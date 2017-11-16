@@ -6,5 +6,5 @@ class NetworkStreamReader(object):
         with stream as s:
             length = int(s.read(5))
             command_id = int(s.read(1).decode("utf8"))
-            parameters = s.read(length-1).decode("utf8")
-            return CommandData(command_id, parameters)
+            parameter = s.read(length-1).decode("utf8")
+            return CommandData(command_id, parameter)

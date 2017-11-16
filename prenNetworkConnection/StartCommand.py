@@ -1,0 +1,2 @@
+class StartCommand(object):
+    pass
