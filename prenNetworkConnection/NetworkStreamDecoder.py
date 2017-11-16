@@ -1,7 +1,7 @@
 from prenNetworkConnection.CommandData import CommandData
 
 
-class NetworkStreamReader(object):
+class NetworkStreamDecoder(object):
     def read(self, stream):
         with stream as s:
             length = int(s.read(5))
