@@ -3,7 +3,7 @@ import unittest
 from unittest import mock
 
 from prenNetworkConnection.NetworkStreamReader import NetworkStreamReader
-from prenNetworkConnection.StartCommand import StartCommand
+from prenNetworkConnection.PositionCommand import PositionCommand
 
 
 class NetworkStreamReaderTest(unittest.TestCase):
@@ -13,10 +13,10 @@ class NetworkStreamReaderTest(unittest.TestCase):
             test_stream = io.BytesIO(b"some test data")
             test_data = "some test data"
             decoder_mock.return_value = test_data
-            factory_mock.return_value = StartCommand()
+            factory_mock.return_value = PositionCommand()
 
             command = NetworkStreamReader().read(test_stream)
 
-            self.assertIsInstance(command, StartCommand)
+            self.assertIsInstance(command, PositionCommand)
             decoder_mock.assert_called_with(test_stream)
             factory_mock.assert_called_with(test_data)
