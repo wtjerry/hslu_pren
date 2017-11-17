@@ -20,8 +20,21 @@ class ConnectionHandlerTest(unittest.TestCase):
             command_mock = MagicMock()
             factory_mock.return_value = command_mock
 
-            ConnectionHandler().handle(connection_mock, "client address")
+            ConnectionHandler().handle(connection_mock)
 
             decoder_mock.assert_called_with(test_stream)
             factory_mock.assert_called_with(command_id, command_parameter)
             self.assertTrue(command_mock.execute.called)
+            self.assertTrue(connection_mock.close.called)
+
+    def test_handle_if_decoder_raises_value_error(self):
+        with mock.patch("prenNetworkConnection.Decoder.Decoder.decode") as decoder_mock, \
+                mock.patch("prenNetworkConnection.CommandFactory.CommandFactory.create") as factory_mock:
+            decoder_mock.return_value = (MagicMock(), MagicMock())
+
+            decoder_mock.side_effect = ValueError()
+
+            connection_mock = MagicMock()
+            ConnectionHandler().handle(connection_mock)
+
+            self.assertTrue(connection_mock.close.called)

@@ -1,3 +1,3 @@
 class StartCommand(object):
     def execute(self):
-        pass
+        print("lets start")

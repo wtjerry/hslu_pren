@@ -12,6 +12,6 @@ class IntegrationTest(unittest.TestCase):
             test_data = b"000011"
             connection_mock.recv.return_value = test_data
 
-            ConnectionHandler().handle(connection_mock, "client address")
+            ConnectionHandler().handle(connection_mock)
 
             self.assertTrue(start_signal_mock.called)

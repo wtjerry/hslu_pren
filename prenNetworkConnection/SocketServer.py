@@ -17,7 +17,7 @@ class SocketServer(object):
         while True:
             print("waiting for a connection")
             connection, client_address = sock.accept()
-            ConnectionHandler().handle(connection, client_address)
+            ConnectionHandler().handle(connection)
 
 
 if __name__ == '__main__':
