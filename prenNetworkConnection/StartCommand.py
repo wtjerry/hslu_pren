@@ -1,2 +1,3 @@
 class StartCommand(object):
-    pass
+    def execute(self):
+        pass
