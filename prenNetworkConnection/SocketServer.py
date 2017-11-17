@@ -16,7 +16,11 @@ class SocketServer(object):
 
         while True:
             print("waiting for a connection")
-            connection, client_address = sock.accept()
+            try:
+                connection, client_address = sock.accept()
+            except KeyboardInterrupt:
+                sock.close()
+                break
             ConnectionHandler().handle(connection)
 
 
