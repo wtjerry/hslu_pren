@@ -1,0 +1,4 @@
+- via ssh start SocketServer in background / start SocketServer via systemd
+- SocketServer creates and starts MasterModule (can be sync, as process is anyway in background
+- MasterModule creates and starts PositionPushingThreadPoolExecutor
+- from then on MasterModule or another appropriate Module can submit the current position to PositionPushingThreadPoolExecutor to be sent via network
