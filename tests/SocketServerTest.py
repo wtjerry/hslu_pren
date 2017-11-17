@@ -9,11 +9,9 @@ class SocketServerTest(unittest.TestCase):
     def test_start(self):
         with mock.patch("socket.socket") as socket_ctor_mock:
             local_socket_mock = MagicMock()
-            accept_method_mock = MagicMock()
 
             socket_ctor_mock.return_value = local_socket_mock
-            local_socket_mock.accept = accept_method_mock
-            accept_method_mock.return_value = (MagicMock(), "addr")
+            local_socket_mock.accept.return_value = (MagicMock(), "addr")
 
             expected_address = "someAddress"
             expected_port = 9999
