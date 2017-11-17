@@ -17,6 +17,6 @@ class CommandFactory(object):
         x, y = parameter.split(',')
         return PositionCommand(int(x), int(y))
 
-    def create(self, command_data):
-        class_type = self.__id_to_command_mapping.get(command_data.command_id)
-        return class_type(command_data.parameter)
+    def create(self,command_id, parameter):
+        class_type = self.__id_to_command_mapping.get(command_id)
+        return class_type(parameter)

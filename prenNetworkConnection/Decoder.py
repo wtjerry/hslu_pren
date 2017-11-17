@@ -1,13 +1,10 @@
-from prenNetworkConnection.CommandData import CommandData
-
-
 class Decoder(object):
     def decode(self, data):
         length = int(data[:5])
         self.raise_if_not_correct_length(data, length)
         command_id = int(data[5:6].decode("utf8"))
         parameter = data[6:].decode("utf8")
-        return CommandData(command_id, parameter)
+        return command_id, parameter
 
     def raise_if_not_correct_length(self, data, length):
         expected_total_length = length + 5

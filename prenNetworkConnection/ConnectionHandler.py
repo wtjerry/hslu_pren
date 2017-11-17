@@ -7,8 +7,8 @@ class ConnectionHandler(object):
         try:
             data = connection.recv(1024)
             if data:
-                command_data = Decoder().decode(data)
-                command = CommandFactory().create(command_data)
+                command_id, parameter = Decoder().decode(data)
+                command = CommandFactory().create(command_id, parameter)
                 command.execute()
         finally:
             connection.close()

@@ -13,8 +13,9 @@ class ConnectionHandlerTest(unittest.TestCase):
             connection_mock = MagicMock()
             connection_mock.recv.return_value = test_stream
 
-            test_data = "some test data"
-            decoder_mock.return_value = test_data
+            command_id = 999
+            command_parameter = "parameter"
+            decoder_mock.return_value = (command_id, command_parameter)
 
             command_mock = MagicMock()
             factory_mock.return_value = command_mock
@@ -22,22 +23,5 @@ class ConnectionHandlerTest(unittest.TestCase):
             ConnectionHandler().handle(connection_mock, "client address")
 
             decoder_mock.assert_called_with(test_stream)
-            factory_mock.assert_called_with(test_data)
+            factory_mock.assert_called_with(command_id, command_parameter)
             self.assertTrue(command_mock.execute.called)
-
-    def test_handle_with_empty_data_received(self):
-        connection_mock = MagicMock()
-        test_data = b""
-        connection_mock.recv.return_value = test_data
-
-        ConnectionHandler().handle(connection_mock, "client address")
-
-        connection_mock.sendall.assert_not_called()
-
-    def test_handle_with_no_data_received(self):
-        connection_mock = MagicMock()
-        connection_mock.recv.return_value = None
-
-        ConnectionHandler().handle(connection_mock, "client address")
-
-        connection_mock.sendall.assert_not_called()
