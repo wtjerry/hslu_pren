@@ -3,17 +3,13 @@ class ConnectionHandler(object):
         try:
             print("connection from {address}".format(address=client_address))
 
-            while True:
-                data = connection.recv(16)
-                print(type(data))
-                print(len(data))
-                print("received {!r}".format(data))
-                if data:
-                    print("sending data back to the client")
-                    connection.sendall(data)
-                else:
-                    print("no data from {address}".format(address=client_address))
-                    break
+            data = connection.recv(1024)
+            print("received {0}".format(data))
+            if data:
+                print("sending data back to the client")
+                connection.sendall(data)
+            else:
+                print("no data from {address}".format(address=client_address))
 
         finally:
             connection.close()
