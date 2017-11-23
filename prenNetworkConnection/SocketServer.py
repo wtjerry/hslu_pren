@@ -1,6 +1,10 @@
+import os
 import socket
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from prenNetworkConnection.ConnectionHandler import ConnectionHandler
+from prenNetworkConnection.IpProvider import get_wlan_ip_address
 
 
 class SocketServer(object):
@@ -25,4 +29,5 @@ class SocketServer(object):
 
 
 if __name__ == '__main__':
-    SocketServer().start()
+    ip = get_wlan_ip_address()
+    SocketServer(address=ip).start()
