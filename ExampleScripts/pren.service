@@ -1,0 +1,9 @@
+[Unit]
+Description=Service that is used to receive the start signal for the pren project
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3.5 /home/jerry/Downloads/prenNetworkConnection/prenNetworkConnection/App.py &
+
+[Install]
+WantedBy=multi-user.target
