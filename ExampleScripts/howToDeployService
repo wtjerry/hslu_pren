@@ -1,0 +1,8 @@
+# everything as root
+# might need to adapt path to App.py in pren.service
+# copy pren.service to /etc/systemd/system/pren.service
+chmod 664 /etc/systemd/system/pren.service
+systemctl daemon-reload
+systemctl start pren.service
+systemctl status pren.service
+systemctl stop pren.service
