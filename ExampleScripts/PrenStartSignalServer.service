@@ -1,0 +1,10 @@
+[Unit]
+Description=Service that is used to receive the start signal for the pren project
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3.5 /home/pi/pren/prenNetworkConnection/SocketServer.py &
+ExecStop=kill $(ps -aux | grep prenNetworkConnection/SocketServer.py | grep -v grep | awk '{ print $2 }')
+
+[Install]
+WantedBy=multi-user.target
