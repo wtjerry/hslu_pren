@@ -1,10 +1,10 @@
 [Unit]
 Description=Service that is used to receive the start signal for the pren project
-Requires=network.target
+Requires=network-online.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3.5 -u /home/jerry/Downloads/prenNetworkConnection/prenNetworkConnection/App.py &
+ExecStart=/usr/bin/python3.5 -u /home/pi/pren/prenNetworkConnection/App.py &
 
 [Install]
 WantedBy=default.target
