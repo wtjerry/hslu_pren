@@ -3,7 +3,7 @@ import sys
 from multiprocessing import Process
 from time import sleep
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(os.path.dirname(__file__))
 
 from networking.IpProvider import get_wlan_ip_address
 from networking.SocketServer import SocketServer
