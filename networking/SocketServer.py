@@ -1,5 +1,5 @@
 import socket
-from prenNetworkConnection.ConnectionHandler import ConnectionHandler
+from networking.ConnectionHandler import ConnectionHandler
 
 
 class SocketServer(object):

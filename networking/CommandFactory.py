@@ -1,5 +1,5 @@
-from prenNetworkConnection.StartCommand import StartCommand
-from prenNetworkConnection.PositionCommand import PositionCommand
+from networking.StartCommand import StartCommand
+from networking.PositionCommand import PositionCommand
 
 
 class CommandFactory(object):

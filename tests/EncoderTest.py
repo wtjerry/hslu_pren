@@ -1,6 +1,6 @@
 import unittest
 
-from prenNetworkConnection.Encoder import Encoder
+from networking.Encoder import Encoder
 
 
 class EncoderTest(unittest.TestCase):

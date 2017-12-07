@@ -1,6 +1,6 @@
 import unittest
 
-from prenNetworkConnection.Decoder import Decoder
+from networking.Decoder import Decoder
 
 
 class DecoderTest(unittest.TestCase):

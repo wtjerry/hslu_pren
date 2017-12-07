@@ -1,6 +1,6 @@
 import socket
 
-from prenNetworkConnection.Encoder import Encoder
+from networking.Encoder import Encoder
 
 address = "localhost"
 port = 12346

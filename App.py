@@ -5,8 +5,8 @@ from time import sleep
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-from prenNetworkConnection.IpProvider import get_wlan_ip_address
-from prenNetworkConnection.SocketServer import SocketServer
+from networking.IpProvider import get_wlan_ip_address
+from networking.SocketServer import SocketServer
 
 
 def _startSocketServer():

@@ -1,8 +1,8 @@
 import unittest
 
-from prenNetworkConnection.CommandFactory import CommandFactory
-from prenNetworkConnection.PositionCommand import PositionCommand
-from prenNetworkConnection.StartCommand import StartCommand
+from networking.CommandFactory import CommandFactory
+from networking.PositionCommand import PositionCommand
+from networking.StartCommand import StartCommand
 
 
 class CommandFactoryTest(unittest.TestCase):

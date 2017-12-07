@@ -2,7 +2,7 @@ import unittest
 from unittest import mock
 from unittest.mock import MagicMock
 
-from prenNetworkConnection.SocketServer import SocketServer
+from networking.SocketServer import SocketServer
 
 
 class SocketServerTest(unittest.TestCase):

@@ -2,13 +2,13 @@ import unittest
 from unittest import mock
 from unittest.mock import MagicMock
 
-from prenNetworkConnection.ConnectionHandler import ConnectionHandler
+from networking.ConnectionHandler import ConnectionHandler
 
 
 class ConnectionHandlerTest(unittest.TestCase):
     def test_handle(self):
-        with mock.patch("prenNetworkConnection.Decoder.Decoder.decode") as decoder_mock, \
-                mock.patch("prenNetworkConnection.CommandFactory.CommandFactory.create") as factory_mock:
+        with mock.patch("networking.Decoder.Decoder.decode") as decoder_mock, \
+                mock.patch("networking.CommandFactory.CommandFactory.create") as factory_mock:
             test_stream = b"hello world"
             connection_mock = MagicMock()
             connection_mock.recv.return_value = test_stream
@@ -28,8 +28,8 @@ class ConnectionHandlerTest(unittest.TestCase):
             self.assertTrue(connection_mock.close.called)
 
     def test_handle_if_decoder_raises_value_error(self):
-        with mock.patch("prenNetworkConnection.Decoder.Decoder.decode") as decoder_mock, \
-                mock.patch("prenNetworkConnection.CommandFactory.CommandFactory.create") as factory_mock:
+        with mock.patch("networking.Decoder.Decoder.decode") as decoder_mock, \
+                mock.patch("networking.CommandFactory.CommandFactory.create") as factory_mock:
             decoder_mock.return_value = (MagicMock(), MagicMock())
 
             decoder_mock.side_effect = ValueError()

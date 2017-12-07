@@ -1,5 +1,5 @@
-from prenNetworkConnection.CommandFactory import CommandFactory
-from prenNetworkConnection.Decoder import Decoder
+from networking.CommandFactory import CommandFactory
+from networking.Decoder import Decoder
 
 
 class ConnectionHandler(object):
