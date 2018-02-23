@@ -10,7 +10,7 @@ def blocking_count_down(text):
 
 class ABC(object):
     def __init__(self):
-        self.__executor = ThreadPoolExecutor(max_workers=1)
+        self.__executor = ThreadPoolExecutor(max_workers=3)
 
     def submit(self, text):
         self.__executor.submit(blocking_count_down, text)
