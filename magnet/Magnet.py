@@ -2,22 +2,23 @@ import RPi.GPIO as GPIO
 
 
 class Magnet(object):
-    PIN = 17
+    _PIN = 17
 
-    """
-    Constructor of the class.
-    """
-    def __init__(self, yo):
-        GPIO.setup(self.PIN, GPIO.OUT)
+    def __init__(self):
+        """
+        Constructor of the class.
+        """
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(self._PIN, GPIO.OUT)
 
-    """
-    Starts the magnet.
-    """
     def start(self):
-        GPIO.output(self.PIN, GPIO.HIGH)
+        """
+        Starts the magnet.
+        """
+        GPIO.output(self._PIN, GPIO.HIGH)
 
-    """
-    Stops the magnet.
-    """
     def stop(self):
-        GPIO.output(self.PIN, GPIO.LOW)
+        """
+        Stops the magnet.
+        """
+        GPIO.output(self._PIN, GPIO.LOW)
