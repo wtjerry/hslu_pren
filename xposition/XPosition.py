@@ -10,11 +10,13 @@ class XPosition(object):
     _FRONT_SENSOR_ADDRESS = 0x2B
     _FRONT_SENSOR = None
     _FRONT_SENSOR_DISTANCE_TO_CENTER = 197.5
+    _FRONT_SENSOR_CACHED_VALUE = 0
 
     _BACK_SENSOR_PIN = 16
     _BACK_SENSOR_ADDRESS = 0x2D
     _BACK_SENSOR = None
     _BACK_SENSOR_DISTANCE_TO_CENTER = 177
+    _BACK_SENSOR_CACHED_VALUE = 0
 
     def __init__(self):
         """
@@ -61,11 +63,21 @@ class XPosition(object):
         Returns the front sensor measurement in mm.
         :rtype: int
         """
-        return self._TRACK_LENGTH - (self._FRONT_SENSOR.get_distance() / 10) - self._FRONT_SENSOR_DISTANCE_TO_CENTER
+        measurement = self._FRONT_SENSOR.get_distance() / 10
+
+        if measurement > 0:
+            self._FRONT_SENSOR_CACHED_VALUE = measurement
+
+        return self._TRACK_LENGTH - self._FRONT_SENSOR_CACHED_VALUE - self._FRONT_SENSOR_DISTANCE_TO_CENTER
 
     def _get_back_sensor_measurement(self):
         """
         Returns the back sensor measurement in mm.
         :rtype: int
         """
-        return (self._BACK_SENSOR.get_distance() / 10) + self._BACK_SENSOR_DISTANCE_TO_CENTER
+        measurement = self._BACK_SENSOR.get_distance() / 10
+
+        if measurement > 0:
+            self._BACK_SENSOR_CACHED_VALUE = measurement
+
+        return self._BACK_SENSOR_CACHED_VALUE + self._BACK_SENSOR_DISTANCE_TO_CENTER
