@@ -11,12 +11,20 @@ class CommandFactory(object):
         }
 
     def _create_start_command(self, parameter):
-        return StartCommand()
+        return StartCommand(CommandFactory._start_function)
 
     def _create_position_command(self, parameter):
         x, y = parameter.split(',')
         return PositionCommand(int(x), int(y))
 
-    def create(self,command_id, parameter):
+    @staticmethod
+    def _start_function():
+        pass
+
+    @classmethod
+    def setup_start(cls, start_function):
+        CommandFactory._start_function = start_function
+
+    def create(self, command_id, parameter):
         class_type = self.__id_to_command_mapping.get(command_id)
         return class_type(parameter)
