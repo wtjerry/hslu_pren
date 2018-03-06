@@ -3,5 +3,4 @@ class StartCommand(object):
         self._start_func = start_func
 
     def execute(self):
-        print("lets start")
         self._start_func()

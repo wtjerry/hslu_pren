@@ -1,3 +1,12 @@
+class Controller(object):
+
+    def __init__(self, executor):
+        self.executor = executor
+
+    def switchToStart(self):
+        print("hello world")
+        self.executor.submit(print("switching to start now.."))
+
 # States
 #
 # WaitForStart

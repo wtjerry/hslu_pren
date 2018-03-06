@@ -12,6 +12,6 @@ class ConnectionHandler(object):
                 command.execute()
         except ValueError as e:
             print(e)
-            connection.close
+            connection.close()
         finally:
             connection.close()
