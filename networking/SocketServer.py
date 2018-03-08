@@ -9,7 +9,6 @@ class SocketServer(object):
 
     def start(self):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
         sock.bind((self.address, self.port))
         sock.listen(1)
 
