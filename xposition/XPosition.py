@@ -6,17 +6,18 @@ import RPi.GPIO as GPIO
 class XPosition(object):
     _TRACK_LENGTH = 3500
 
-    _FRONT_SENSOR_PIN = 20
-    _FRONT_SENSOR_ADDRESS = 0x2B
-    _FRONT_SENSOR = None
-    _FRONT_SENSOR_DISTANCE_TO_CENTER = 197.5
-    _FRONT_SENSOR_CACHED_VALUE = 0
-
     _BACK_SENSOR_PIN = 16
     _BACK_SENSOR_ADDRESS = 0x2D
-    _BACK_SENSOR = None
     _BACK_SENSOR_DISTANCE_TO_CENTER = 177
-    _BACK_SENSOR_CACHED_VALUE = 0
+    _back_sensor = None
+    _back_sensor_cached_value = 137
+
+    _FRONT_SENSOR_PIN = 20
+    _FRONT_SENSOR_ADDRESS = 0x2B
+    _FRONT_SENSOR_DISTANCE_TO_CENTER = 197.5
+    _front_sensor = None
+    _front_sensor_cached_value = _TRACK_LENGTH - _back_sensor_cached_value - \
+        _BACK_SENSOR_DISTANCE_TO_CENTER - _FRONT_SENSOR_DISTANCE_TO_CENTER
 
     def __init__(self):
         """
@@ -36,8 +37,8 @@ class XPosition(object):
         time.sleep(0.5)
 
         # Create the sensor objects
-        self._FRONT_SENSOR = VL53L0X.VL53L0X(address=self._FRONT_SENSOR_ADDRESS)
-        self._BACK_SENSOR = VL53L0X.VL53L0X(address=self._BACK_SENSOR_ADDRESS)
+        self._front_sensor = VL53L0X.VL53L0X(address=self._FRONT_SENSOR_ADDRESS)
+        self._back_sensor = VL53L0X.VL53L0X(address=self._BACK_SENSOR_ADDRESS)
 
     def start(self):
         """
@@ -48,8 +49,8 @@ class XPosition(object):
 
         time.sleep(0.5)
 
-        self._FRONT_SENSOR.start_ranging(VL53L0X.VL53L0X_BETTER_ACCURACY_MODE)
-        self._BACK_SENSOR.start_ranging(VL53L0X.VL53L0X_BETTER_ACCURACY_MODE)
+        self._front_sensor.start_ranging(VL53L0X.VL53L0X_BETTER_ACCURACY_MODE)
+        self._back_sensor.start_ranging(VL53L0X.VL53L0X_BETTER_ACCURACY_MODE)
 
     def get_position(self):
         """
@@ -63,21 +64,21 @@ class XPosition(object):
         Returns the front sensor measurement in mm.
         :rtype: int
         """
-        measurement = self._FRONT_SENSOR.get_distance() / 10
+        measurement = self._front_sensor.get_distance() / 10
 
         if measurement > 0:
-            self._FRONT_SENSOR_CACHED_VALUE = measurement
+            self._front_sensor_cached_value = measurement
 
-        return self._TRACK_LENGTH - self._FRONT_SENSOR_CACHED_VALUE - self._FRONT_SENSOR_DISTANCE_TO_CENTER
+        return self._TRACK_LENGTH - self._front_sensor_cached_value - self._FRONT_SENSOR_DISTANCE_TO_CENTER
 
     def _get_back_sensor_measurement(self):
         """
         Returns the back sensor measurement in mm.
         :rtype: int
         """
-        measurement = self._BACK_SENSOR.get_distance() / 10
+        measurement = self._back_sensor.get_distance() / 10
 
         if measurement > 0:
-            self._BACK_SENSOR_CACHED_VALUE = measurement
+            self._back_sensor_cached_value = measurement
 
-        return self._BACK_SENSOR_CACHED_VALUE + self._BACK_SENSOR_DISTANCE_TO_CENTER
+        return self._back_sensor_cached_value + self._BACK_SENSOR_DISTANCE_TO_CENTER
