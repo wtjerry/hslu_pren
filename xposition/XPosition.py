@@ -1,6 +1,9 @@
 import time
-import VL53L0X
+import sys
 import RPi.GPIO as GPIO
+
+sys.path.append("../py_libs/VL53L0X_rasp_python/python/")
+import VL53L0X
 
 
 class XPosition(object):
@@ -17,7 +20,7 @@ class XPosition(object):
     _FRONT_SENSOR_DISTANCE_TO_CENTER = 197.5
     _front_sensor = None
     _front_sensor_cached_value = _TRACK_LENGTH - _back_sensor_cached_value - \
-        _BACK_SENSOR_DISTANCE_TO_CENTER - _FRONT_SENSOR_DISTANCE_TO_CENTER
+                                 _BACK_SENSOR_DISTANCE_TO_CENTER - _FRONT_SENSOR_DISTANCE_TO_CENTER
 
     def __init__(self):
         """
@@ -49,8 +52,8 @@ class XPosition(object):
 
         time.sleep(0.5)
 
-        self._front_sensor.start_ranging(VL53L0X.VL53L0X_BETTER_ACCURACY_MODE)
-        self._back_sensor.start_ranging(VL53L0X.VL53L0X_BETTER_ACCURACY_MODE)
+        self._front_sensor.start_ranging(VL53L0X.VL53L0X_LONG_RANGE_MODE)
+        self._back_sensor.start_ranging(VL53L0X.VL53L0X_LONG_RANGE_MODE)
 
     def get_position(self):
         """
@@ -64,9 +67,9 @@ class XPosition(object):
         Returns the front sensor measurement in mm.
         :rtype: int
         """
-        measurement = self._front_sensor.get_distance() / 10
+        measurement = self._front_sensor.get_distance()
 
-        if measurement > 0:
+        if measurement > 0 and 8000 < measurement:
             self._front_sensor_cached_value = measurement
 
         return self._TRACK_LENGTH - self._front_sensor_cached_value - self._FRONT_SENSOR_DISTANCE_TO_CENTER
@@ -76,9 +79,9 @@ class XPosition(object):
         Returns the back sensor measurement in mm.
         :rtype: int
         """
-        measurement = self._back_sensor.get_distance() / 10
+        measurement = self._back_sensor.get_distance()
 
-        if measurement > 0:
+        if measurement > 0 and 8000 < measurement:
             self._back_sensor_cached_value = measurement
 
         return self._back_sensor_cached_value + self._BACK_SENSOR_DISTANCE_TO_CENTER
