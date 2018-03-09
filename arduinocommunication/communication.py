@@ -3,7 +3,6 @@ import sys
 
 
 class Communication(object):
-    _connection = None
     _PORT = '/dev/ttyACM0'
     _BAUDRATE = 115200
     _TIMEOUT = None
@@ -17,9 +16,10 @@ class Communication(object):
         :param command: The command to send.
         :return: A bytearray with the return message.
         """
-        byteswritten = self._connection.write(command.encode('utf-8'))
+        encoded_command = command.encode('utf-8')
+        byteswritten = self._connection.write(encoded_command)
 
-        if byteswritten == sys.getsizeof(command.encode('utf-8')):
+        if byteswritten == sys.getsizeof(encoded_command):
             return self._connection.read(2)
         else:
             raise IOError("Couldn't send to arduino!")
