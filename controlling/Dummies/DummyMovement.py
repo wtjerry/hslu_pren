@@ -1,5 +1,5 @@
 
-class Movement:
+class DummyMovement:
     def __init__(self):
         self.is_moving = False
 

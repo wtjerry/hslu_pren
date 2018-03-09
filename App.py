@@ -2,18 +2,20 @@ import os
 import sys
 from concurrent.futures import ThreadPoolExecutor
 
+from controlling.Dummies.DummyBalancer import DummyBalancer
+
 sys.path.append(os.path.dirname(__file__))
 
-from controlling.Controller import Controller
+from controlling.DummyController import DummyController
 from networking.CommandFactory import CommandFactory
-from networking.IpProvider import get_wlan_ip_address
+# from networking.IpProvider import get_wlan_ip_address
 from networking.SocketServer import SocketServer
 
 
 def _startSocketServer():
-    ip = get_wlan_ip_address()
+    #ip = get_wlan_ip_address()
     print("starting socket server")
-    SocketServer(address=ip).start()
+    #SocketServer(address=ip).start()
 
 
 def _blocking_count(text):
@@ -22,8 +24,12 @@ def _blocking_count(text):
 
 
 if __name__ == '__main__':
-    executor = ThreadPoolExecutor(max_workers=2)
-    controller = Controller(executor)
-    CommandFactory.setup_start(controller.switchToStart)
-    executor.submit(_startSocketServer)
-    executor.submit(_blocking_count, "hello")
+    # Dummy Start
+    controller = DummyController()
+    controller.listenForStart()
+
+    # executor = ThreadPoolExecutor(max_workers=2)
+    # CommandFactory.setup_start(controller.switch_to_start)
+    # controller.switch_to_start()
+    # executor.submit(_startSocketServer)
+    # executor.submit(_blocking_count, "hello")

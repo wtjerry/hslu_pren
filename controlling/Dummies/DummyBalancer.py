@@ -3,7 +3,7 @@ import random
 import time
 
 
-class Balancer:
+class DummyBalancer:
     def __init__(self, x_position):
         self.lookup_table = []
         self.x_position_getter = x_position

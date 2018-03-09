@@ -1,5 +1,7 @@
 import time
-class LoadPositionComparer:
+
+
+class DummyLoadPositionComparer:
     def __init__(self, dummy_x):
         self._check_for_load= True
         self._dummy_x_position = dummy_x

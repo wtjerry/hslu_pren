@@ -1,4 +1,4 @@
-class Magnet:
+class DummyMagnet:
     def activate(self):
         print("Magnet activated")
 

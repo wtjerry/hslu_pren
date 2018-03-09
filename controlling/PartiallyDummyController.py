@@ -1,26 +1,26 @@
-from controlling.Dummies.Balancer import Balancer
+from controlling.Dummies.DummyBalancer import DummyBalancer
 import time
 
-from controlling.Dummies.GoalDetection import GoalDetection
-from controlling.Dummies.LoadPositionComparer import LoadPositionComparer
-from controlling.Dummies.Magnet import Magnet
-from controlling.Dummies.Movement import Movement
-from controlling.Dummies.Telescope import Telescope
+from controlling.Dummies.DummyGoalDetection import DummyGoalDetection
+from controlling.Dummies.DummyLoadPositionComparer import DummyLoadPositionComparer
+from controlling.Dummies.DummyMagnet import DummyMagnet
+from controlling.Dummies.DummyMovement import DummyMovement
+from controlling.Dummies.DummyTelescope import DummyTelescope
 from controlling.Dummies.sensors.DummyXPosition import DummyXPosition
 
 
-class Controller(object):
+class PartiallyDummyController(object):
 
     def __init__(self, executor):
-        self.goal_detection = GoalDetection(self.goal_found)
+        self.goal_detection = DummyGoalDetection(self.goal_found)
         self.executor = executor
-        self._movement = Movement()
+        self._movement = DummyMovement()
         self.dummy_x_position = DummyXPosition(self._movement)
-        self._balancer = Balancer(self.dummy_x_position)
-        self.load_position_comparer = LoadPositionComparer(self.dummy_x_position)
+        self._balancer = DummyBalancer(self.dummy_x_position)
+        self.load_position_comparer = DummyLoadPositionComparer(self.dummy_x_position)
         self.executor.submit(self._balancer.start)
-        self.telescope = Telescope()
-        self.magnet = Magnet()
+        self.telescope = DummyTelescope()
+        self.magnet = DummyMagnet()
 
     def switch_to_start(self):
         print("----------------------------")
@@ -81,24 +81,4 @@ class Controller(object):
         self._movement.start_moving()
         time.sleep(1)
         print("finished")
-
-# States
-#
-# WaitForStart
-## startsignalreceiver
-# MoveToLoad
-## movement
-# GetLoad
-## telescope
-## positionoutput
-## magnet
-# SearchGoal
-## movement
-## positionoutput
-# DeliverLoad
-## telescope
-## positionoutput
-## magnet
-# Finnish
-## movement
 

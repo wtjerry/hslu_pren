@@ -1,7 +1,7 @@
 import time
 
 
-class Telescope:
+class DummyTelescope:
     def __init__(self):
         self._is_lowered = False
 

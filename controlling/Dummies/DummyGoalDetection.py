@@ -1,7 +1,7 @@
 import random
 import time
 
-class GoalDetection:
+class DummyGoalDetection:
     listeners = []
 
     def __init__(self, goalfound):
