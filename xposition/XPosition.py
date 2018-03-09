@@ -69,7 +69,7 @@ class XPosition(object):
         """
         measurement = self._front_sensor.get_distance()
 
-        if measurement > 0 and 8000 < measurement:
+        if 0 < measurement < 8000:
             self._front_sensor_cached_value = measurement
 
         return self._TRACK_LENGTH - self._front_sensor_cached_value - self._FRONT_SENSOR_DISTANCE_TO_CENTER
@@ -81,7 +81,7 @@ class XPosition(object):
         """
         measurement = self._back_sensor.get_distance()
 
-        if measurement > 0 and 8000 < measurement:
+        if 0 < measurement < 8000:
             self._back_sensor_cached_value = measurement
 
         return self._back_sensor_cached_value + self._BACK_SENSOR_DISTANCE_TO_CENTER
