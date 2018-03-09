@@ -1,1 +1,3 @@
 RPi.GPIO
+pyserial
+opencv-contrib-python
