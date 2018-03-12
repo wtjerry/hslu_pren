@@ -4,7 +4,7 @@ Requires=network-online.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3.5 -u /home/pi/pren/prenNetworkConnection/App.py &
+ExecStart=cd /home/pi/pren/prenNetworkConnection; /usr/bin/python3.5 -u ./App.py &
 
 [Install]
 WantedBy=default.target
