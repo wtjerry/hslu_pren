@@ -1,13 +1,11 @@
-from concurrent.futures import ThreadPoolExecutor
-
-from controlling.Dummies.DummyBalancer import DummyBalancer
 import time
-
+from concurrent.futures import ThreadPoolExecutor
+from controlling.StartSignalReceiver import StartSignalReceiver
+from controlling.Dummies.DummyBalancer import DummyBalancer
 from controlling.Dummies.DummyGoalDetection import DummyGoalDetection
 from controlling.Dummies.DummyLoadPositionComparer import DummyLoadPositionComparer
 from controlling.Dummies.DummyMagnet import DummyMagnet
 from controlling.Dummies.DummyMovement import DummyMovement
-from controlling.Dummies.DummyStartSignalReceiver import DummyStartSignalReceiver
 from controlling.Dummies.DummyTelescope import DummyTelescope
 from controlling.Dummies.sensors.DummyXPosition import DummyXPosition
 
@@ -15,7 +13,7 @@ from controlling.Dummies.sensors.DummyXPosition import DummyXPosition
 class DummyController(object):
 
     def __init__(self):
-        self.executor = ThreadPoolExecutor(max_workers=2)
+        self.executor = ThreadPoolExecutor(max_workers=4)
         self.goal_detection = DummyGoalDetection(self.goal_found)
         self._movement = DummyMovement()
         self.dummy_x_position = DummyXPosition(self._movement)
@@ -24,7 +22,7 @@ class DummyController(object):
         self.executor.submit(self._balancer.start)
         self.telescope = DummyTelescope()
         self.magnet = DummyMagnet()
-        self.start_signal_receiver = DummyStartSignalReceiver(self.switch_to_start)
+        self.start_signal_receiver = StartSignalReceiver(self.executor, self.switch_to_start)
 
     def listenForStart(self):
         print("----------------------------")
@@ -92,4 +90,3 @@ class DummyController(object):
         self._movement.start_moving()
         time.sleep(1)
         print("finished")
-
