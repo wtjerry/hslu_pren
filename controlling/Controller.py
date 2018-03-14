@@ -1,30 +1,24 @@
 import time
 from concurrent.futures import ThreadPoolExecutor
-from controlling.StartSignalReceiver import StartSignalReceiver
-from controlling.Dummies.DummyBalancer import DummyBalancer
-from controlling.Dummies.DummyGoalDetection import DummyGoalDetection
-from controlling.Dummies.DummyLoadPositionComparer import DummyLoadPositionComparer
-from controlling.Dummies.DummyMagnet import DummyMagnet
-from controlling.Dummies.DummyMovement import DummyMovement
-from controlling.Dummies.DummyTelescope import DummyTelescope
-from controlling.Dummies.sensors.DummyXPosition import DummyXPosition
 
+from controlling.Binding import Binding
 
-class DummyController(object):
+class Controller(object):
 
     def __init__(self):
         self.executor = ThreadPoolExecutor(max_workers=4)
-        self.goal_detection = DummyGoalDetection(self.goal_found)
-        self._movement = DummyMovement()
-        self.dummy_x_position = DummyXPosition(self._movement)
-        self._balancer = DummyBalancer(self.dummy_x_position)
-        self.load_position_comparer = DummyLoadPositionComparer(self.dummy_x_position)
+        binding = Binding(self.executor, self.switch_to_start, self.goal_found)
+        self.goal_detection = binding.goal_detection
+        self._movement = binding.movement
+        self.dummy_x_position = binding.x_position
+        self._balancer = binding.balancer
+        self.load_position_comparer = binding.load_position_comparer
         self.executor.submit(self._balancer.start)
-        self.telescope = DummyTelescope()
-        self.magnet = DummyMagnet()
-        self.start_signal_receiver = StartSignalReceiver(self.executor, self.switch_to_start)
+        self.telescope = binding.telescope
+        self.magnet = binding.magnet
+        self.start_signal_receiver = binding.start_signal_receiver
 
-    def listenForStart(self):
+    def listen_for_start(self):
         print("----------------------------")
         print("Listening for start")
         print("----------------------------")
@@ -89,4 +83,5 @@ class DummyController(object):
         print("move until finnished")
         self._movement.start_moving()
         time.sleep(1)
+        self._movement.stop_moving()
         print("finished")

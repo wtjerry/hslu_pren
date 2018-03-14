@@ -1,4 +1,4 @@
-from controlling.DummyController import DummyController
+from controlling.Controller import Controller
 
 if __name__ == '__main__':
-    DummyController().listenForStart()
+    Controller().listen_for_start()
