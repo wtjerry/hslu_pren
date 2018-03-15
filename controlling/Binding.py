@@ -1,6 +1,6 @@
 from controlling.Dummies.Dummy import Dummy
 from controlling.Dummies.DummyBalancer import DummyBalancer
-from controlling.Dummies.DummyGoalDetection import DummyGoalDetection
+from controlling.Dummies.DummyTargetDetection import DummyTargetDetection
 from controlling.Dummies.DummyLoadPositionComparer import DummyLoadPositionComparer
 from controlling.Dummies.DummyMagnet import DummyMagnet
 from controlling.Dummies.DummyMovement import DummyMovement
@@ -20,14 +20,14 @@ class Binding:
     use_real_position_output = False
     use_real_telescope = False
     use_real_x_position = False
-    use_real_start_signal = True
+    use_real_start_signal = False
 
     def __init__(self, executor, start_function, goalfound_function):
         # TODO replace Dummy(), it raises an error when initialized
         self.movement = Dummy() if self.use_real_movement else DummyMovement()
         self.x_position = Dummy() if self.use_real_x_position else DummyXPosition(self.movement)
         self.balancer = Dummy() if self.use_real_balancer else DummyBalancer(self.x_position)
-        self.goal_detection = Dummy() if self.use_real_goal_detection else DummyGoalDetection(goalfound_function)
+        self.target_detection = Dummy() if self.use_real_goal_detection else DummyTargetDetection(goalfound_function)
         self.load_position_comparer = Dummy() if self.use_real_load_position_comparer \
             else DummyLoadPositionComparer(self.x_position)
 

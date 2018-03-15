@@ -14,7 +14,7 @@ class StartSignalReceiver:
         print("starting socket server")
         SocketServer(address=ip).start()
 
-    def StartListening(self):
+    def start_listening(self):
         # if the start_function is not dispatched to another thread,
         # the socket server is blocked while the main algorithm is running
         # This is not desired once we need to send the current position back over the socket

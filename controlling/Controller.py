@@ -7,8 +7,8 @@ from controlling.Binding import Binding
 class Controller(object):
     def __init__(self):
         self.executor = ThreadPoolExecutor(max_workers=4)
-        binding = Binding(self.executor, self.switch_to_start, self.goal_found)
-        self.goal_detection = binding.goal_detection
+        binding = Binding(self.executor, self.on_start, self.on_target_found)
+        self.target_detection = binding.target_detection
         self._movement = binding.movement
         self.x_position = binding.x_position
         self._balancer = binding.balancer
@@ -24,15 +24,23 @@ class Controller(object):
         print("                            ")
         self.start_signal_receiver.start_listening()
 
-    def switch_to_start(self):
+    def on_start(self):
         print("----------------------------")
         print("switching to start now..")
         print("----------------------------")
         print("                            ")
         self.executor.submit(self._balancer.start)
         self._move_until_load_reached()
+
+    def _move_until_load_reached(self):
+        print("----------------------------")
+        print("Move until load reached")
+        print("----------------------------")
+        print("                            ")
+        self._movement.start_moving()
+        self.load_position_comparer.check_until_reached()
+        self._movement.stop_moving()
         self._get_load()
-        self._move_until_goal_reached()
 
     def _get_load(self):
         print("----------------------------")
@@ -43,32 +51,24 @@ class Controller(object):
         self.magnet.activate()
         time.sleep(1)
         self.telescope.up(100)
+        self._move_until_target_reached()
 
-    def _move_until_load_reached(self):
+    def _move_until_target_reached(self):
         print("----------------------------")
-        print("Move until load reached")
+        print("move until target reached")
         print("----------------------------")
         print("                            ")
         self._movement.start_moving()
-        self.load_position_comparer.check_until_reached()
-        self._movement.stop_moving()
+        self.executor.submit(self.target_detection.start)
 
-    def _move_until_goal_reached(self):
+    def on_target_found(self):
         print("----------------------------")
-        print("move until goal reached")
+        print("Target found!")
         print("----------------------------")
         print("                            ")
-        self._movement.start_moving()
-        self.executor.submit(self.goal_detection.start)
-
-    def goal_found(self):
-        print("----------------------------")
-        print("Goal found!")
-        print("----------------------------")
-        print("                            ")
-        print("Moving until goal reached")
+        print("Moving until target reached")
         time.sleep(0.3)
-        print("Goal reached")
+        print("Target reached")
         self._movement.stop_moving()
         self._deliver_load()
 
