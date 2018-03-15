@@ -6,7 +6,7 @@ sys.path.append("../py_libs/VL53L0X_rasp_python/python/")
 import VL53L0X
 
 
-class XPosition(object):
+class XPositionSensor(object):
     _TRACK_LENGTH = 3500
 
     _BACK_SENSOR_PIN = 16
