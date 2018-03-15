@@ -13,11 +13,6 @@ class DummyTelescope:
 
     def down(self, height):
         print("lower telescope")
-        time.sleep(height/50)
+        time.sleep(height / 50)
         self._is_lowered = True
         print("telescope lowered")
-
-
-
-# lower
-# draw in

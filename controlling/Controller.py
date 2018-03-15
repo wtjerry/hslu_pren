@@ -3,17 +3,16 @@ from concurrent.futures import ThreadPoolExecutor
 
 from controlling.Binding import Binding
 
-class Controller(object):
 
+class Controller(object):
     def __init__(self):
         self.executor = ThreadPoolExecutor(max_workers=4)
         binding = Binding(self.executor, self.switch_to_start, self.goal_found)
         self.goal_detection = binding.goal_detection
         self._movement = binding.movement
-        self.dummy_x_position = binding.x_position
+        self.x_position = binding.x_position
         self._balancer = binding.balancer
         self.load_position_comparer = binding.load_position_comparer
-        self.executor.submit(self._balancer.start)
         self.telescope = binding.telescope
         self.magnet = binding.magnet
         self.start_signal_receiver = binding.start_signal_receiver
@@ -23,13 +22,14 @@ class Controller(object):
         print("Listening for start")
         print("----------------------------")
         print("                            ")
-        self.start_signal_receiver.StartListening()
+        self.start_signal_receiver.start_listening()
 
     def switch_to_start(self):
         print("----------------------------")
         print("switching to start now..")
         print("----------------------------")
         print("                            ")
+        self.executor.submit(self._balancer.start)
         self._move_until_load_reached()
         self._get_load()
         self._move_until_goal_reached()

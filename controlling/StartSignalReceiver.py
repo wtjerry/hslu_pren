@@ -4,7 +4,6 @@ from networking.SocketServer import SocketServer
 
 
 class StartSignalReceiver:
-
     def __init__(self, executor, start):
         self._executor = executor
         self._start_function = start

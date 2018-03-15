@@ -1,4 +1,3 @@
-
 class DummyMovement:
     def __init__(self):
         self.is_moving = False
@@ -10,6 +9,3 @@ class DummyMovement:
     def stop_moving(self):
         print("stopped moving")
         self.is_moving = False
-
-# Start Moving
-# Stop Moving

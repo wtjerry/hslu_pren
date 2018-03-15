@@ -4,7 +4,3 @@ class DummyMagnet:
 
     def deactivate(self):
         print("Magnet deactivated")
-
-
-# Activate
-# Deactivate
