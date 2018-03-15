@@ -20,7 +20,7 @@ class Binding:
     use_real_position_output = False
     use_real_telescope = False
     use_real_x_position = False
-    use_real_start_signal = False
+    use_real_start_signal = True
 
     def __init__(self, executor, start, goalfound):
         #TODO replace Dummy(), it raises an error when initialized
