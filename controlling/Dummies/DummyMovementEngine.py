@@ -1,4 +1,4 @@
-class DummyMovement:
+class DummyMovementEngine:
     def __init__(self):
         self.is_moving = False
 

@@ -10,5 +10,4 @@ class DummyTargetDetection:
     def start(self):
         print("searching target....")
         time.sleep(5)
-        print("target found!")
         self.target_found()

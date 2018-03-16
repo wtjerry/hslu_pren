@@ -9,11 +9,11 @@ class Controller(object):
         self.executor = ThreadPoolExecutor(max_workers=4)
         binding = Binding(self.executor, self.on_start, self.on_target_found)
         self.target_detection = binding.target_detection
-        self._movement = binding.movement
-        self.x_position = binding.x_position
+        self._movement = binding.movement_engine
+        self.position = binding.position
         self._balancer = binding.balancer
         self.load_position_comparer = binding.load_position_comparer
-        self.telescope = binding.telescope
+        self.telescope = binding.telescope_engine
         self.magnet = binding.magnet
         self.start_signal_receiver = binding.start_signal_receiver
 
@@ -47,10 +47,12 @@ class Controller(object):
         print("getting the load")
         print("----------------------------")
         print("                            ")
-        self.telescope.down(100)
+        height = self.position.calculate_z(self.position.calculate_x())
+        self.telescope.down(height)
         self.magnet.start()
         time.sleep(1)
-        self.telescope.up(100)
+        self.executor.submit(self.position.start_position_output)
+        self.telescope.up(height)
         self._move_until_target_reached()
 
     def _move_until_target_reached(self):
@@ -77,11 +79,12 @@ class Controller(object):
         print("Deliver Load")
         print("----------------------------")
         print("                            ")
-        self.telescope.down(150)
+        self.telescope.down(self.position.calculate_z(self.position.calculate_x()))
         self.magnet.stop()
+        time.sleep(2)
+        self.position.stop_position_output()
         time.sleep(0.5)
         print("move until finnished")
         self._movement.start_moving()
-        time.sleep(1)
-        self._movement.stop_moving()
         print("finished")
+        exit()
