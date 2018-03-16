@@ -1,5 +1,5 @@
 from controlling.Dummies.Dummy import Dummy
-from controlling.Dummies.DummyBalancer import DummyBalancer
+from controlling.Dummies.DummyBalanceEngine import DummyBalanceEngine
 from controlling.Dummies.DummyTargetDetection import DummyTargetDetection
 from controlling.Dummies.DummyLoadPositionComparer import DummyLoadPositionComparer
 from controlling.Dummies.DummyMagnet import DummyMagnet
@@ -26,14 +26,18 @@ class Binding:
         # TODO replace Dummy(), it raises an error when initialized
         self.movement = Dummy() if self.use_real_movement else DummyMovement()
         self.x_position = Dummy() if self.use_real_x_position else DummyXPosition(self.movement)
-        self.balancer = Dummy() if self.use_real_balancer else DummyBalancer(self.x_position)
+        self.balancer = Dummy() if self.use_real_balancer else DummyBalanceEngine(self.x_position)
         self.target_detection = Dummy() if self.use_real_goal_detection else DummyTargetDetection(goalfound_function)
         self.load_position_comparer = Dummy() if self.use_real_load_position_comparer \
             else DummyLoadPositionComparer(self.x_position)
 
-        self.magnet = Dummy() if self.use_real_magnet else DummyMagnet()
+        self.magnet = self.get_real_magnet() if self.use_real_magnet else DummyMagnet()
         # self.position_calculator = Dummy() if self.use_real_position_calculator else DummyPositionCalculator()
         # self.position_output = Dummy() if self.use_real_position_output else DummyPositionOutput()
         self.telescope = Dummy() if self.use_real_telescope else DummyTelescope()
         self.start_signal_receiver = StartSignalReceiver(executor, start_function) if self.use_real_start_signal \
             else DummyStartSignalReceiver(executor, start_function)
+
+    def get_real_magnet(self):
+        from magnet.Magnet import Magnet
+        return Magnet()

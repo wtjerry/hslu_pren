@@ -1,6 +1,6 @@
 class DummyMagnet:
-    def activate(self):
+    def start(self):
         print("Magnet activated")
 
-    def deactivate(self):
+    def stop(self):
         print("Magnet deactivated")
