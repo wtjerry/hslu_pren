@@ -35,5 +35,5 @@ class Binding:
         # self.position_calculator = Dummy() if self.use_real_position_calculator else DummyPositionCalculator()
         # self.position_output = Dummy() if self.use_real_position_output else DummyPositionOutput()
         self.telescope = Dummy() if self.use_real_telescope else DummyTelescope()
-        self.start_socket_server = StartSignalReceiver(executor, start_function) if self.use_real_start_signal \
+        self.start_socket_server = StartSignalReceiver(executor, start_function) if self.use_real_socket_server \
             else DummyStartSignalReceiver(executor, start_function)
