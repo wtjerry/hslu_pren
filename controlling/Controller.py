@@ -2,6 +2,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 
 from controlling.Binding import Binding
+from controlling.Logger import Logger
 from networking.IpProvider import get_wlan_ip_address
 from networking.SocketServer import SocketServer
 
@@ -19,6 +20,7 @@ class Controller(object):
         self.magnet = binding.magnet
         ip = get_wlan_ip_address()
         self._socket_server = SocketServer(address=ip)
+        self._logger = Logger(self._socket_server)
 
     def listen_for_start(self):
         print("----------------------------")
@@ -37,17 +39,13 @@ class Controller(object):
         print("                            ")
         self.executor.submit(self._balancer.start)
         self._move_until_load_reached()
-        try:
-            self._socket_server.queue.append("+++++++++++++++++++++++++++++++++++++")
-        except Exception as ex:
-            self._socket_server.stop()
-            print(ex)
 
     def _move_until_load_reached(self):
         print("----------------------------")
         print("Move until load reached")
         print("----------------------------")
         print("                            ")
+        self._logger.major_step("Move until load reached")
         self._movement.start_moving()
         self.load_position_comparer.check_until_reached()
         self._movement.stop_moving()
