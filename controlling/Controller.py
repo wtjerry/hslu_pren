@@ -3,6 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 from controlling.Binding import Binding
 from controlling.Logger import Logger
+from networking.ConnectionHandler import ConnectionHandler
 from networking.IpProvider import get_wlan_ip_address
 from networking.SocketServer import SocketServer
 
@@ -19,8 +20,9 @@ class Controller(object):
         self.telescope = binding.telescope
         self.magnet = binding.magnet
         ip = get_wlan_ip_address()
-        self._socket_server = SocketServer(address=ip)
-        self._logger = Logger(self._socket_server)
+        handler = ConnectionHandler()
+        self._socket_server = SocketServer(handler, address=ip)
+        self._logger = Logger(handler)
 
     def listen_for_start(self):
         print("----------------------------")

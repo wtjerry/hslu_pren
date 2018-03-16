@@ -1,6 +1,6 @@
 class Logger(object):
-    def __init__(self, socket_server):
-        self._socket_server = socket_server
+    def __init__(self, connection_handler):
+        self._connection_handler = connection_handler
 
     def major_step(self, step):
         s = "\n" \
@@ -15,7 +15,7 @@ class Logger(object):
 
     def _enqueue(self, s):
         try:
-            self._socket_server.queue.append(s)
+            self._connection_handler.queue.append(s)
         except Exception as ex:
-            self._socket_server.stop()
+            self._connection_handler.stop()
             print(ex)
