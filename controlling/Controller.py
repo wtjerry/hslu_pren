@@ -41,10 +41,6 @@ class Controller(object):
         self._move_until_load_reached()
 
     def _move_until_load_reached(self):
-        print("----------------------------")
-        print("Move until load reached")
-        print("----------------------------")
-        print("                            ")
         self._logger.major_step("Move until load reached")
         self._movement.start_moving()
         self.load_position_comparer.check_until_reached()
@@ -52,10 +48,7 @@ class Controller(object):
         self._get_load()
 
     def _get_load(self):
-        print("----------------------------")
-        print("getting the load")
-        print("----------------------------")
-        print("                            ")
+        self._logger.major_step("getting the load")
         self.telescope.down(100)
         self.magnet.activate()
         time.sleep(1)
@@ -63,29 +56,18 @@ class Controller(object):
         self._move_until_target_reached()
 
     def _move_until_target_reached(self):
-        print("----------------------------")
-        print("move until target reached")
-        print("----------------------------")
-        print("                            ")
+        self._logger.major_step("move until target reached")
         self._movement.start_moving()
         self.executor.submit(self.target_detection.start)
 
     def on_target_found(self):
-        print("----------------------------")
-        print("Target found!")
-        print("----------------------------")
-        print("                            ")
-        print("Moving until target reached")
+        self._logger.major_step("Target found!")
         time.sleep(0.3)
-        print("Target reached")
         self._movement.stop_moving()
         self._deliver_load()
 
     def _deliver_load(self):
-        print("----------------------------")
-        print("Deliver Load")
-        print("----------------------------")
-        print("                            ")
+        self._logger.major_step("Deliver Load")
         self.telescope.down(150)
         self.magnet.deactivate()
         time.sleep(0.5)
@@ -93,6 +75,7 @@ class Controller(object):
         self._movement.start_moving()
         time.sleep(1)
         self._movement.stop_moving()
-        print("finished")
         self._balancer.stop()
+        self._logger.major_step("finished")
+        time.sleep(0.5)
         self._socket_server.stop()

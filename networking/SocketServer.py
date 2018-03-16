@@ -16,11 +16,13 @@ class SocketServer(object):
     def stop(self):
         self._keep_socket_open = False
         if self._sock:
+            self._sock.shutdown()
             self._sock.close()
 
     def start(self, start_function):
         print("starting socket server")
         self._sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self._sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         try:
             self._sock.bind((self.address, self.port))
             self._sock.listen(1)
@@ -41,7 +43,7 @@ class SocketServer(object):
             while self._keep_socket_open:
                 if len(self.queue) > 0:
                     connection.send(self.queue.pop().encode())
-                    time.sleep(0.5)
+                    time.sleep(0.25)
             connection.shutdown(socket.SHUT_RDWR)
             connection.close()
             print("connection closed")

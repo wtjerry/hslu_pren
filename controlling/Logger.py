@@ -3,7 +3,8 @@ class Logger(object):
         self._socket_server = socket_server
 
     def major_step(self, step):
-        s = "----------------------------" + "\n" \
+        s = "\n" \
+            + "----------------------------" + "\n" \
             + step + "\n" \
             + "----------------------------" + "\n" \
             + "                            " + "\n"
