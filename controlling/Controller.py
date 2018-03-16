@@ -5,6 +5,7 @@ from controlling.Binding import Binding
 from controlling.Logger import Logger
 from networking.ConnectionHandler import ConnectionHandler
 from networking.IpProvider import get_wlan_ip_address
+from networking.PositionSender import PositionSender
 from networking.SocketServer import SocketServer
 
 
@@ -23,6 +24,7 @@ class Controller(object):
         handler = ConnectionHandler()
         self._socket_server = SocketServer(handler, address=ip)
         self._logger = Logger(handler)
+        self._position_sender = PositionSender(handler)
 
     def listen_for_start(self):
         print("----------------------------")
@@ -44,6 +46,7 @@ class Controller(object):
 
     def _move_until_load_reached(self):
         self._logger.major_step("Move until load reached")
+        self._position_sender.send(42, 1337)
         self._movement.start_moving()
         self.load_position_comparer.check_until_reached()
         self._movement.stop_moving()
