@@ -4,19 +4,15 @@ from networking.SocketServer import SocketServer
 
 
 class StartSignalReceiver:
-    def __init__(self, executor, start):
+    def __init__(self, executor, start_function, enqueue_for_send_function):
         self._executor = executor
-        self._start_function = start
+        self._start_function = start_function
+        self._enqueue_for_send_function = enqueue_for_send_function
 
-    @staticmethod
-    def _startSocketServer():
+    def _startSocketServer(self):
         ip = get_wlan_ip_address()
         print("starting socket server")
-        SocketServer(address=ip).start()
+        SocketServer(address=ip).start(self._start_function, self._enqueue_for_send_function)
 
     def start_listening(self):
-        # if the start_function is not dispatched to another thread,
-        # the socket server is blocked while the main algorithm is running
-        # This is not desired once we need to send the current position back over the socket
-        CommandFactory.setup_start(self._start_function)
         self._executor.submit(self._startSocketServer)

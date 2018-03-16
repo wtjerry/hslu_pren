@@ -20,7 +20,7 @@ class Binding:
     use_real_position_output = False
     use_real_telescope = False
     use_real_x_position = False
-    use_real_start_signal = False
+    use_real_socket_server = False
 
     def __init__(self, executor, start_function, goalfound_function):
         # TODO replace Dummy(), it raises an error when initialized
@@ -35,5 +35,5 @@ class Binding:
         # self.position_calculator = Dummy() if self.use_real_position_calculator else DummyPositionCalculator()
         # self.position_output = Dummy() if self.use_real_position_output else DummyPositionOutput()
         self.telescope = Dummy() if self.use_real_telescope else DummyTelescope()
-        self.start_signal_receiver = StartSignalReceiver(executor, start_function) if self.use_real_start_signal \
+        self.start_socket_server = StartSignalReceiver(executor, start_function) if self.use_real_start_signal \
             else DummyStartSignalReceiver(executor, start_function)

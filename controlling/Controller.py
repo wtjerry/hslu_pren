@@ -2,11 +2,14 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 
 from controlling.Binding import Binding
+from networking.IpProvider import get_wlan_ip_address
+from networking.SocketServer import SocketServer
 
 
 class Controller(object):
     def __init__(self):
         self.executor = ThreadPoolExecutor(max_workers=4)
+        self._socket_server_executor = ThreadPoolExecutor(max_workers=1)
         binding = Binding(self.executor, self.on_start, self.on_target_found)
         self.target_detection = binding.target_detection
         self._movement = binding.movement
@@ -15,22 +18,27 @@ class Controller(object):
         self.load_position_comparer = binding.load_position_comparer
         self.telescope = binding.telescope
         self.magnet = binding.magnet
-        self.start_signal_receiver = binding.start_signal_receiver
+        ip = get_wlan_ip_address()
+        self._socket_server = SocketServer(address=ip)
+
+    def _startSocketServer(self):
+        self._socket_server.start(self._on_start)
 
     def listen_for_start(self):
         print("----------------------------")
         print("Listening for start")
         print("----------------------------")
         print("                            ")
-        self.start_signal_receiver.start_listening()
+        self._socket_server_executor.submit(self._startSocketServer)
 
-    def on_start(self):
+    def _on_start(self):
         print("----------------------------")
         print("switching to start now..")
         print("----------------------------")
         print("                            ")
         self.executor.submit(self._balancer.start)
         self._move_until_load_reached()
+        self._socket_server.queue.append("+++++++++++++++++++++++++++++++++++++")
 
     def _move_until_load_reached(self):
         print("----------------------------")
