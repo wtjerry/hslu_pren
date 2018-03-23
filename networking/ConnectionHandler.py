@@ -1,17 +1,24 @@
-from networking.CommandFactory import CommandFactory
-from networking.Decoder import Decoder
+import time
 
 
 class ConnectionHandler(object):
-    def handle(self, connection):
-        try:
-            data = connection.recv(1024)
-            if data:
-                command_id, parameter = Decoder().decode(data)
-                command = CommandFactory().create(command_id, parameter)
-                command.execute()
-        except ValueError as e:
-            print(e)
+    def __init__(self):
+        self.queue = []
+        self._keep_socket_open = True
+
+    def stop(self):
+        self._keep_socket_open = False
+
+    def handle(self, connection, start_function):
+        data = connection.recv(1024)
+        if self._contains_start_signal(data):
+            start_function()
+            while self._keep_socket_open:
+                if len(self.queue) > 0:
+                    connection.send(self.queue.pop().encode())
+                    time.sleep(0.25)
             connection.close()
-        finally:
-            connection.close()
+
+    @staticmethod
+    def _contains_start_signal(data):
+        return data.decode() == "start\n"
