@@ -14,10 +14,15 @@ from networking.SocketServer import SocketServer
 class Controller(object):
     def __init__(self):
         self._executor = ThreadPoolExecutor(max_workers=4)
-        self._queue = Queue()
 
-        binding = Binding()
-        self._target_detection = binding.target_detection
+        ip = get_wlan_ip_address()
+        connection_handler = ConnectionHandler()
+        self._socket_server = SocketServer(connection_handler, address=ip)
+        self._logger = Logger(connection_handler)
+        position_sender = PositionSender(connection_handler)
+
+        binding = Binding(position_sender)
+        target_detection = binding.target_detection
         self._movement = binding.movement_engine
         self._position = binding.position
         self._balancer = binding.balancer
@@ -25,13 +30,8 @@ class Controller(object):
         self._telescope = binding.telescope_engine
         self._magnet = binding.magnet
 
-        self._search_target_process = Process(target=self._target_detection.start, args=(self._queue,))
-
-        ip = get_wlan_ip_address()
-        connection_handler = ConnectionHandler()
-        self._socket_server = SocketServer(connection_handler, address=ip)
-        self._logger = Logger(connection_handler)
-        self._position_sender = PositionSender(connection_handler)
+        self._queue = Queue()
+        self._search_target_process = Process(target=target_detection.start, args=(self._queue,))
 
     def listen_for_start(self):
         self._socket_server.start(self._enqueue_on_start)
@@ -54,7 +54,7 @@ class Controller(object):
 
     def _get_load(self):
         self._logger.major_step("Getting load")
-        height = self._position.calculate_z(self._position.calculate_x())
+        height = self._position.get_current_z()
         self._telescope.down(height)
         self._magnet.start()
         time.sleep(1)
@@ -80,7 +80,7 @@ class Controller(object):
 
     def _deliver_load(self):
         self._logger.major_step("Delivering load")
-        self._telescope.down(self._position.calculate_z(self._position.calculate_x()))
+        self._telescope.down(self._position.get_current_z())
         self._magnet.stop()
         time.sleep(2)
         self._position.stop()

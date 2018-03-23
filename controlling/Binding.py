@@ -21,14 +21,14 @@ class Binding:
     use_real_start_signal = False
     use_real_position = False
 
-    def __init__(self):
+    def __init__(self, position_sender):
         # TODO replace Dummy(), it raises an error when initialized
         self.movement_engine = Dummy() if self.use_real_movement else DummyMovementEngine()
         self.target_detection = Dummy() if self.use_real_goal_detection else DummyTargetDetection()
         self.magnet = self.get_real_magnet() if self.use_real_magnet else DummyMagnet()
         self.telescope_engine = Dummy() if self.use_real_telescope else DummyTelescopeEngine()
         self.position = self._get_real_position() if self.use_real_position \
-            else DummyPosition(self.movement_engine, self.telescope_engine)
+            else DummyPosition(self.movement_engine, self.telescope_engine, position_sender)
         self.balancer = Dummy() if self.use_real_balancer else DummyBalanceEngine(self.position)
         self.load_position_comparer = Dummy() if self.use_real_load_position_comparer \
             else DummyLoadPositionComparer(self.position)

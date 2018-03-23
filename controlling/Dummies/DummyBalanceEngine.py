@@ -24,6 +24,6 @@ class DummyBalanceEngine:
     def start_balancing(self):
         print("Start balancing")
         while self._should_balance:
-            x_position = self._position.calculate_x()
+            x_position = self._position.get_current_x()
             print("Korriegiere neigung: ", self._lookup_table[math.floor(x_position / 100)])
             time.sleep(1)
