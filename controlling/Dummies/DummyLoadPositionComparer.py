@@ -2,16 +2,16 @@ import time
 
 
 class DummyLoadPositionComparer:
-    def __init__(self, x_pos):
+    def __init__(self, pos):
         self._check_for_load = True
-        self.x_position = x_pos
+        self._position = pos
 
         # Load position in mm
         self._load_position = 650
 
     def check_until_reached(self):
         while self._check_for_load:
-            position = self.x_position.get_position()
+            position = self._position.calculate_x()
             if position >= self._load_position:
                 print("Load Reached!")
                 self._check_for_load = False

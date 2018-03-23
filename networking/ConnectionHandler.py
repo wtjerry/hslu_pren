@@ -18,7 +18,6 @@ class ConnectionHandler(object):
                     connection.send(self.queue.pop().encode())
                     time.sleep(0.25)
             connection.close()
-            print("connection closed")
 
     @staticmethod
     def _contains_start_signal(data):
