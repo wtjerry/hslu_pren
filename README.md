@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/wtjerry/hslu_pren.svg?branch=master)](https://travis-ci.org/wtjerry/hslu_pren)
 
+
 # how to start the App
 ## startup
 Either use the provided but experimental systemd service in ExampleScripts/
@@ -20,7 +21,7 @@ and then
 start
 ```
 
-### Windows:
+### Linux:
 ``` sh 
 nc your_current_wlan_ip 12345
 ```
@@ -28,3 +29,8 @@ and then
 ``` sh
 start
 ```
+
+
+# Notes
+As the Software is still under development and there are external hardware dependencies, some parts have dummy implementations.
+You can configure whether to use the real or the dummy implementation in *Bindings.py*.
