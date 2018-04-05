@@ -1,37 +1,45 @@
+from arduinocommunication.communication import Communication
 from controlling.Dummies.Dummy import Dummy
-from controlling.Dummies.DummyBalanceEngine import DummyBalanceEngine
+from controlling.Dummies.DummyTiltEngine import DummyTiltEngine
 from controlling.Dummies.DummyPosition import DummyPosition
 from controlling.Dummies.DummyTargetDetection import DummyTargetDetection
 from controlling.Dummies.DummyLoadPositionComparer import DummyLoadPositionComparer
 from controlling.Dummies.DummyMagnet import DummyMagnet
 from controlling.Dummies.DummyMovementEngine import DummyMovementEngine
 from controlling.Dummies.DummyTelescopeEngine import DummyTelescopeEngine
+from controlling.TiltController import TiltController
+from engines.MovementEngine import MovementEngine
+from engines.TelescopeEngine import TelescopeEngine
+from engines.TiltEngine import TiltEngine
 
 
 class Binding:
-    use_real_balancer = False
-    use_real_goal_detection = False
-    use_real_load_position_comparer = False
-    use_real_magnet = False
-    use_real_movement = False
-    use_real_position_calculator = False
-    use_real_position_output = False
-    use_real_telescope = False
-    use_real_x_position = False
-    use_real_start_signal = False
-    use_real_position = False
+    _use_real_tilt_engine = False
+    _use_real_goal_detection = False
+    _use_real_load_position_comparer = False
+    _use_real_magnet = False
+    _use_real_movement = False
+    _use_real_position_calculator = False
+    _use_real_position_output = False
+    _use_real_telescope = False
+    _use_real_x_position = False
+    _use_real_start_signal = False
+    _use_real_position = False
+    _use_real_communication = False
 
     def __init__(self):
         # TODO replace Dummy(), it raises an error when initialized
-        self.movement_engine = Dummy() if self.use_real_movement else DummyMovementEngine()
-        self.target_detection = Dummy() if self.use_real_goal_detection else DummyTargetDetection()
-        self.magnet = self.get_real_magnet() if self.use_real_magnet else DummyMagnet()
-        self.telescope_engine = Dummy() if self.use_real_telescope else DummyTelescopeEngine()
-        self.position = self._get_real_position() if self.use_real_position \
+        self._communication = Communication() if self._use_real_communication else object()
+        self.movement_engine = MovementEngine(self._communication) if self._use_real_movement else DummyMovementEngine()
+        self.target_detection = Dummy() if self._use_real_goal_detection else DummyTargetDetection()
+        self.magnet = self.get_real_magnet() if self._use_real_magnet else DummyMagnet()
+        self.telescope_engine = TelescopeEngine(self._communication) if self._use_real_telescope else DummyTelescopeEngine()
+        self.position = self._get_real_position() if self._use_real_position \
             else DummyPosition(self.movement_engine, self.telescope_engine)
-        self.balancer = Dummy() if self.use_real_balancer else DummyBalanceEngine(self.position)
-        self.load_position_comparer = Dummy() if self.use_real_load_position_comparer \
+        self.tilt_engine = TiltEngine(self._communication) if self._use_real_tilt_engine else DummyTiltEngine()
+        self.load_position_comparer = Dummy() if self._use_real_load_position_comparer \
             else DummyLoadPositionComparer(self.position)
+        self.tilt_controller = TiltController(self.position, self.tilt_engine)
 
     def _get_real_position(self):
         from position.Position import Position

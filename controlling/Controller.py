@@ -20,7 +20,7 @@ class Controller(object):
         self._target_detection = binding.target_detection
         self._movement = binding.movement_engine
         self._position = binding.position
-        self._balancer = binding.balancer
+        self._tilt_controller = binding.tilt_controller
         self._load_position_comparer = binding.load_position_comparer
         self._telescope = binding.telescope_engine
         self._magnet = binding.magnet
@@ -41,7 +41,7 @@ class Controller(object):
 
     def _on_start(self):
         self._logger.major_step("Switching to start")
-        self._executor.submit(self._balancer.start)
+        self._executor.submit(self._tilt_controller.start)
         self._executor.submit(self._position.start_calc_pos)
         self._move_until_load_reached()
 
@@ -89,7 +89,7 @@ class Controller(object):
         self._finish()
 
     def _finish(self):
-        self._balancer.stop()
+        self._tilt_controller.stop()
         self._logger.major_step("Finished")
         time.sleep(1)
         self._socket_server.stop()
