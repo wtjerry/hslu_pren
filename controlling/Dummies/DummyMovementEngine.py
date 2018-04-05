@@ -2,10 +2,13 @@ class DummyMovementEngine:
     def __init__(self):
         self.is_moving = False
 
-    def start_moving(self):
-        print("Started to move")
+    def start(self, speed):
+        print("Started to move at speed", speed)
         self.is_moving = True
 
-    def stop_moving(self):
+    def stop(self):
         print("stopped moving")
         self.is_moving = False
+
+    def get_x(self):
+        return 42
