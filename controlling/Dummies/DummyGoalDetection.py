@@ -1,12 +1,12 @@
 import time
 
-from controlling.processMessages import TARGET_FOUND
+from controlling.processMessages import GOAL_FOUND
 
 
-class DummyTargetDetection:
+class DummyGoalDetection:
     listeners = []
 
     def start(self, queue):
         print("searching target....")
         time.sleep(5)
-        queue.put(TARGET_FOUND)
+        queue.put(GOAL_FOUND)

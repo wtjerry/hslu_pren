@@ -2,7 +2,7 @@ class DummyMovementEngine:
     def __init__(self):
         self.is_moving = False
 
-    def start_moving(self):
+    def start_moving(self, speed):
         print("Started to move")
         self.is_moving = True
 
