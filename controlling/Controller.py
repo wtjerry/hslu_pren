@@ -47,9 +47,9 @@ class Controller(object):
 
     def _move_until_load_reached(self):
         self._logger.major_step("Moving to load")
-        self._movement.start_moving()
+        self._movement.start(1)
         self._load_position_comparer.check_until_reached()
-        self._movement.stop_moving()
+        self._movement.stop()
         self._get_load()
 
     def _get_load(self):
@@ -64,7 +64,7 @@ class Controller(object):
 
     def _move_until_target_reached(self):
         self._logger.major_step("Moving to target")
-        self._movement.start_moving()
+        self._movement.start(1)
         self._search_target_process.start()
         self._block_until_target_found()
 
@@ -75,7 +75,7 @@ class Controller(object):
     def _on_target_found(self):
         self._logger.major_step("Target found")
         time.sleep(0.3)
-        self._movement.stop_moving()
+        self._movement.stop()
         self._deliver_load()
 
     def _deliver_load(self):
@@ -84,7 +84,7 @@ class Controller(object):
         self._magnet.stop()
         time.sleep(2)
         self._position.stop()
-        self._movement.start_moving()
+        self._movement.start(1)
         time.sleep(0.5)
         self._finish()
 

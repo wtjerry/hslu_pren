@@ -3,7 +3,7 @@ class Algo(object):
         print("test event handled")
 
     def handle_x_changed(self, x):
-        print("new {x}".format(x=x))
+        print("new ", x)
 
 
 class XPosition(object):
@@ -32,12 +32,12 @@ class XPosition(object):
 
 if __name__ == '__main__':
     a = Algo()
-    x = XPosition()
+    x_position = XPosition()
 
-    x.register_test_event(a.handle_test_event)
-    x.register_test_event(lambda: print("hello from lambda method"))
-    x.raise_test_event()
+    x_position.register_test_event(a.handle_test_event)
+    x_position.register_test_event(lambda: print("hello from lambda method"))
+    x_position.raise_test_event()
 
-    x.register_x_changed(a.handle_x_changed)
-    x.register_x_changed(lambda new_x: print("lambda method with x: '{}'".format(new_x)))
-    x.raise_x_changed(27)
+    x_position.register_x_changed(a.handle_x_changed)
+    x_position.register_x_changed(lambda new_x: print("lambda method with x: '{}'".format(new_x)))
+    x_position.raise_x_changed(27)

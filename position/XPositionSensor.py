@@ -20,7 +20,7 @@ class XPositionSensor(object):
     _FRONT_SENSOR_DISTANCE_TO_CENTER = 197.5
     _front_sensor = None
     _front_sensor_cached_value = _TRACK_LENGTH - _back_sensor_cached_value - \
-                                 _BACK_SENSOR_DISTANCE_TO_CENTER - _FRONT_SENSOR_DISTANCE_TO_CENTER
+        _BACK_SENSOR_DISTANCE_TO_CENTER - _FRONT_SENSOR_DISTANCE_TO_CENTER
 
     def __init__(self):
         """

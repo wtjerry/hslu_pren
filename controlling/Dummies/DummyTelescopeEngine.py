@@ -10,7 +10,7 @@ class DummyTelescopeEngine:
 
     def down(self, height):
         print("lower telescope")
-        for counter in range(0, math.floor(height)):
+        for counter in range(0, int(math.floor(height))):
             self.z += 1
             time.sleep(0.001)
         self._is_lowered = True
@@ -18,7 +18,7 @@ class DummyTelescopeEngine:
 
     def up(self, height):
         print("retract telescope")
-        for counter in range(0, math.floor(height)):
+        for counter in range(0, int(math.floor(height))):
             self.z -= 1
             time.sleep(0.001)
 

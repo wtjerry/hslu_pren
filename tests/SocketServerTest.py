@@ -1,6 +1,8 @@
 import unittest
 from unittest import mock
 from unittest.mock import MagicMock
+
+from networking.ConnectionHandler import ConnectionHandler
 from networking.SocketServer import SocketServer
 
 
@@ -18,7 +20,7 @@ class SocketServerTest(unittest.TestCase):
 
             expected_address = "someAddress"
             expected_port = 9999
-            server = SocketServer(address=expected_address, port=expected_port)
+            server = SocketServer(ConnectionHandler(), address=expected_address, port=expected_port)
             server.start(lambda: print("starting now.."))
 
             local_socket_mock.bind.assert_called_once_with((expected_address, expected_port))
