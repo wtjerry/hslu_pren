@@ -1,12 +1,17 @@
 [![Build Status](https://travis-ci.org/wtjerry/hslu_pren.svg?branch=master)](https://travis-ci.org/wtjerry/hslu_pren)
 
+# how to deploy to the raspberry PI
+just copy all files within the repository to the pi (you may want to exclude .git/ and tests/ for performance reasons)
+``` sh
+rsync -rav -e ssh --exclude='.git/' --exclude='tests/'  . pi@PI_IP:/home/pi/pren/
+```
 
 # how to start the App
 ## startup
 Either use the provided but experimental systemd service in ExampleScripts/
 or start via:
 ``` sh
-cd /path_to_repository/prenNetworkConnection; /usr/bin/python3 -u ./App.py &
+cd path_to_repository/; /usr/bin/python3 -u ./App.py &
 ```
 
 ## start signal
