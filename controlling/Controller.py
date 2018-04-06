@@ -2,6 +2,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from multiprocessing import Queue, Process
 
+from controlling.AsyncProcessor import AsyncProcessor
 from controlling.Binding import Binding
 from controlling.Logger import Logger
 from controlling.processMessages import GOAL_FOUND
@@ -17,7 +18,7 @@ class Controller(object):
     FINNISH_SPEED = 1
 
     def __init__(self):
-        self._executor = ThreadPoolExecutor(max_workers=4)
+        self._executor = AsyncProcessor(ThreadPoolExecutor(max_workers=4))
         position_sender = self.get_position_sender()
         binding = Binding(position_sender)
 
@@ -45,12 +46,12 @@ class Controller(object):
         self._socket_server.start(self._enqueue_on_start)
 
     def _enqueue_on_start(self):
-        self._executor.submit(self._on_start)
+        self._executor.enqueue(self._on_start)
 
     def _on_start(self):
         self._logger.major_step("Switching to start")
-        self._executor.submit(self._tilt_controller.start)
-        self._executor.submit(self._position.start_calc_pos)
+        self._executor.enqueue(self._tilt_controller.start)
+        self._executor.enqueue(self._position.start_calc_pos)
         self._move_until_load_reached()
 
     def _move_until_load_reached(self):
@@ -66,7 +67,7 @@ class Controller(object):
         self._telescope.down(height)
         self._magnet.start()
         time.sleep(1)
-        self._executor.submit(self._position.start_position_output)
+        self._executor.enqueue(self._position.start_position_output)
         self._telescope.up(height)
         self._move_until_goal_reached()
 
