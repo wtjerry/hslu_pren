@@ -8,7 +8,7 @@ class MovementEngine(object):
         self._communication = communication
 
     def start(self, speed):
-        self._communication.execute(self._START_COMMAND + speed)
+        self._communication.execute(self._START_COMMAND + str(speed))
 
     def stop(self):
         self._communication.execute(self._STOP_COMMAND)

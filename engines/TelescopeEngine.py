@@ -9,11 +9,11 @@ class TelescopeEngine(object):
 
     def up(self, mm):
         mm_formatted = self._get_formatted_mm(mm)
-        self._communication.execute(self._UP_COMMAND + mm_formatted)
+        self._communication.execute(self._UP_COMMAND + str(mm_formatted))
 
     def down(self, mm):
         mm_formatted = self._get_formatted_mm(mm)
-        self._communication.execute(self._DOWN_COMMAND + mm_formatted)
+        self._communication.execute(self._DOWN_COMMAND + str(mm_formatted))
 
     def get_z(self):
         z = self._communication.execute(self._GET_Z_COMMAND)

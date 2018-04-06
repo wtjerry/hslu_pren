@@ -19,10 +19,13 @@ class Communication(object):
         :return: A string with the return message.
         """
         command = command + self._COMMAND_TERMINATOR
+        print("Sending to Arduino: ", command)
         encoded_command = command.encode('utf-8')
         byteswritten = self._connection.write(encoded_command)
 
         if byteswritten == len(encoded_command):
-            return self._connection.readline().rstrip().decode('utf-8')
+            result = self._connection.readline().rstrip().decode('utf-8')
+            print("Arduino returned ", result)
+            return result
         else:
             raise IOError("Couldn't send to arduino!")
