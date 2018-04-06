@@ -3,7 +3,7 @@ import time
 
 
 class Communication(object):
-    _PORT = '/dev/ttyACM0'
+    _PORT = '/dev/ttyAMA0'
     _BAUDRATE = 115200
     _TIMEOUT = None
     _COMMAND_TERMINATOR = ";"
