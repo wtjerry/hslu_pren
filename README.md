@@ -11,8 +11,10 @@ rsync -rav -e ssh --exclude='.git/' --exclude='tests/'  . pi@PI_IP:/home/pi/pren
 Either use the provided but experimental systemd service in ExampleScripts/
 or start via:
 ``` sh
-cd path_to_repository/; /usr/bin/python3 -u ./App.py &
+cd path_to_repository/; /usr/bin/python3 -u ./App.py | tee last_run.log &
 ```
+
+It will create a logfile "last_run.log"
 
 ## start signal
 Once started the App goes into waiting mode and you need to send it a start signal:
