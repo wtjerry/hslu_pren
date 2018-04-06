@@ -1,6 +1,5 @@
 import time
 import serial
-import sys
 
 PORT = '/dev/ttyACM1'
 BAUDRATE = 9600

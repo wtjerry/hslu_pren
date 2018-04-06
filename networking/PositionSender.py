@@ -4,4 +4,4 @@ class PositionSender(object):
 
     def send(self, x, z):
         s = "new position x: '{x}' z: '{z}'\n".format(x=x, z=z)
-        self._connection_handler.queue.append(s)
+        self._connection_handler.enqueue_message(s)

@@ -10,14 +10,14 @@ def blocking_count_down(text):
 
 class ABC(object):
     def __init__(self):
-        self.__executor = ThreadPoolExecutor(max_workers=3)
+        self._executor = ThreadPoolExecutor(max_workers=3)
 
     def submit(self, text):
-        self.__executor.submit(blocking_count_down, text)
+        self._executor.submit(blocking_count_down, text)
         return text
 
     def stop(self):
-        self.__executor.stop()
+        self._executor.shutdown()
 
 
 a = ABC()

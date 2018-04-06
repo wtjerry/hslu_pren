@@ -1,9 +1,10 @@
 import time
+from queue import Queue
 
 
 class ConnectionHandler(object):
     def __init__(self):
-        self.queue = []
+        self._queue = Queue()
         self._keep_socket_open = True
 
     def stop(self):
@@ -14,10 +15,13 @@ class ConnectionHandler(object):
         if self._contains_start_signal(data):
             start_function()
             while self._keep_socket_open:
-                if len(self.queue) > 0:
-                    connection.send(self.queue.pop().encode())
-                    time.sleep(0.25)
+                if not self._queue.empty():
+                    connection.send(self._queue.get().encode())
+                    time.sleep(0.05)
             connection.close()
+
+    def enqueue_message(self, message):
+        self._queue.put(message)
 
     @staticmethod
     def _contains_start_signal(data):

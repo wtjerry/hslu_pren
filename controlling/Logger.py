@@ -15,7 +15,7 @@ class Logger(object):
 
     def _enqueue(self, s):
         try:
-            self._connection_handler.queue.append(s)
+            self._connection_handler.enqueue_message(s)
         except Exception as ex:
             self._connection_handler.stop()
             print(ex)

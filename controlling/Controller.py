@@ -55,9 +55,9 @@ class Controller(object):
 
     def _move_until_load_reached(self):
         self._logger.major_step("Moving to load")
-        self._movement.start_moving(self.MOVE_TO_LOAD_SPEED)
+        self._movement.start(self.MOVE_TO_LOAD_SPEED)
         self._load_position_comparer.check_until_reached()
-        self._movement.stop_moving()
+        self._movement.stop()
         self._get_load()
 
     def _get_load(self):
@@ -72,7 +72,7 @@ class Controller(object):
 
     def _move_until_goal_reached(self):
         self._logger.major_step("Moving to goal")
-        self._movement.start_moving(self.SEARCH_GOAL_SPEED)
+        self._movement.start(self.SEARCH_GOAL_SPEED)
         self._search_goal_process.start()
         self._block_until_goal_found()
 
@@ -83,7 +83,7 @@ class Controller(object):
     def _on_goal_found(self):
         self._logger.major_step("Goal found")
         time.sleep(0.3)
-        self._movement.stop_moving()
+        self._movement.stop()
         self._deliver_load()
 
     def _deliver_load(self):
@@ -92,13 +92,14 @@ class Controller(object):
         self._magnet.stop()
         time.sleep(2)
         self._position.stop()
-        self._movement.start_moving(self.FINNISH_SPEED)
+        self._movement.start(self.FINNISH_SPEED)
+
         time.sleep(0.5)
         self._finish()
 
     def _finish(self):
         self._tilt_controller.stop()
         self._logger.major_step("Finished")
-        time.sleep(1)
+        time.sleep(2)
         self._socket_server.stop()
         exit()

@@ -23,6 +23,6 @@ class TiltController:
     def start_balancing(self):
         print("Start balancing")
         while self._should_balance:
-            x_position = self._position.calculate_x()
+            x_position = self._position.get_current_x()
             self._tile_engine.correct(self._lookup_table[floor(x_position / 100)])
             sleep(1)

@@ -2,7 +2,7 @@ class MovementEngine(object):
     _START_COMMAND = "FBstart"
     _STOP_COMMAND = "FBstop"
     _GET_X_COMMAND = "FBgetx"
-    _communication = None;
+    _communication = None
 
     def __init__(self, communication):
         self._communication = communication
