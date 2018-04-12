@@ -29,11 +29,7 @@ class TargetDetection(object):
         if m00 > 0:
             cx = int(m['m10'] / m00)
             cy = int(m['m01'] / m00)
-        return (cx, cy)
-
-    @staticmethod
-    def draw_contours(image, contures, color, thickness):
-        cv2.drawContours(image, [contures], 0, color, thickness)
+        return cx, cy
 
     def find_threshold(self, image):
         image_gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
@@ -47,7 +43,6 @@ class TargetDetection(object):
         if len(approx) != 4:
             return False
         (x, y, w, h) = cv2.boundingRect(approx)
-        (cx, cy) = self.determine_center(contours)
         width_height_ratio = w / float(h)
         sensible_width_height_ratio = (self._MAX_SQUARE_XY_RATIO > width_height_ratio > self._MIN_SQUARE_XY_RATIO)
 
@@ -88,12 +83,9 @@ class TargetDetection(object):
             cont = item[0]
             hier = item[1]
             area = cv2.contourArea(cont)
-            # hier[3] = parent: smallest must have no child but a parent
             if area < min_area and hier[2] == -1 and hier[3] != -1:
                 min_area = area
                 min_cont = cont
-            # hier[2] = child: biggest must have a child (checking for no parent is
-            # unreliable, because the image frame could be the outermost parent)
             if area > max_area and hier[2] != -1:
                 max_area = area
                 max_cont = cont
@@ -112,14 +104,6 @@ class TargetDetection(object):
         middle = int(h / 2)
         return middle
 
-    def draw_middle_line(self, image):
-        _, w, _ = image.shape
-        middle = self.calc_middle(image)
-
-    def draw_distance_line(self, image, square_center):
-        middle = self.calc_middle(image)
-        x = square_center[0]
-
     def process(self, filename):
         image_bgr = cv2.imread(filename)
         image_rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
@@ -128,7 +112,6 @@ class TargetDetection(object):
         _, contours, hierarchy = cv2.findContours(threshold.copy(),
                                                   cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
-        self.draw_middle_line(image_rgb)
         square_candidates = []
         for item in zip(contours, hierarchy[0]):
             cont = item[0]
@@ -147,8 +130,6 @@ class TargetDetection(object):
             dist_px, dist_cm = self.estimate_distance_to_center(image_rgb, smallest)
             print('distance: {:4d}px {:7.3f}cm'.format(dist_px, dist_cm))
             if cx > 0 and cy > 0:
-                i = image_rgb
-                self.draw_distance_line(image_rgb, (cx, cy))
                 h, _, _ = image_rgb.shape
 
                 if h * 0.5 > dist_px >= h * 0.3:
