@@ -79,7 +79,7 @@ class Controller(object):
         self._logger.major_step("Moving to goal")
         self._movement.start(self.SEARCH_GOAL_SPEED)
         self._search_goal_process.start()
-        self._executor.submit(self._fail_safe)
+        self._executor.enqueue(self._fail_safe)
         self._block_until_goal_found()
 
     def _block_until_goal_found(self):
@@ -87,18 +87,23 @@ class Controller(object):
             self._on_goal_found()
 
     def _fail_safe(self):
-        while self._goal_found == False:
+        reverted = False
+
+        while self._goal_found == False & reverted == False:
+            print("loop 1")
             if self._position.get_current_x() >= self.END_DROP_ZONE:
                 self._movement.set_speed(self.REVERT_MOVEMENT)
-                break
+                reverted = True
 
-        while self._goal_found == False:
+        while self._goal_found == False & reverted:
+            print("loop 2")
             if self._position.get_current_x() <= self.START_DROP_ZONE:
                 self._movement.set_speed(self.SEARCH_GOAL_SPEED)
-                break
+                reverted = False
 
     def _on_goal_found(self):
         self._logger.major_step("Goal found")
+        self._goal_found = True
         time.sleep(0.3)
         self._movement.stop()
         self._deliver_load()
