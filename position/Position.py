@@ -7,7 +7,8 @@ class Position(object):
     _telescope_engine = None
     _should_calc = None
     _position_output = None
-    _x_pos = 320
+    _start_x_pos = 320
+    _x_pos = 0
     _z_pos = 0
     _START_HEIGHT = 600
     _TELESCOPE_HEIGHT = 150
@@ -22,7 +23,7 @@ class Position(object):
         self._should_calc = True
         while self._should_calc:
             if self._movement_engine.is_moving:
-                self._x_pos += self._calculate_x()
+                self._x_pos = self._calculate_x()
                 time.sleep(0.05)
 
             self._z_pos = self._calculate_z_from_x(self._x_pos)
@@ -33,12 +34,15 @@ class Position(object):
             self._position_sender.send(self._x_pos, self._z_pos)
             time.sleep(0.2)
 
+    def stop_output(self):
+        self._position_output = False
+
     def stop(self):
         self._position_output = False
         self._should_calc = False
 
     def _calculate_x(self):
-        return (self._x_pos + self._movement_engine.get_x()) / 2
+        return self._start_x_pos + self._movement_engine.get_x()
 
     def _calculate_z_from_x(self, x):
         return (math.tan(self._GROUND_TO_CABLE_ANGLE) * x) \

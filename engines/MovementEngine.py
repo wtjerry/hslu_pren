@@ -1,5 +1,6 @@
 class MovementEngine(object):
     _START_COMMAND = "FBstart"
+    _CHANGE_SPEED_COMMAND = "FBsetspeed"
     _STOP_COMMAND = "FBstop"
     _GET_X_COMMAND = "FBgetx"
     _communication = None
@@ -15,6 +16,9 @@ class MovementEngine(object):
     def stop(self):
         self._communication.execute(self._STOP_COMMAND)
         self.is_moving = False
+
+    def set_speed(self, speed):
+        self._communication.execute(self._CHANGE_SPEED_COMMAND + str(speed))
 
     def get_x(self):
         x = self._communication.execute(self._GET_X_COMMAND)

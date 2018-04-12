@@ -7,6 +7,7 @@ class DummyPosition:
     _telescope_engine = None
     _should_calc = None
     _position_output = None
+    START_X_POS = 320
     _x_pos = 320
     _z_pos = 0
     _START_HEIGHT = 575
@@ -20,19 +21,24 @@ class DummyPosition:
 
     def start_calc_pos(self):
         self._should_calc = True
-
         while self._should_calc:
             if self._movement_engine.is_moving:
-                self._x_pos += 5
-                time.sleep(0.05)
+                self._x_pos = self._calculate_x()
 
             self._z_pos = self._calculate_z_from_x(self._x_pos)
+            time.sleep(0.05)
+
+    def _calculate_x(self):
+        return self.START_X_POS + self._movement_engine.get_x()
 
     def start_position_output(self):
         self._position_output = True
         while self._position_output:
             self._position_sender.send(self._x_pos, self._z_pos)
             time.sleep(0.2)
+
+    def stop_output(self):
+        self._position_output = False
 
     def stop(self):
         self._position_output = False
