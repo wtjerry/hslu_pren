@@ -1,3 +1,6 @@
+import math
+
+
 class MovementEngine(object):
     _START_COMMAND = "FBstart"
     _STOP_COMMAND = "FBstop"
@@ -17,5 +20,7 @@ class MovementEngine(object):
         self.is_moving = False
 
     def get_x(self):
-        x = self._communication.execute(self._GET_X_COMMAND)
+        x_on_rope = self._communication.execute(self._GET_X_COMMAND)
+        alpha_angle = 8.13
+        x = x_on_rope * math.cos(alpha_angle)
         return int(x)
