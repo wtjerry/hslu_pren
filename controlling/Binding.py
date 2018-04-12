@@ -42,7 +42,6 @@ class Binding:
         self.tilt_controller = TiltController(self.position, self.tilt_engine)
 
     def _get_real_position(self, position_sender):
-
         from position.Position import Position
         return Position(self.movement_engine, self.telescope_engine, position_sender)
 
