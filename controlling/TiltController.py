@@ -17,7 +17,7 @@ class TiltController:
         self._should_balance = False
 
     def get_lookup_table(self):
-        for i in range(0, 34):
+        for i in range(0, 50):
             self._lookup_table.append(random())
 
     def start_balancing(self):
@@ -25,4 +25,4 @@ class TiltController:
         while self._should_balance:
             x_position = self._position.get_current_x()
             self._tile_engine.correct(self._lookup_table[floor(x_position / 100)])
-            sleep(1)
+            sleep(2.5)

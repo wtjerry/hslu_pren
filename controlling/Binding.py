@@ -12,7 +12,7 @@ from controlling.Dummies.DummyMagnet import DummyMagnet
 from controlling.Dummies.DummyMovementEngine import DummyMovementEngine
 from controlling.Dummies.DummyTelescopeEngine import DummyTelescopeEngine
 from engines.MovementEngine import MovementEngine
-from position.XPositionSensor import XPositionSensor
+
 
 
 class Binding:
@@ -42,6 +42,7 @@ class Binding:
         self.tilt_controller = TiltController(self.position, self.tilt_engine)
 
     def _get_real_position(self, position_sender):
+        from position.XPositionSensor import XPositionSensor
         from position.Position import Position
         return Position(XPositionSensor(), self.movement_engine, self.telescope_engine, position_sender)
 

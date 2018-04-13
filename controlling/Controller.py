@@ -21,7 +21,7 @@ class Controller(object):
     END_DROP_ZONE = 3300
 
     def __init__(self):
-        self._executor = AsyncProcessor(ThreadPoolExecutor(max_workers=4))
+        self._executor = AsyncProcessor(ThreadPoolExecutor(max_workers=6))
         position_sender = self.get_position_sender()
         binding = Binding(position_sender)
 
@@ -89,17 +89,17 @@ class Controller(object):
     def _fail_safe(self):
         reverted = False
 
-        while self._goal_found == False & reverted == False:
-            print("loop 1")
+        while (not self._goal_found) and (not reverted):
             if self._position.get_current_x() >= self.END_DROP_ZONE:
                 self._movement.set_speed(self.REVERT_MOVEMENT)
                 reverted = True
+            time.sleep(0.5)
 
-        while self._goal_found == False & reverted:
-            print("loop 2")
+        while (not self._goal_found) and reverted:
             if self._position.get_current_x() <= self.START_DROP_ZONE:
                 self._movement.set_speed(self.SEARCH_GOAL_SPEED)
                 reverted = False
+            time.sleep(0.5)
 
     def _on_goal_found(self):
         self._logger.major_step("Goal found")
@@ -113,24 +113,32 @@ class Controller(object):
         self._telescope.down(self._position.get_current_z())
         self._magnet.stop()
         time.sleep(2)
-        self._position.stop_output()
         self._movement.start(self.FINNISH_SPEED)
+        self._position.stop_output()
         self._finish()
 
     def _finish(self):
-        while True:
+        finished = False
+        while not finished:
+            print(self._position.get_current_x())
             if self._position.get_current_x() <= 3000:
                 self._movement.set_speed(5)
             elif self._position.get_current_x() <= 3300:
                 self._movement.set_speed(3)
-            elif self._movement.get_x() <= 3400:
+            elif self._position.get_current_x() <= 3400:
                 self._movement.set_speed(1)
-            if self._position.get_current_x() >= 3800:
+            elif self._position.get_current_x() >= 3600:
                 self._movement.stop()
-                break
+                finished = True
+            time.sleep(0.25)
 
         self._tilt_controller.stop()
         self._logger.major_step("Finished")
         time.sleep(1)
         self._socket_server.stop()
         exit()
+
+    def stop_all(self):
+        self._movement.stop()
+        self._position.stop()
+        self._tilt_controller.stop()
