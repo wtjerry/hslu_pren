@@ -33,7 +33,7 @@ class Binding:
         self.goal_detection = Dummy() if self.use_real_goal_detection else DummyGoalDetection()
         self.magnet = self.get_real_magnet() if self.use_real_magnet else DummyMagnet()
         self.telescope_engine = TelescopeEngine(self._communication) if self.use_real_telescope else DummyTelescopeEngine()
-        self.position = self._get_real_position() if self.use_real_position \
+        self.position = self._get_real_position(position_sender) if self.use_real_position \
             else DummyPosition(self.movement_engine, self.telescope_engine, position_sender)
         self.tilt_engine = TiltEngine(self._communication) if self.use_real_tilt_engine else DummyTiltEngine()
         self.load_position_comparer = Dummy() if self.use_real_load_position_comparer \
