@@ -19,7 +19,7 @@ class TargetDetection(object):
 
     def __init__(self):
         self._camera = picamera.PiCamera()
-        self._camera.resolution = (2400, 2400)
+        self._camera.resolution = (1920, 1080)
 
     @staticmethod
     def determine_center(contours):
