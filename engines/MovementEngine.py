@@ -7,6 +7,7 @@ class MovementEngine(object):
     _STOP_COMMAND = "FBstop"
     _GET_X_COMMAND = "FBgetx"
     _communication = None
+    _GROUND_TO_CABLE_ANGLE = 0.141897
 
     def __init__(self, communication):
         self._communication = communication
@@ -24,7 +25,6 @@ class MovementEngine(object):
         self._communication.execute(self._CHANGE_SPEED_COMMAND + str(speed))
 
     def get_x(self):
-        x_on_rope = self._communication.execute(self._GET_X_COMMAND)
-        alpha_angle = 8.13
-        x = x_on_rope * math.cos(alpha_angle)
+        x_on_rope = int(self._communication.execute(self._GET_X_COMMAND))
+        x = x_on_rope * math.cos(self._GROUND_TO_CABLE_ANGLE)
         return int(x)

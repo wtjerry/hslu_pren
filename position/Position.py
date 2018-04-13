@@ -47,7 +47,7 @@ class Position(object):
         #        (self._START_X_POS + self._movement_engine.get_x())) \
         #       / 2
         current_x = self._START_X_POS + self._movement_engine.get_x()
-        print(current_x)
+        print("Current x: ", current_x)
         return current_x
 
     def _calculate_z_from_x(self, x):

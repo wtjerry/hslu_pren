@@ -30,7 +30,7 @@ class Binding:
 
         self._communication = Communication() if self.use_real_movement or self.use_real_position else DummyCommunication()
         self.movement_engine = MovementEngine(self._communication) if self.use_real_movement else DummyMovementEngine()
-        self.goal_detection = Dummy() if self.use_real_goal_detection else DummyGoalDetection()
+        self.goal_detection = self._get_real_goal_detection() if self.use_real_goal_detection else DummyGoalDetection()
         self.magnet = self.get_real_magnet() if self.use_real_magnet else DummyMagnet()
         self.telescope_engine = TelescopeEngine(self._communication) if self.use_real_telescope else DummyTelescopeEngine()
         self.position = self._get_real_position(position_sender) if self.use_real_position \
@@ -45,6 +45,10 @@ class Binding:
         from position.XPositionSensor import XPositionSensor
         from position.Position import Position
         return Position(XPositionSensor(), self.movement_engine, self.telescope_engine, position_sender)
+
+    def _get_real_goal_detection(self):
+        from goaldetection.GoalDetection import GoalDetection
+        return GoalDetection()
 
     @staticmethod
     def get_real_magnet():

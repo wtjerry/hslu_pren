@@ -1,1 +1,1 @@
-GOAL_FOUND = "Target Found"
+GOAL_FOUND = "Goal Found"

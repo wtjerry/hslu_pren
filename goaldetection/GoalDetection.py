@@ -3,10 +3,10 @@ import math
 import numpy as np
 import picamera
 
-from controlling.processMessages import TARGET_FOUND
+from controlling.processMessages import GOAL_FOUND
 
 
-class TargetDetection(object):
+class GoalDetection(object):
     _camera = None
 
     _INNERMOST_SQUARE_HEIGHT_CM = 6.0
@@ -16,10 +16,6 @@ class TargetDetection(object):
     _MIN_SQUARE_XY_RATIO = 0.85
     _MAX_SQUARE_XY_RATIO = 1.15
     _MAX_PERIMETER_DELTA_RATIO = 0.1
-
-    def __init__(self):
-        self._camera = picamera.PiCamera()
-        self._camera.resolution = (1920, 1080)
 
     @staticmethod
     def determine_center(contours):
@@ -155,7 +151,9 @@ class TargetDetection(object):
                 return False
 
     def start(self, queue):
+        self._camera = picamera.PiCamera()
+        self._camera.resolution = (1920, 1080)
         for f in self._camera.capture_continuous('img{counter:04d}.jpg'):
             if self.process(f):
-                queue.put(TARGET_FOUND)
+                queue.put(GOAL_FOUND)
                 break

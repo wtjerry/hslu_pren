@@ -1,3 +1,6 @@
+import traceback
+
+
 class AsyncProcessor(object):
     def __init__(self, thread_pool):
         self._thread_pool = thread_pool
@@ -9,5 +12,6 @@ class AsyncProcessor(object):
         try:
             action()
         except Exception as e:
+            print(traceback.format.exc())
             print("*** EXCEPTION IN THREAD ***")
             print(str(e))
