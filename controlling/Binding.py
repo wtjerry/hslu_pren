@@ -12,6 +12,7 @@ from controlling.Dummies.DummyMagnet import DummyMagnet
 from controlling.Dummies.DummyMovementEngine import DummyMovementEngine
 from controlling.Dummies.DummyTelescopeEngine import DummyTelescopeEngine
 from engines.MovementEngine import MovementEngine
+from position.XPositionSensor import XPositionSensor
 
 
 class Binding:
@@ -23,7 +24,6 @@ class Binding:
     use_real_balancer = False
     use_real_load_position_comparer = False
     use_real_tilt_engine = False
-    use_real_load_position_comparer = False
 
     def __init__(self, position_sender):
         # TODO replace Dummy(), it raises an error when initialized
@@ -43,7 +43,7 @@ class Binding:
 
     def _get_real_position(self, position_sender):
         from position.Position import Position
-        return Position(self.movement_engine, self.telescope_engine, position_sender)
+        return Position(XPositionSensor(), self.movement_engine, self.telescope_engine, position_sender)
 
     @staticmethod
     def get_real_magnet():
