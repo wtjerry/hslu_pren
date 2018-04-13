@@ -38,6 +38,18 @@ start
 ```
 
 
+## install opencv
+1. sudo pip3 install opencv-python
+2. sudo apt install libhdf5-dev
+3. sudo apt install libhdf5-serial-dev
+4. sudo apt install libatlas-base-dev
+5. sudo apt install libjasper-dev
+6. sudo apt install libjpeg8-dev
+7. sudo apt install libgtk2.0-dev
+8. sudo apt install libqtgui4
+9. sudo apt install libqt4-test
+
+
 # Notes
 As the Software is still under development and there are external hardware dependencies, some parts have dummy implementations.
 You can configure whether to use the real or the dummy implementation in *Bindings.py*.
