@@ -119,14 +119,18 @@ class Controller(object):
 
     def _finish(self):
         finished = False
+        current_speed = self.FINNISH_SPEED;
         while not finished:
             print(self._position.get_current_x())
-            if self._position.get_current_x() <= 3000:
+            if self._position.get_current_x() <= 3000 and current_speed != 5:
                 self._movement.set_speed(5)
-            elif self._position.get_current_x() <= 3300:
+                current_speed = 5
+            elif self._position.get_current_x() <= 3300 and current_speed != 3:
                 self._movement.set_speed(3)
-            elif self._position.get_current_x() <= 3400:
+                current_speed = 3
+            elif self._position.get_current_x() <= 3400 and current_speed != 1:
                 self._movement.set_speed(1)
+                current_speed = 1
             elif self._position.get_current_x() >= 3600:
                 self._movement.stop()
                 finished = True

@@ -8,5 +8,5 @@ class DummyGoalDetection:
 
     def start(self, queue):
         print("searching target....")
-        time.sleep(25)
+        time.sleep(10)
         queue.put(GOAL_FOUND)
