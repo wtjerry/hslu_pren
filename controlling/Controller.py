@@ -19,6 +19,8 @@ class Controller(object):
     REVERT_MOVEMENT = 0
     START_DROP_ZONE = 900
     END_DROP_ZONE = 3300
+    DISTANCE_TO_GOAL_STOP = 2
+    DISTANCE_TO_GOAL_SLOWER = 50
 
     def __init__(self):
         self._executor = AsyncProcessor(ThreadPoolExecutor(max_workers=6))
@@ -83,8 +85,12 @@ class Controller(object):
         self._block_until_goal_found()
 
     def _block_until_goal_found(self):
-        if self._queue.get() == GOAL_FOUND:
-            self._on_goal_found()
+        while not self._goal_found:
+            value = self._queue.get()
+            if value < self.DISTANCE_TO_GOAL_STOP:
+                self._on_goal_found()
+            elif value < self.DISTANCE_TO_GOAL_SLOWER:
+                self._movement.set_speed(1)
 
     def _fail_safe(self):
         reverted = False
@@ -104,7 +110,6 @@ class Controller(object):
     def _on_goal_found(self):
         self._logger.major_step("Goal found")
         self._goal_found = True
-        time.sleep(0.3)
         self._movement.stop()
         self._deliver_load()
 

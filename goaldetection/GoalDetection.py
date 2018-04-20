@@ -100,7 +100,7 @@ class GoalDetection(object):
         middle = int(h / 2)
         return middle
 
-    def process(self, filename):
+    def process(self, filename, queue):
         image_bgr = cv2.imread(filename)
         image_rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
         threshold = self.find_threshold(image_rgb)[1]
@@ -124,10 +124,11 @@ class GoalDetection(object):
         if smallest is not None:
             (cx, cy) = self.determine_center(smallest)
             dist_px, dist_cm = self.estimate_distance_to_center(image_rgb, smallest)
+            dist_mm = dist_cm * 10
             print('distance: {:4d}px {:7.3f}cm'.format(dist_px, dist_cm))
             if cx > 0 and cy > 0:
                 h, _, _ = image_rgb.shape
-
+                queue.put(dist_mm)
                 if h * 0.5 > dist_px >= h * 0.3:
                     print('far away: {:.3f}cm'.format(dist_cm))
                 elif h * 0.3 > dist_px >= h * 0.2:
@@ -140,7 +141,6 @@ class GoalDetection(object):
                     print('very close: {:.3f}cm'.format(dist_cm))
                 elif h * 0.01 > dist_px >= 0:
                     print('extremely close: {:.3f}cm'.format(dist_cm))
-                    return True
                 elif dist_px < 0:
                     print('passed: {:.3f}cm'.format(dist_cm))
                 elif dist_px > 0:
@@ -154,6 +154,4 @@ class GoalDetection(object):
         self._camera = picamera.PiCamera()
         self._camera.resolution = (1920, 1080)
         for f in self._camera.capture_continuous('img{counter:04d}.jpg'):
-            if self.process(f):
-                queue.put(GOAL_FOUND)
-                break
+            self.process(f, queue)
