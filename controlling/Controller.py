@@ -39,6 +39,7 @@ class Controller(object):
 
         self._queue = Queue()
         self._search_goal_process = Process(target=_goal_detection.start, args=(self._queue,))
+        self.reverted = False
 
     def get_position_sender(self):
         ip = get_wlan_ip_address()
@@ -82,47 +83,29 @@ class Controller(object):
         self._movement.start(self.SEARCH_GOAL_SPEED)
         self._search_goal_process.start()
         self._executor.enqueue(self._fail_safe)
-        self._block_until_goal_found()
+        self._goal_detection_handling()
 
-    def _block_until_goal_found(self):
+    def _goal_detection_handling(self):
         while not self._goal_found:
             value = self._queue.get()
-            if value < self.DISTANCE_TO_GOAL_STOP:
+            if self.DISTANCE_TO_GOAL_STOP > value > self.DISTANCE_TO_GOAL_STOP - 10:
                 self._on_goal_found()
-            elif value < self.DISTANCE_TO_GOAL_SLOWER:
+            elif value < self.DISTANCE_TO_GOAL_SLOWER and self.reverted is False:
                 self._movement.set_speed(1)
 
     def _fail_safe(self):
-        reverted = False
-
-        while (not self._goal_found) and (not reverted):
+        while (not self._goal_found) and (not self.reverted):
             if self._position.get_current_x() >= self.END_DROP_ZONE:
                 self._movement.set_speed(self.REVERT_MOVEMENT)
-                reverted = True
+                self.reverted = True
             time.sleep(0.5)
 
-        while (not self._goal_found) and reverted:
+        while (not self._goal_found) and self.reverted:
             if self._position.get_current_x() <= self.START_DROP_ZONE:
                 self._movement.set_speed(self.SEARCH_GOAL_SPEED)
-                reverted = False
+                self.reverted = False
             time.sleep(0.5)
 
-    def _on_goal_found(self):
-        self._logger.major_step("Goal found")
-        self._goal_found = True
-        self._movement.stop()
-        self._deliver_load()
-
-    def _deliver_load(self):
-        self._logger.major_step("Delivering load")
-        self._telescope.down(self._position.get_current_z())
-        self._magnet.stop()
-        time.sleep(2)
-        self._movement.start(self.FINNISH_SPEED)
-        self._position.stop_output()
-        self._finish()
-
-    def _finish(self):
         finished = False
         current_speed = self.FINNISH_SPEED;
         while not finished:
@@ -141,6 +124,24 @@ class Controller(object):
                 finished = True
             time.sleep(0.25)
 
+        self._finish()
+
+    def _on_goal_found(self):
+        self._logger.major_step("Goal found")
+        self._goal_found = True
+        self._movement.stop()
+        self._deliver_load()
+
+    def _deliver_load(self):
+        self._logger.major_step("Delivering load")
+        self._telescope.down(self._position.get_current_z())
+        self._magnet.stop()
+        time.sleep(2)
+        self._movement.start(self.FINNISH_SPEED)
+        self._position.stop_output()
+        self._finish()
+
+    def _finish(self):
         self._tilt_controller.stop()
         self._logger.major_step("Finished")
         time.sleep(1)
