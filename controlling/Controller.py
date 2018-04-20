@@ -19,7 +19,7 @@ class Controller(object):
     REVERT_MOVEMENT = 0
     START_DROP_ZONE = 900
     END_DROP_ZONE = 3300
-    DISTANCE_TO_GOAL_STOP = 2
+    DISTANCE_TO_GOAL_STOP = -17
     DISTANCE_TO_GOAL_SLOWER = 50
 
     def __init__(self):
