@@ -2,6 +2,7 @@ from arduinocommunication.communication import Communication
 from controlling.Dummies.Dummy import Dummy
 from controlling.Dummies.DummyCommunication import DummyCommunication
 from controlling.Dummies.DummyTiltEngine import DummyTiltEngine
+from controlling.PositionLoadComparer import PositionLoadComparer
 from controlling.TiltController import TiltController
 from engines.TelescopeEngine import TelescopeEngine
 from engines.TiltEngine import TiltEngine
@@ -15,7 +16,7 @@ from engines.MovementEngine import MovementEngine
 
 
 
-class Binding:
+class Binding(object):
     use_real_movement = False
     use_real_goal_detection = False
     use_real_magnet = False
@@ -36,7 +37,7 @@ class Binding:
         self.position = self._get_real_position(position_sender) if self.use_real_position \
             else DummyPosition(self.movement_engine, self.telescope_engine, position_sender)
         self.tilt_engine = TiltEngine(self._communication) if self.use_real_tilt_engine else DummyTiltEngine()
-        self.load_position_comparer = Dummy() if self.use_real_load_position_comparer \
+        self.load_position_comparer = PositionLoadComparer() if self.use_real_load_position_comparer \
             else DummyLoadPositionComparer(self.position)
 
         self.tilt_controller = TiltController(self.position, self.tilt_engine)
