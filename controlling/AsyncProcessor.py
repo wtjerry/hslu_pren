@@ -12,6 +12,6 @@ class AsyncProcessor(object):
         try:
             action()
         except Exception as e:
-            print(traceback.format.exc())
+            print(traceback.format_exc())
             print("*** EXCEPTION IN THREAD ***")
             print(str(e))
