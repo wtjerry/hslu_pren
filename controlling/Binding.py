@@ -17,18 +17,16 @@ from engines.MovementEngine import MovementEngine
 
 
 class Binding(object):
-    use_real_movement = False
-    use_real_goal_detection = False
+    use_real_movement = True
+    use_real_goal_detection = True
     use_real_magnet = False
-    use_real_telescope = False
-    use_real_position = False
+    use_real_telescope = True
+    use_real_position = True
     use_real_balancer = False
     use_real_load_position_comparer = False
     use_real_tilt_engine = False
 
     def __init__(self, position_sender):
-        # TODO replace Dummy(), it raises an error when initialized
-
         self._communication = Communication() if self.use_real_movement or self.use_real_position else DummyCommunication()
         self.movement_engine = MovementEngine(self._communication) if self.use_real_movement else DummyMovementEngine()
         self.goal_detection = self._get_real_goal_detection() if self.use_real_goal_detection else DummyGoalDetection()

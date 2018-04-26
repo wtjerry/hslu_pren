@@ -4,6 +4,7 @@ import math
 
 
 class DummyTelescopeEngine:
+    _GROUND_TO_CABLE_ANGLE = 0.141897
     def __init__(self):
         self._is_lowered = False
         self.z = 0
@@ -26,4 +27,5 @@ class DummyTelescopeEngine:
         print("telescope retracted")
 
     def get_z(self):
-        return self.z
+        (math.tan(self._GROUND_TO_CABLE_ANGLE) * 12)
+        return int(self.z)

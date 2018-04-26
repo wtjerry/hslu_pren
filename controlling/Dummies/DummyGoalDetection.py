@@ -5,7 +5,7 @@ from controlling.processMessages import GOAL_FOUND
 
 class DummyGoalDetection:
     listeners = []
-    _distance_to_goal = 100;
+    _distance_to_goal = 100
 
     def start(self, queue):
         print("searching target....")
