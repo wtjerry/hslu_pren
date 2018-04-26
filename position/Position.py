@@ -25,9 +25,9 @@ class Position(object):
         while self._should_calc:
             if self._movement_engine.is_moving:
                 self._x_pos = self._calculate_x()
-                time.sleep(0.05)
 
             self._z_pos = self._calculate_z_from_x(self._x_pos)
+            time.sleep(0.05)
 
     def start_position_output(self):
         self._position_output = True
