@@ -3,21 +3,25 @@ class TelescopeEngine(object):
     _DOWN_COMMAND = "HSdn"
     _GET_Z_COMMAND = "HSgetz"
     _communication = None
+    _TELESCOPE_HEIGHT = 150
 
     def __init__(self, communication):
+        self._z = 0
         self._communication = communication
 
     def up(self, mm):
-        mm_formatted = self._get_formatted_mm(mm)
-        self._communication.execute(self._UP_COMMAND + str(mm_formatted))
+        mm_formatted = self._get_formatted_mm(mm - self._TELESCOPE_HEIGHT)
+        self._communication.execute_multiple_return(self._UP_COMMAND + str(mm_formatted), self.set_z)
 
     def down(self, mm):
-        mm_formatted = self._get_formatted_mm(mm)
-        self._communication.execute(self._DOWN_COMMAND + str(mm_formatted))
+        mm_formatted = self._get_formatted_mm(mm - self._TELESCOPE_HEIGHT)
+        self._communication.execute_multiple_return(self._DOWN_COMMAND + str(mm_formatted), self.set_z)
 
     def get_z(self):
-        z = self._communication.execute(self._GET_Z_COMMAND)
-        return int(z)
+        return self._z
+
+    def set_z(self, new_z):
+        self._z = int(new_z)
 
     def _get_formatted_mm(self, mm):
         mm_string = str(mm)

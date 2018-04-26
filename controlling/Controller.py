@@ -117,12 +117,12 @@ class Controller(object):
             elif self._position.get_current_x() <= 3400 and current_speed != 1:
                 self._movement.set_speed(1)
                 current_speed = 1
-            #elif self._position.get_current_x() <= 3300 and current_speed != 3:
-            #    self._movement.set_speed(3)
-            #    current_speed = 3
-            #elif self._position.get_current_x() <= 3000 and current_speed != 5:
-            #    self._movement.set_speed(5)
-            #    current_speed = 5
+            elif self._position.get_current_x() <= 3300 and current_speed != 3:
+                self._movement.set_speed(3)
+                current_speed = 3
+            elif self._position.get_current_x() <= 3000 and current_speed != 5:
+                self._movement.set_speed(5)
+                current_speed = 5
 
             time.sleep(0.25)
 

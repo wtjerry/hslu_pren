@@ -33,3 +33,22 @@ class Communication(object):
                 return result
             else:
                 raise IOError("Couldn't send to arduino!")
+
+    def execute_multiple_return(self, command, callback):
+        command = command + self._COMMAND_TERMINATOR
+        print("Sending to Arduino: ", command)
+        encoded_command = command.encode('utf-8')
+        byteswritten = self._connection.write(encoded_command)
+
+        if byteswritten == len(encoded_command):
+            finished = False
+            while not finished:
+                result = self._connection.readline().rstrip().decode('utf-8')
+                print("Arduino returned ", result)
+                if result == "OK":
+                    finished = True
+                else:
+                    callback(result)
+        else:
+            raise IOError("Couldn't send to arduino!")
+
