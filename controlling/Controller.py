@@ -15,7 +15,7 @@ from networking.SocketServer import SocketServer
 class Controller(object):
     MOVE_TO_LOAD_SPEED = 4
     SEARCH_GOAL_SPEED = 2
-    FINNISH_SPEED = 1
+    FINNISH_SPEED = 3
     REVERT_MOVEMENT = 0
     START_DROP_ZONE = 900
     END_DROP_ZONE = 3300
@@ -107,22 +107,16 @@ class Controller(object):
             time.sleep(0.5)
 
         finished = False
-        current_speed = self.FINNISH_SPEED;
-        while not finished:
+        current_speed = self.FINNISH_SPEED
 
+        while not finished:
             print(self._position.get_current_x())
             if self._position.get_current_x() >= 3600:
                 self._movement.stop()
                 finished = True
-            elif self._position.get_current_x() <= 3400 and current_speed != 1:
+            elif self._position.get_current_x() >= 3400 and current_speed != 1:
                 self._movement.set_speed(1)
                 current_speed = 1
-            elif self._position.get_current_x() <= 3300 and current_speed != 3:
-                self._movement.set_speed(3)
-                current_speed = 3
-            elif self._position.get_current_x() <= 3000 and current_speed != 5:
-                self._movement.set_speed(5)
-                current_speed = 5
 
             time.sleep(0.25)
 
