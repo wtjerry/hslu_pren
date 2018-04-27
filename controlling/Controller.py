@@ -14,12 +14,12 @@ from networking.SocketServer import SocketServer
 
 class Controller(object):
     MOVE_TO_LOAD_SPEED = 4
-    SEARCH_GOAL_SPEED = 2
-    FINNISH_SPEED = 3
+    SEARCH_GOAL_SPEED = 4 
+    FINNISH_SPEED = 4 
     REVERT_MOVEMENT = 0
     START_DROP_ZONE = 900
     END_DROP_ZONE = 3300
-    DISTANCE_TO_GOAL_STOP = -17
+    DISTANCE_TO_GOAL_STOP = -20
     DISTANCE_TO_GOAL_SLOWER = 50
 
     def __init__(self):
@@ -88,7 +88,8 @@ class Controller(object):
     def _goal_detection_handling(self):
         while not self._goal_found:
             value = self._queue.get()
-            if self.DISTANCE_TO_GOAL_STOP > value > self.DISTANCE_TO_GOAL_STOP - 10:
+            print("goal detection value: ", value)
+            if self.DISTANCE_TO_GOAL_STOP > value > self.DISTANCE_TO_GOAL_STOP - 25:
                 self._on_goal_found()
             elif value < self.DISTANCE_TO_GOAL_SLOWER and self.reverted is False:
                 self._movement.set_speed(1)
@@ -114,9 +115,9 @@ class Controller(object):
             if self._position.get_current_x() >= 3600:
                 self._movement.stop()
                 finished = True
-            elif self._position.get_current_x() >= 3400 and current_speed != 1:
-                self._movement.set_speed(1)
-                current_speed = 1
+            elif self._position.get_current_x() >= 3400 and current_speed != 2:
+                self._movement.set_speed(2)
+                current_speed = 2 
 
             time.sleep(0.25)
 

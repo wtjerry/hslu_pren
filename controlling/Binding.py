@@ -20,10 +20,10 @@ class Binding(object):
     use_real_movement = True
     use_real_goal_detection = True
     use_real_magnet = True
-    use_real_telescope = True
+    use_real_telescope = True 
     use_real_position = True
     use_real_balancer = False
-    use_real_load_position_comparer = False
+    use_real_load_position_comparer = True 
     use_real_tilt_engine = False
 
     def __init__(self, position_sender):
@@ -35,7 +35,7 @@ class Binding(object):
         self.position = self._get_real_position(position_sender) if self.use_real_position \
             else DummyPosition(self.movement_engine, self.telescope_engine, position_sender)
         self.tilt_engine = TiltEngine(self._communication) if self.use_real_tilt_engine else DummyTiltEngine()
-        self.load_position_comparer = PositionLoadComparer() if self.use_real_load_position_comparer \
+        self.load_position_comparer = PositionLoadComparer(self.position) if self.use_real_load_position_comparer \
             else DummyLoadPositionComparer(self.position)
 
         self.tilt_controller = TiltController(self.position, self.tilt_engine)

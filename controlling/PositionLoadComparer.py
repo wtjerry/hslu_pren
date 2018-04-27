@@ -6,7 +6,7 @@ class PositionLoadComparer(object):
         self._check_for_load = True
         self._position = pos
         # Load position in mm
-        self._load_position = 650
+        self._load_position = 600 
 
     def check_until_reached(self):
         while self._check_for_load:
@@ -17,4 +17,4 @@ class PositionLoadComparer(object):
             else:
                 print("goal not yet reached, position: ", position)
 
-            time.sleep(0.5)
+            time.sleep(0.1)

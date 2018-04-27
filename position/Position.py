@@ -9,7 +9,7 @@ class Position(object):
     _position_output = None
     _x_pos = 0
     _z_pos = 0
-    _START_X_POS = 320
+    _START_X_POS = 275 
     _START_HEIGHT = 600
     _TELESCOPE_HEIGHT = 150
     _GROUND_TO_CABLE_ANGLE = 0.141897
