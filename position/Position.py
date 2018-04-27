@@ -11,7 +11,6 @@ class Position(object):
     _z_pos = 0
     _START_X_POS = 275 
     _START_HEIGHT = 600
-    _TELESCOPE_HEIGHT = 150
     _GROUND_TO_CABLE_ANGLE = 0.141897
 
     def __init__(self, x_position_sensor, movement_engine, telescope_engine, position_sender):
@@ -53,7 +52,6 @@ class Position(object):
     def _calculate_z_from_x(self, x):
         return (math.tan(self._GROUND_TO_CABLE_ANGLE) * x) \
                + self._START_HEIGHT \
-               - self._TELESCOPE_HEIGHT \
                - self._telescope_engine.get_z()
 
     def get_current_x(self):

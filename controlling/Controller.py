@@ -21,6 +21,7 @@ class Controller(object):
     END_DROP_ZONE = 3300
     DISTANCE_TO_GOAL_STOP = -20
     DISTANCE_TO_GOAL_SLOWER = 50
+    INITIAL_LOAD_HEIGHT = 300
 
     def __init__(self):
         self._executor = AsyncProcessor(ThreadPoolExecutor(max_workers=6))
@@ -70,12 +71,11 @@ class Controller(object):
 
     def _get_load(self):
         self._logger.major_step("Getting load")
-        height = self._position.get_current_z()
         self._magnet.start()
-        self._telescope.down(height)
+        self._telescope.down(self.INITIAL_LOAD_HEIGHT)
         time.sleep(1)
         self._executor.enqueue(self._position.start_position_output)
-        self._telescope.up(height)
+        self._telescope.up(self.INITIAL_LOAD_HEIGHT)
         self._move_until_goal_reached()
 
     def _move_until_goal_reached(self):
