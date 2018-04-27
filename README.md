@@ -50,6 +50,14 @@ start
 9. sudo apt install libqt4-test
 
 
+## Gui
+It reads from a named pipe. It's path is specified in Gui.py
+To test it locally just write to the pipe, eg:
+``` sh
+echo "new position x: '135.21' z: '98.2323'" > pos_queue
+```
+
+
 # Notes
 As the Software is still under development and there are external hardware dependencies, some parts have dummy implementations.
 You can configure whether to use the real or the dummy implementation in *Bindings.py*.
