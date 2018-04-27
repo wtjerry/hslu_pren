@@ -71,8 +71,8 @@ class Controller(object):
     def _get_load(self):
         self._logger.major_step("Getting load")
         height = self._position.get_current_z()
-        self._telescope.down(height)
         self._magnet.start()
+        self._telescope.down(height)
         time.sleep(1)
         self._executor.enqueue(self._position.start_position_output)
         self._telescope.up(height)
