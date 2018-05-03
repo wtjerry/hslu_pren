@@ -1,9 +1,26 @@
+import io
+
 import cv2
 import math
 import numpy as np
 import picamera
+from picamera.array import PiRGBArray
+from time import sleep
+from datetime import datetime
 
-from controlling.processMessages import GOAL_FOUND
+
+def print_time(text):
+    print("{time}: {text}".format(time=datetime.now(), text=text))
+
+
+def print_elapsed_time(func, *p):
+    before = datetime.now()
+    result = func(*p)
+    after = datetime.now()
+    diff = after - before
+    caller_function_name = func.__name__
+    print("'{func}' took {time}".format(func=caller_function_name, time=diff))
+    return result
 
 
 class GoalDetection(object):
@@ -100,12 +117,11 @@ class GoalDetection(object):
         middle = int(h / 2)
         return middle
 
-    def process(self, filename, queue):
-        image_bgr = cv2.imread(filename)
-        image_rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
-        threshold = self.find_threshold(image_rgb)[1]
+    def process(self, img, queue):
+        image_rgb = print_elapsed_time(cv2.cvtColor, img, cv2.COLOR_BGR2RGB)
+        threshold = print_elapsed_time(self.find_threshold, image_rgb)[1]
 
-        _, contours, hierarchy = cv2.findContours(threshold.copy(),
+        _, contours, hierarchy = print_elapsed_time(cv2.findContours, threshold.copy(),
                                                   cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
         square_candidates = []
@@ -125,33 +141,34 @@ class GoalDetection(object):
             (cx, cy) = self.determine_center(smallest)
             dist_px, dist_cm = self.estimate_distance_to_center(image_rgb, smallest)
             dist_mm = dist_cm * 10
-            print('distance: {:4d}px {:7.3f}cm'.format(dist_px, dist_cm))
+            print_time('distance: {:4d}px {:7.3f}cm'.format(dist_px, dist_cm))
             if cx > 0 and cy > 0:
                 h, _, _ = image_rgb.shape
                 queue.put(dist_mm)
                 if h * 0.5 > dist_px >= h * 0.3:
-                    print('far away: {:.3f}cm'.format(dist_cm))
+                    print_time('far away: {:.3f}cm'.format(dist_cm))
                 elif h * 0.3 > dist_px >= h * 0.2:
-                    print('away: {:.3f}cm'.format(dist_cm))
+                    print_time('away: {:.3f}cm'.format(dist_cm))
                 elif h * 0.2 > dist_px >= h * 0.1:
-                    print('close: {:.3f}cm'.format(dist_cm))
+                    print_time('close: {:.3f}cm'.format(dist_cm))
                 elif h * 0.1 > dist_px >= h * 0.05:
-                    print('closer: {:.3f}cm'.format(dist_cm))
+                    print_time('closer: {:.3f}cm'.format(dist_cm))
                 elif h * 0.05 > dist_px >= h * 0.01:
-                    print('very close: {:.3f}cm'.format(dist_cm))
+                    print_time('very close: {:.3f}cm'.format(dist_cm))
                 elif h * 0.01 > dist_px >= 0:
-                    print('extremely close: {:.3f}cm'.format(dist_cm))
+                    print_time('extremely close: {:.3f}cm'.format(dist_cm))
                 elif dist_px < 0:
-                    print('passed: {:.3f}cm'.format(dist_cm))
+                    print_time('passed: {:.3f}cm'.format(dist_cm))
                 elif dist_px > 0:
-                    print('way too far away')
+                    print_time('way too far away')
                 else:
-                    print('unknown distance')
-
-                return False
+                    print_time('unknown distance')
 
     def start(self, queue):
         self._camera = picamera.PiCamera()
         self._camera.resolution = (1920, 1080)
-        for f in self._camera.capture_continuous('img{counter:04d}.jpg'):
-            self.process(f, queue)
+        rawCapture = PiRGBArray(self._camera, size=(1920, 1080))
+        sleep(0.1)
+        for frame in self._camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
+            print_elapsed_time(self.process, frame.array, queue)
+            rawCapture.truncate(0)
