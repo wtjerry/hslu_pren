@@ -21,7 +21,7 @@ class Controller(object):
     END_DROP_ZONE = 3300
     DISTANCE_TO_GOAL_STOP = -20
     DISTANCE_TO_GOAL_SLOWER = 50
-    INITIAL_LOAD_HEIGHT = 300
+    INITIAL_LOAD_HEIGHT = 200
 
     def __init__(self):
         self._executor = AsyncProcessor(ThreadPoolExecutor(max_workers=6))

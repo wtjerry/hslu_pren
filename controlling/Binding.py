@@ -20,7 +20,7 @@ class Binding(object):
     use_real_movement = True
     use_real_goal_detection = True
     use_real_magnet = True
-    use_real_telescope = True 
+    use_real_telescope = False
     use_real_position = True
     use_real_balancer = False
     use_real_load_position_comparer = True 
