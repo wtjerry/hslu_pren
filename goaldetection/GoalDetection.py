@@ -141,28 +141,10 @@ class GoalDetection(object):
             (cx, cy) = self.determine_center(smallest)
             dist_px, dist_cm = self.estimate_distance_to_center(image_rgb, smallest)
             dist_mm = dist_cm * 10
-            print_time('distance: {:4d}px {:7.3f}cm'.format(dist_px, dist_cm))
+            print_time('distance: {:4d}px {:7.3f}mm'.format(dist_px, dist_mm))
             if cx > 0 and cy > 0:
                 h, _, _ = image_rgb.shape
                 queue.put(dist_mm)
-                if h * 0.5 > dist_px >= h * 0.3:
-                    print_time('far away: {:.3f}cm'.format(dist_cm))
-                elif h * 0.3 > dist_px >= h * 0.2:
-                    print_time('away: {:.3f}cm'.format(dist_cm))
-                elif h * 0.2 > dist_px >= h * 0.1:
-                    print_time('close: {:.3f}cm'.format(dist_cm))
-                elif h * 0.1 > dist_px >= h * 0.05:
-                    print_time('closer: {:.3f}cm'.format(dist_cm))
-                elif h * 0.05 > dist_px >= h * 0.01:
-                    print_time('very close: {:.3f}cm'.format(dist_cm))
-                elif h * 0.01 > dist_px >= 0:
-                    print_time('extremely close: {:.3f}cm'.format(dist_cm))
-                elif dist_px < 0:
-                    print_time('passed: {:.3f}cm'.format(dist_cm))
-                elif dist_px > 0:
-                    print_time('way too far away')
-                else:
-                    print_time('unknown distance')
 
     def start(self, queue):
         self._camera = picamera.PiCamera()
