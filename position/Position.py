@@ -12,7 +12,6 @@ class Position(object):
     _x_pos = 0
     _z_pos = 0
 
-
     def __init__(self, x_position_sensor, movement_engine, telescope_engine, position_sender):
         self._xposition_sensor = x_position_sensor
         self._movement_engine = movement_engine
@@ -52,10 +51,13 @@ class Position(object):
     def _calculate_z_from_x(self, x):
         return (math.tan(Config.POSITION_GROUND_TO_CABLE_ANGLE) * x) \
                + Config.POSITION_START_HEIGHT \
+               - Config.POSITION_TELESCOPE_HEIGHT \
                - self._telescope_engine.get_z()
 
-    def get_current_x(self):
-        return self._x_pos
 
-    def get_current_z(self):
-        return self._z_pos
+def get_current_x(self):
+    return self._x_pos
+
+
+def get_current_z(self):
+    return self._z_pos
