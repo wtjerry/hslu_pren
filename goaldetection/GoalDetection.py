@@ -118,10 +118,10 @@ class GoalDetection(object):
         return middle
 
     def process(self, img, queue):
-        image_rgb = print_elapsed_time(cv2.cvtColor, img, cv2.COLOR_BGR2RGB)
-        threshold = print_elapsed_time(self.find_threshold, image_rgb)[1]
+        image_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        threshold = self.find_threshold(image_rgb[1])
 
-        _, contours, hierarchy = print_elapsed_time(cv2.findContours, threshold.copy(),
+        _, contours, hierarchy = cv2.findContours(threshold.copy(),
                                                   cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
         square_candidates = []
@@ -170,5 +170,5 @@ class GoalDetection(object):
         rawCapture = PiRGBArray(self._camera, size=(1920, 1080))
         sleep(0.1)
         for frame in self._camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
-            print_elapsed_time(self.process, frame.array, queue)
+            self.process(frame.array, queue)
             rawCapture.truncate(0)
