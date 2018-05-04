@@ -1,5 +1,6 @@
 import time
 
+from controlling.Config import Config
 from controlling.processMessages import GOAL_FOUND
 
 
@@ -9,7 +10,7 @@ class DummyGoalDetection:
 
     def start(self, queue):
         print("searching target....")
-        time.sleep(7)
+        time.sleep(2)
         queue.put(70)
         time.sleep(1)
         queue.put(55)
@@ -20,4 +21,4 @@ class DummyGoalDetection:
         time.sleep(0.5)
         queue.put(1)
         time.sleep(0.5)
-        queue.put(-20)
+        queue.put(Config.CONTROLLER_DISTANCE_TO_GOAL_STOP - 10)

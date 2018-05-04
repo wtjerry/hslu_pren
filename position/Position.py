@@ -1,6 +1,8 @@
 import time
 import math
 
+from controlling.Config import Config
+
 
 class Position(object):
     _movement_engine = None
@@ -9,9 +11,7 @@ class Position(object):
     _position_output = None
     _x_pos = 0
     _z_pos = 0
-    _START_X_POS = 275 
-    _START_HEIGHT = 600
-    _GROUND_TO_CABLE_ANGLE = 0.141897
+
 
     def __init__(self, x_position_sensor, movement_engine, telescope_engine, position_sender):
         self._xposition_sensor = x_position_sensor
@@ -45,13 +45,13 @@ class Position(object):
         # return (self._xposition_sensor.get_position() +
         #        (self._START_X_POS + self._movement_engine.get_x())) \
         #       / 2
-        current_x = self._START_X_POS + self._movement_engine.get_x()
+        current_x = Config.POSITION_START_X_POS + self._movement_engine.get_x()
         print("Current x: ", current_x)
         return current_x
 
     def _calculate_z_from_x(self, x):
-        return (math.tan(self._GROUND_TO_CABLE_ANGLE) * x) \
-               + self._START_HEIGHT \
+        return (math.tan(Config.POSITION_GROUND_TO_CABLE_ANGLE) * x) \
+               + Config.POSITION_START_HEIGHT \
                - self._telescope_engine.get_z()
 
     def get_current_x(self):

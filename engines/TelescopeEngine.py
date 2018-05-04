@@ -1,20 +1,22 @@
+from controlling.Config import Config
+
+
 class TelescopeEngine(object):
     _UP_COMMAND = "HSup"
     _DOWN_COMMAND = "HSdn"
     _GET_Z_COMMAND = "HSgetz"
     _communication = None
-    _TELESCOPE_HEIGHT = 150
 
     def __init__(self, communication):
         self._z = 0
         self._communication = communication
 
     def up(self, mm):
-        mm_formatted = self._get_formatted_mm(mm - self._TELESCOPE_HEIGHT)
+        mm_formatted = self._get_formatted_mm(mm - Config.TELESCOPE_HEIGHT)
         self._communication.execute_multiple_return(self._UP_COMMAND + str(mm_formatted), self.set_z)
 
     def down(self, mm):
-        mm_formatted = self._get_formatted_mm(mm - self._TELESCOPE_HEIGHT)
+        mm_formatted = self._get_formatted_mm(mm - Config.TELESCOPE_HEIGHT)
         self._communication.execute_multiple_return(self._DOWN_COMMAND + str(mm_formatted), self.set_z)
 
     def get_z(self):
