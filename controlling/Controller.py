@@ -14,14 +14,16 @@ from networking.SocketServer import SocketServer
 
 class Controller(object):
     MOVE_TO_LOAD_SPEED = 4
-    SEARCH_GOAL_SPEED = 4 
-    FINNISH_SPEED = 4 
+    MOVE_TO_GOAL_SPEED = 4
+    SEARCH_GOAL_SPEED = 1
+    FINNISH_SPEED = 4
     REVERT_MOVEMENT = 0
     START_DROP_ZONE = 900
     END_DROP_ZONE = 3300
     DISTANCE_TO_GOAL_STOP = -20
     DISTANCE_TO_GOAL_SLOWER = 50
     INITIAL_LOAD_HEIGHT = 200
+    END_TELESCOPE_HEIGHT = 300
 
     def __init__(self):
         self._executor = AsyncProcessor(ThreadPoolExecutor(max_workers=6))
@@ -80,7 +82,7 @@ class Controller(object):
 
     def _move_until_goal_reached(self):
         self._logger.major_step("Moving to goal")
-        self._movement.start(self.SEARCH_GOAL_SPEED)
+        self._movement.start(self.MOVE_TO_GOAL_SPEED)
         self._search_goal_process.start()
         self._executor.enqueue(self._fail_safe)
         self._goal_detection_handling()
@@ -93,7 +95,7 @@ class Controller(object):
                 print("goal found")
                 self._on_goal_found()
             elif value < self.DISTANCE_TO_GOAL_SLOWER and self.reverted is False:
-                self._movement.set_speed(1)
+                self._movement.set_speed(self.SEARCH_GOAL_SPEED)
 
     def _fail_safe(self):
         while (not self._goal_found) and (not self.reverted):
@@ -104,7 +106,7 @@ class Controller(object):
 
         while (not self._goal_found) and self.reverted:
             if self._position.get_current_x() <= self.START_DROP_ZONE:
-                self._movement.set_speed(self.SEARCH_GOAL_SPEED)
+                self._movement.set_speed(self.MOVE_TO_GOAL_SPEED)
                 self.reverted = False
             time.sleep(0.5)
 
@@ -135,6 +137,7 @@ class Controller(object):
         self._telescope.down(self._position.get_current_z())
         self._magnet.stop()
         time.sleep(2)
+        self._telescope.up(self.END_TELESCOPE_HEIGHT)
         self._movement.start(self.FINNISH_SPEED)
         self._position.stop_output()
         self._finish()
