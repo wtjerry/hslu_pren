@@ -24,6 +24,7 @@ class Controller(object):
     DISTANCE_TO_GOAL_SLOWER = 50
     INITIAL_LOAD_HEIGHT = 200
     END_TELESCOPE_HEIGHT = 300
+    END_SPEED = 2
 
     def __init__(self):
         self._executor = AsyncProcessor(ThreadPoolExecutor(max_workers=6))
@@ -118,9 +119,9 @@ class Controller(object):
             if self._position.get_current_x() >= 3600:
                 self._movement.stop()
                 finished = True
-            elif self._position.get_current_x() >= 3400 and current_speed != 2:
-                self._movement.set_speed(2)
-                current_speed = 2 
+            elif self._position.get_current_x() >= 3400 and current_speed != self.END_SPEED:
+                self._movement.set_speed(self.END_SPEED)
+                current_speed = self.END_SPEED
 
             time.sleep(0.25)
 
