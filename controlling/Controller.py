@@ -90,6 +90,7 @@ class Controller(object):
             value = self._queue.get()
             print("goal detection value: ", value)
             if self.DISTANCE_TO_GOAL_STOP > value > self.DISTANCE_TO_GOAL_STOP - 25:
+                print("goal found")
                 self._on_goal_found()
             elif value < self.DISTANCE_TO_GOAL_SLOWER and self.reverted is False:
                 self._movement.set_speed(1)
