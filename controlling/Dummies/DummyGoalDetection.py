@@ -21,4 +21,4 @@ class DummyGoalDetection:
         time.sleep(0.5)
         queue.put(1)
         time.sleep(0.5)
-        queue.put(Config.CONTROLLER_DISTANCE_TO_GOAL_STOP - 10)
+        queue.put(Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE - 10)

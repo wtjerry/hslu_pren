@@ -15,7 +15,6 @@ from networking.SocketServer import SocketServer
 
 class Controller(object):
 
-
     def __init__(self):
         self._executor = AsyncProcessor(ThreadPoolExecutor(max_workers=6))
         position_sender = self.get_position_sender()
@@ -82,8 +81,7 @@ class Controller(object):
         while not self._goal_found:
             value = self._queue.get()
             print("goal detection value: ", value)
-            print(Config.CONTROLLER_DISTANCE_TO_GOAL_STOP - Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE)
-            if Config.CONTROLLER_DISTANCE_TO_GOAL_STOP > value > Config.CONTROLLER_DISTANCE_TO_GOAL_STOP - Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE:
+            if Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE + Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE_THRESHOLD > value > Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE - Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE_THRESHOLD:
                 print("goal found")
                 self._on_goal_found()
             elif value < Config.CONTROLLER_DISTANCE_TO_GOAL_SLOWER and self.reverted is False:
