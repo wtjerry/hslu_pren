@@ -44,12 +44,13 @@ class Position(object):
         # return (self._xposition_sensor.get_position() +
         #        (self._START_X_POS + self._movement_engine.get_x())) \
         #       / 2
-        current_x = Config.POSITION_START_X_POS + self._movement_engine.get_x()
+        current_x = Config.POSITION_START_X_POS + \
+                    (math.cos(Config.POSITION_GROUND_TO_CABLE_ANGLE) * self._movement_engine.get_x())
         print("Current x: ", current_x)
         return current_x
 
     def _calculate_z_from_x(self, x):
-        return (math.tan(Config.POSITION_GROUND_TO_CABLE_ANGLE) * x) \
+        return (math.cos(Config.POSITION_GROUND_TO_CABLE_ANGLE) * x) \
                + Config.POSITION_START_HEIGHT \
                - Config.POSITION_TELESCOPE_HEIGHT \
                - self._telescope_engine.get_z()

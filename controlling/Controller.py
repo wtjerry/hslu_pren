@@ -126,11 +126,11 @@ class Controller(object):
 
     def _block_until_goal_reached(self, distance_to_goal_when_found):
         goal_reached = False
-        goal_position = self._position.get_current_x() + Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE - distance_to_goal_when_found
+        goal_position = self._position.get_current_x() + Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE + distance_to_goal_when_found
         while not goal_reached:
             position = self._position.get_current_x()
             if position >= goal_position:
-                print("Goal Reached!")
+                print("Goal Reached! ##########################################")
                 goal_reached = True
             else:
                 print("Goal  not yet reached, position: ", position)
