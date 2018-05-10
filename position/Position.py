@@ -28,7 +28,7 @@ class Position(object):
                 print("Current x: ", current_x)
                 self._x_pos = current_x
 
-                self._z_pos = self._calculate_z_from_arduino_x(arduino_x)
+                self._z_pos = self._calculate_z_from_arduino_distance(arduino_x)
             time.sleep(0.05)
 
     def start_position_output(self):
@@ -44,11 +44,9 @@ class Position(object):
         self._position_output = False
         self._should_calc = False
 
-    def _calculate_z_from_arduino_x(self, arduino_x):
-        arduino_x = math.sin(Config.POSITION_GROUND_TO_CABLE_ANGLE) * arduino_x
-        return (math.tan(Config.POSITION_GROUND_TO_CABLE_ANGLE) * arduino_x) \
-            + Config.DISTANCE_BOTTOM_MAGNET_TO_TOP_LOAD \
-            - self._telescope_engine.get_z()
+    def _calculate_z_from_arduino_distance(self, arduino_distance):
+        arduino_z = math.sin(Config.POSITION_GROUND_TO_CABLE_ANGLE) * arduino_distance
+        return arduino_z + Config.DISTANCE_BOTTOM_MAGNET_TO_TOP_LOAD
 
     def get_current_x(self):
         return self._x_pos
