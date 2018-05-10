@@ -83,7 +83,7 @@ class Controller(object):
             print("goal detection value: ", value)
             if Config.CONTROLLER_GOAL_DETECTION_THRESHOLD > value > -Config.CONTROLLER_GOAL_DETECTION_THRESHOLD:
                 print("goal found")
-                self._on_goal_found()
+                self._on_goal_found(value)
             elif value < Config.CONTROLLER_DISTANCE_TO_GOAL_SLOWER and self.reverted is False:
                 print("Goal slower speed set")
                 self._movement.set_speed(Config.CONTROLLER_SEARCH_GOAL_SPEED)
@@ -117,16 +117,16 @@ class Controller(object):
 
         self._finish()
 
-    def _on_goal_found(self):
+    def _on_goal_found(self, distance_to_goal_when_found):
         self._logger.major_step("Goal found")
         self._goal_found = True
-        self._block_until_goal_reached()
+        self._block_until_goal_reached(distance_to_goal_when_found)
         self._movement.stop()
         self._deliver_load()
 
-    def _block_until_goal_reached(self):
+    def _block_until_goal_reached(self, distance_to_goal_when_found):
         goal_reached = False
-        goal_position = self._position.get_current_x() + Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE
+        goal_position = self._position.get_current_x() + Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE - distance_to_goal_when_found
         while not goal_reached:
             position = self._position.get_current_x()
             if position >= goal_position:
