@@ -55,9 +55,8 @@ class Position(object):
                - self._telescope_engine.get_z()
 
 
-def get_current_x(self):
-    return self._x_pos
+    def get_current_x(self):
+        return self._x_pos
 
-
-def get_current_z(self):
-    return self._z_pos
+    def get_current_z(self):
+        return self._z_pos
