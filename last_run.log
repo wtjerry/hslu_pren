@@ -1,0 +1,2478 @@
+starting socket server
+waiting for a connection
+Start balancing
+Sending to Arduino:  FBstart3;
+Arduino returned  OK
+load  not yet reached, position:  0
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  0
+Arduino returned  16
+Current x:  279.8492425207504
+load  not yet reached, position:  279.8492425207504
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  279.8492425207504
+Arduino returned  24
+Current x:  287.76883853181727
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  287.76883853181727
+Arduino returned  32
+Current x:  295.6884345428842
+load  not yet reached, position:  295.6884345428842
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  295.6884345428842
+Arduino returned  40
+Current x:  303.60803055395104
+load  not yet reached, position:  303.60803055395104
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  303.60803055395104
+Arduino returned  49
+Current x:  312.51757606640126
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  312.51757606640126
+Arduino returned  58
+Current x:  321.42712157885154
+load  not yet reached, position:  321.42712157885154
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  321.42712157885154
+Arduino returned  65
+Current x:  328.35676808853503
+load  not yet reached, position:  328.35676808853503
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  328.35676808853503
+Arduino returned  70
+Current x:  333.30651559545186
+load  not yet reached, position:  333.30651559545186
+Sending to Arduino:  FBgetx;
+Arduino returned  73
+Current x:  336.2763640996019
+load  not yet reached, position:  336.2763640996019
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  336.2763640996019
+Arduino returned  81
+Current x:  344.1959601106688
+load  not yet reached, position:  344.1959601106688
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  344.1959601106688
+Arduino returned  90
+Current x:  353.10550562311903
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  353.10550562311903
+Arduino returned  97
+Current x:  360.0351521328026
+load  not yet reached, position:  360.0351521328026
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  360.0351521328026
+Arduino returned  106
+Current x:  367.95474814386944
+load  not yet reached, position:  367.95474814386944
+Sending to Arduino:  FBgetx;
+Arduino returned  85
+Current x:  348.15575811620226
+load  not yet reached, position:  348.15575811620226
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  348.15575811620226
+Arduino returned  113
+Current x:  374.88439465355293
+load  not yet reached, position:  374.88439465355293
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  374.88439465355293
+Arduino returned  122
+Current x:  383.7939401660032
+load  not yet reached, position:  383.7939401660032
+Sending to Arduino:  FBgetx;
+Arduino returned  129
+Current x:  390.7235866756867
+load  not yet reached, position:  390.7235866756867
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  390.7235866756867
+Arduino returned  137
+Current x:  398.64318268675356
+load  not yet reached, position:  398.64318268675356
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  398.64318268675356
+Arduino returned  145
+Current x:  406.5627786978205
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  406.5627786978205
+Arduino returned  148
+Current x:  409.53262720197057
+load  not yet reached, position:  409.53262720197057
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  409.53262720197057
+Arduino returned  154
+Current x:  415.4723242102707
+load  not yet reached, position:  415.4723242102707
+Sending to Arduino:  FBgetx;
+Arduino returned  162
+Current x:  423.3919202213376
+load  not yet reached, position:  423.3919202213376
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  423.3919202213376
+Arduino returned  171
+Current x:  432.30146573378784
+load  not yet reached, position:  432.30146573378784
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  432.30146573378784
+Arduino returned  180
+Current x:  441.21101124623806
+load  not yet reached, position:  441.21101124623806
+Sending to Arduino:  FBgetx;
+Arduino returned  187
+Current x:  448.1406577559216
+load  not yet reached, position:  448.1406577559216
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  448.1406577559216
+Arduino returned  195
+Current x:  456.06025376698847
+load  not yet reached, position:  456.06025376698847
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  456.06025376698847
+Arduino returned  203
+Current x:  462.989900276672
+load  not yet reached, position:  462.989900276672
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  462.989900276672
+Arduino returned  212
+Current x:  471.89944578912224
+load  not yet reached, position:  471.89944578912224
+Sending to Arduino:  FBgetx;
+Arduino returned  220
+Current x:  479.8190418001891
+load  not yet reached, position:  479.8190418001891
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  479.8190418001891
+Arduino returned  227
+Current x:  486.74868830987265
+load  not yet reached, position:  486.74868830987265
+Sending to Arduino:  FBgetx;
+Arduino returned  231
+Current x:  490.70848631540605
+load  not yet reached, position:  490.70848631540605
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  490.70848631540605
+Arduino returned  231
+Current x:  490.70848631540605
+load  not yet reached, position:  490.70848631540605
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  490.70848631540605
+Arduino returned  233
+Current x:  492.6883853181728
+load  not yet reached, position:  492.6883853181728
+Sending to Arduino:  FBgetx;
+Arduino returned  242
+Current x:  501.59793083062306
+load  not yet reached, position:  501.59793083062306
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  501.59793083062306
+Arduino returned  249
+Current x:  508.5275773403066
+load  not yet reached, position:  508.5275773403066
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  508.5275773403066
+Arduino returned  257
+Current x:  516.4471733513734
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  516.4471733513734
+Arduino returned  265
+Current x:  524.3667693624403
+load  not yet reached, position:  524.3667693624403
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  524.3667693624403
+Arduino returned  273
+Current x:  532.2863653735071
+load  not yet reached, position:  532.2863653735071
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  532.2863653735071
+Arduino returned  281
+Current x:  540.205961384574
+load  not yet reached, position:  540.205961384574
+Sending to Arduino:  FBgetx;
+Arduino returned  290
+Current x:  549.1155068970243
+load  not yet reached, position:  549.1155068970243
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  549.1155068970243
+Arduino returned  299
+Current x:  557.0351029080912
+load  not yet reached, position:  557.0351029080912
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  557.0351029080912
+Arduino returned  307
+Current x:  564.9546989191581
+load  not yet reached, position:  564.9546989191581
+Sending to Arduino:  FBgetx;
+Arduino returned  307
+Current x:  564.9546989191581
+load  not yet reached, position:  564.9546989191581
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  564.9546989191581
+Arduino returned  312
+Current x:  569.9044464260749
+load  not yet reached, position:  569.9044464260749
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  569.9044464260749
+Arduino returned  320
+Current x:  577.8240424371418
+load  not yet reached, position:  577.8240424371418
+Sending to Arduino:  FBgetx;
+Arduino returned  329
+Current x:  586.733587949592
+load  not yet reached, position:  586.733587949592
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  586.733587949592
+Arduino returned  337
+Current x:  594.6531839606589
+load  not yet reached, position:  594.6531839606589
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  594.6531839606589
+Arduino returned  345
+Current x:  602.5727799717258
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  602.5727799717258
+Arduino returned  353
+Current x:  610.4923759827926
+load  not yet reached, position:  610.4923759827926
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  610.4923759827926
+Arduino returned  353
+Current x:  610.4923759827926
+load  not yet reached, position:  610.4923759827926
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  610.4923759827926
+Arduino returned  360
+Current x:  617.4220224924761
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  617.4220224924761
+Arduino returned  369
+Current x:  626.3315680049263
+load  not yet reached, position:  626.3315680049263
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  626.3315680049263
+Arduino returned  372
+Current x:  629.3014165090765
+load  not yet reached, position:  629.3014165090765
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  629.3014165090765
+Arduino returned  374
+Current x:  631.2813155118432
+load  not yet reached, position:  631.2813155118432
+Sending to Arduino:  FBgetx;
+Arduino returned  382
+Current x:  639.20091152291
+load  not yet reached, position:  639.20091152291
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  639.20091152291
+Arduino returned  390
+Current x:  647.1205075339769
+load  not yet reached, position:  647.1205075339769
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  647.1205075339769
+Arduino returned  398
+Current x:  654.0501540436605
+Sending to Arduino:  FBgetx;
+Load Reached!
+Arduino returned  407
+Current x:  662.9596995561108
+Sending to Arduino:  FBstop;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  428
+Current x:  683.7486390851614
+Sending to Arduino:  HSdn185;
+Arduino returned  13
+Arduino returned  22
+Arduino returned  34
+Arduino returned  46
+Arduino returned  59
+Arduino returned  72
+Arduino returned  84
+Arduino returned  98
+Arduino returned  111
+Arduino returned  124
+Arduino returned  137
+Arduino returned  148
+Arduino returned  161
+Arduino returned  174
+Arduino returned  185
+Arduino returned  197
+Arduino returned  197
+Arduino returned  OK
+Sending to Arduino:  HSup185;
+Arduino returned  202
+Arduino returned  197
+Arduino returned  184
+Arduino returned  173
+Arduino returned  158
+Arduino returned  147
+Arduino returned  134
+Arduino returned  123
+Arduino returned  110
+Arduino returned  97
+Arduino returned  83
+Arduino returned  71
+Arduino returned  58
+Arduino returned  45
+Arduino returned  33
+Arduino returned  22
+Arduino returned  22
+Arduino returned  OK
+Sending to Arduino:  FBstart4;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  453
+Current x:  708.4973766197453
+Sending to Arduino:  FBgetx;
+Arduino returned  469
+Current x:  724.336568641879
+Sending to Arduino:  FBgetx;
+Arduino returned  477
+Current x:  732.2561646529459
+Sending to Arduino:  FBgetx;
+Arduino returned  493
+Current x:  748.0953566750798
+Sending to Arduino:  FBgetx;
+Arduino returned  509
+Current x:  762.94459919583
+'process' took 0:00:00.031572
+Sending to Arduino:  FBgetx;
+Arduino returned  525
+Current x:  778.7837912179639
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029327
+Arduino returned  543
+Current x:  796.6028822428643
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.032369
+Arduino returned  558
+Current x:  811.4521247636147
+Sending to Arduino:  FBgetx;
+Arduino returned  575
+Current x:  828.2812662871319
+'process' took 0:00:00.032822
+Sending to Arduino:  FBgetx;
+Arduino returned  591
+Current x:  844.1204583092656
+'process' took 0:00:00.032741
+Sending to Arduino:  FBgetx;
+Arduino returned  599
+Current x:  851.0501048189491
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.032831
+Arduino returned  615
+Current x:  866.8892968410829
+Sending to Arduino:  FBgetx;
+Arduino returned  631
+Current x:  882.7284888632166
+'process' took 0:00:00.029402
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029572
+Arduino returned  647
+Current x:  898.5676808853505
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.030412
+Arduino returned  673
+Current x:  924.3063679213178
+Sending to Arduino:  FBgetx;
+Arduino returned  682
+Current x:  933.215913433768
+'process' took 0:00:00.033375
+Sending to Arduino:  FBgetx;
+Arduino returned  686
+Current x:  937.1757114393015
+'process' took 0:00:00.034694
+Sending to Arduino:  FBgetx;
+Arduino returned  703
+Current x:  953.0149034614352
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.035072
+Arduino returned  719
+Current x:  968.8540954835689
+Sending to Arduino:  FBgetx;
+Arduino returned  726
+Current x:  975.7837419932525
+'process' took 0:00:00.036133
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.036190
+Arduino returned  742
+Current x:  991.6229340153862
+Sending to Arduino:  FBgetx;
+Arduino returned  767
+Current x:  1016.3716715499703
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.056862
+Arduino returned  784
+Current x:  1033.2008130734873
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.033426
+Arduino returned  800
+Current x:  1048.0500555942376
+Sending to Arduino:  FBgetx;
+Arduino returned  816
+Current x:  1063.8892476163714
+'process' took 0:00:00.033237
+Sending to Arduino:  FBgetx;
+Arduino returned  832
+Current x:  1079.7284396385053
+'process' took 0:00:00.032492
+Sending to Arduino:  FBgetx;
+Arduino returned  843
+Current x:  1090.6178841537221
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.032840
+Arduino returned  856
+Current x:  1103.487227671706
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029163
+Arduino returned  872
+Current x:  1119.3264196938399
+Sending to Arduino:  FBgetx;
+Arduino returned  888
+Current x:  1135.1656117159735
+'process' took 0:00:00.029014
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029029
+Arduino returned  905
+Current x:  1151.004803738107
+Sending to Arduino:  FBgetx;
+Arduino returned  921
+Current x:  1166.843995760241
+'process' took 0:00:00.029318
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029071
+Arduino returned  922
+Current x:  1167.8339452616242
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.030425
+Arduino returned  938
+Current x:  1183.673137283758
+Sending to Arduino:  FBgetx;
+Arduino returned  955
+Current x:  1200.5022788072752
+'process' took 0:00:00.035974
+Sending to Arduino:  FBgetx;
+Arduino returned  917
+Current x:  1162.8841977547077
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.036455
+Arduino returned  979
+Current x:  1224.261066840476
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029676
+Arduino returned  994
+Current x:  1239.1103093612264
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029005
+Arduino returned  1010
+Current x:  1253.9595518819765
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028877
+Arduino returned  1028
+Current x:  1271.7786429068772
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029536
+Arduino returned  1044
+Current x:  1287.6178349290108
+Sending to Arduino:  FBgetx;
+Arduino returned  1060
+Current x:  1303.4570269511446
+'process' took 0:00:00.030866
+Sending to Arduino:  FBgetx;
+Arduino returned  1076
+Current x:  1319.2962189732784
+'process' took 0:00:00.029755
+Sending to Arduino:  FBgetx;
+Arduino returned  1088
+Current x:  1331.1756129898788
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029216
+Arduino returned  1101
+Current x:  1343.0550070064792
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029849
+Arduino returned  1116
+Current x:  1357.9042495272295
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029735
+Arduino returned  1132
+Current x:  1373.7434415493633
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028768
+Arduino returned  1140
+Current x:  1381.6630375604302
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029316
+Arduino returned  1150
+Current x:  1391.5625325742637
+Sending to Arduino:  FBgetx;
+Arduino returned  1166
+Current x:  1407.4017245963976
+'process' took 0:00:00.029231
+Sending to Arduino:  FBgetx;
+Arduino returned  1182
+Current x:  1423.2409166185312
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029378
+Arduino returned  1199
+Current x:  1439.080108640665
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029555
+Arduino returned  1209
+Current x:  1448.9796036544985
+'process' took 0:00:00.029066
+Sending to Arduino:  FBgetx;
+Arduino returned  1223
+Current x:  1462.8388966738655
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.030272
+Arduino returned  1239
+Current x:  1478.6780886959993
+Sending to Arduino:  FBgetx;
+Arduino returned  1255
+Current x:  1494.5172807181332
+'process' took 0:00:00.033268
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.032291
+Arduino returned  1272
+Current x:  1511.3464222416503
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.032889
+Arduino returned  1296
+Current x:  1534.1152607734675
+Sending to Arduino:  FBgetx;
+Arduino returned  1313
+Current x:  1550.9444022969847
+'process' took 0:00:00.033452
+Sending to Arduino:  FBgetx;
+Arduino returned  1329
+Current x:  1566.7835943191185
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029600
+Arduino returned  1328
+Current x:  1565.793644817735
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029783
+Arduino returned  1332
+Current x:  1569.7534428232684
+Sending to Arduino:  FBgetx;
+Arduino returned  1340
+Current x:  1577.6730388343353
+'process' took 0:00:00.029119
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.030387
+Arduino returned  1356
+Current x:  1593.5122308564692
+Sending to Arduino:  FBgetx;
+Arduino returned  1380
+Current x:  1617.2710188896697
+'process' took 0:00:00.030552
+Sending to Arduino:  FBgetx;
+Arduino returned  1398
+Current x:  1634.1001604131868
+'process' took 0:00:00.029609
+Sending to Arduino:  FBgetx;
+Arduino returned  1412
+Current x:  1647.959453432554
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.030050
+Arduino returned  1430
+Current x:  1665.7785444574545
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029716
+Arduino returned  1446
+Current x:  1681.617736479588
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.030308
+Arduino returned  1456
+Current x:  1691.5172314934218
+'process' took 0:00:00.030107
+Sending to Arduino:  FBgetx;
+Arduino returned  1470
+Current x:  1705.3765245127888
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.030459
+Arduino returned  1486
+Current x:  1721.2157165349226
+'process' took 0:00:00.029934
+Sending to Arduino:  FBgetx;
+Arduino returned  1502
+Current x:  1736.064959055673
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.030788
+Arduino returned  1519
+Current x:  1752.89410057919
+'process' took 0:00:00.029404
+Sending to Arduino:  FBgetx;
+Arduino returned  1518
+Current x:  1751.9041510778068
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029157
+Arduino returned  1526
+Current x:  1759.8237470888737
+Sending to Arduino:  FBgetx;
+Arduino returned  1541
+Current x:  1774.672989609624
+'process' took 0:00:00.028879
+Sending to Arduino:  FBgetx;
+Arduino returned  1558
+Current x:  1791.5021311331411
+'process' took 0:00:00.029495
+Sending to Arduino:  FBgetx;
+Arduino returned  1574
+Current x:  1807.341323155275
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.030814
+Arduino returned  1581
+Current x:  1814.2709696649583
+Sending to Arduino:  FBgetx;
+Arduino returned  1598
+Current x:  1830.1101616870922
+'process' took 0:00:00.030567
+Sending to Arduino:  FBgetx;
+Arduino returned  1614
+Current x:  1845.949353709226
+'process' took 0:00:00.029529
+Sending to Arduino:  FBgetx;
+Arduino returned  1630
+Current x:  1861.7885457313598
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029576
+Arduino returned  1648
+Current x:  1879.6076367562603
+Sending to Arduino:  FBgetx;
+Arduino returned  1663
+Current x:  1894.4568792770106
+2018-05-10 12:30:01.205278: distance:  213px  99.533mm
+'process' took 0:00:00.031795
+goal detection value:  99.53310192670459
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1680
+Current x:  1911.2860208005277
+2018-05-10 12:30:01.321336: distance:  179px  83.282mm
+'process' took 0:00:00.029620
+goal detection value:  83.28153767025583
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1680
+Current x:  1911.2860208005277
+2018-05-10 12:30:01.453160: distance:  102px  48.710mm
+'process' took 0:00:00.030890
+goal detection value:  48.709773846230384
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:01.589500: distance:   90px  43.584mm
+Arduino returned  1682
+'process' took 0:00:00.030099
+Current x:  1913.2659198032945
+goal detection value:  43.583712832298204
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1686
+Current x:  1917.2257178088278
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:01.735629: distance:  133px  63.103mm
+'process' took 0:00:00.044339
+goal detection value:  63.10288015222432
+Goal slower speed set
+Arduino returned  1690
+Current x:  1921.1855158143612
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1693
+Current x:  1923.165414817128
+2018-05-10 12:30:01.884338: distance:  186px  86.481mm
+'process' took 0:00:00.044406
+goal detection value:  86.4808290786024
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1688
+Current x:  1919.2056168115946
+2018-05-10 12:30:01.989867: distance:  186px  85.969mm
+'process' took 0:00:00.033130
+goal detection value:  85.96934904400463
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1692
+Current x:  1922.1754653157448
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.032636
+Arduino returned  1696
+Current x:  1926.1352633212782
+Sending to Arduino:  FBgetx;
+Arduino returned  1700
+Current x:  1930.0950613268114
+2018-05-10 12:30:02.271208: distance:  192px  88.826mm
+'process' took 0:00:00.031635
+goal detection value:  88.82556777479033
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:02.391876: distance:  167px  77.471mm
+'process' took 0:00:00.032888
+goal detection value:  77.470931526001
+Arduino returned  1662
+Current x:  1893.4669297756272
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1727
+Current x:  1956.8236978641623
+2018-05-10 12:30:02.523978: distance:  151px  70.254mm
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.033748
+goal detection value:  70.2542580346851
+Goal slower speed set
+Arduino returned  1701
+Current x:  1931.085010828195
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1701
+Current x:  1931.085010828195
+2018-05-10 12:30:02.699386: distance:  136px  63.800mm
+'process' took 0:00:00.031441
+goal detection value:  63.80009565208496
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:02.821877: distance:  144px  67.029mm
+'process' took 0:00:00.029644
+goal detection value:  67.0289671468851
+Goal slower speed set
+Arduino returned  1708
+Current x:  1938.0146573378784
+Sending to Arduino:  FBsetspeed2;
+2018-05-10 12:30:02.960152: distance:  134px  62.546mm
+'process' took 0:00:00.036624
+Arduino returned  OK
+goal detection value:  62.5457320046153
+Sending to Arduino:  FBgetx;
+Goal slower speed set
+Arduino returned  1714
+Current x:  1943.9543543461787
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:03.106039: distance:  120px  56.011mm
+'process' took 0:00:00.032935
+goal detection value:  56.0111032877152
+Goal slower speed set
+Arduino returned  1710
+Current x:  1939.9945563406452
+Sending to Arduino:  FBsetspeed2;
+2018-05-10 12:30:03.223598: distance:   89px  42.276mm
+'process' took 0:00:00.031809
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+goal detection value:  42.27569653082103
+Goal slower speed set
+Arduino returned  1714
+Current x:  1943.9543543461787
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:03.358157: distance:  120px  56.139mm
+'process' took 0:00:00.034604
+goal detection value:  56.13901660631054
+Goal slower speed set
+Arduino returned  1718
+Current x:  1947.9141523517121
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1722
+Current x:  1951.8739503572456
+2018-05-10 12:30:03.506629: distance:  134px  62.063mm
+goal detection value:  62.06292465969146
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+'process' took 0:00:00.034136
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:03.622120: distance:  120px  55.616mm
+'process' took 0:00:00.033824
+goal detection value:  55.615567619271275
+Arduino returned  1726
+Current x:  1955.8337483627788
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:03.759223: distance:   84px  39.406mm
+'process' took 0:00:00.033815
+goal detection value:  39.405941432170124
+Goal slower speed set
+Arduino returned  1724
+Current x:  1953.8538493600122
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:03.889835: distance:   83px  39.071mm
+goal detection value:  39.07103363473694
+Goal slower speed set
+'process' took 0:00:00.036162
+Arduino returned  1730
+Current x:  1959.7935463683123
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:04.021015: distance:   84px  39.561mm
+'process' took 0:00:00.033717
+goal detection value:  39.560596446713866
+Goal slower speed set
+Arduino returned  1734
+Current x:  1963.7533443738457
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:04.155609: distance:   73px  34.396mm
+'process' took 0:00:00.033666
+goal detection value:  34.396419704107515
+Goal slower speed set
+Arduino returned  1741
+Current x:  1970.6829908835293
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1741
+Current x:  1970.6829908835293
+2018-05-10 12:30:04.306921: distance:   55px  25.933mm
+goal detection value:  25.932581167448426
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+'process' took 0:00:00.034505
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:04.438605: distance:   52px  24.575mm
+'process' took 0:00:00.033372
+goal detection value:  24.57463920035312
+goal found
+Goal  not yet reached, position:  1970.6829908835293
+Arduino returned  1743
+Current x:  1972.662889886296
+Goal  not yet reached, position:  1972.662889886296
+Sending to Arduino:  FBgetx;
+Arduino returned  1748
+Current x:  1977.612637393213
+Goal  not yet reached, position:  1977.612637393213
+Sending to Arduino:  FBgetx;
+1977.612637393213
+2018-05-10 12:30:04.575249: distance:   76px  35.514mm
+'process' took 0:00:00.032893
+Goal  not yet reached, position:  1977.612637393213
+Arduino returned  1751
+Current x:  1980.5824858973629
+Goal  not yet reached, position:  1980.5824858973629
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:04.687747: distance:   77px  35.801mm
+'process' took 0:00:00.030043
+Arduino returned  1755
+Current x:  1984.5422839028963
+Goal  not yet reached, position:  1984.5422839028963
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1984.5422839028963
+1984.5422839028963
+2018-05-10 12:30:04.821062: distance:   54px  25.263mm
+'process' took 0:00:00.030020
+Goal  not yet reached, position:  1984.5422839028963
+Arduino returned  1759
+Current x:  1988.5020819084298
+Goal  not yet reached, position:  1988.5020819084298
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1988.5020819084298
+2018-05-10 12:30:04.972069: distance:   26px  12.293mm
+'process' took 0:00:00.032181
+Arduino returned  1761
+Current x:  1990.4819809111966
+Goal  not yet reached, position:  1990.4819809111966
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1990.4819809111966
+1990.4819809111966
+2018-05-10 12:30:05.091920: distance:   31px  14.552mm
+'process' took 0:00:00.034490
+Arduino returned  1765
+Current x:  1994.4417789167298
+Goal  not yet reached, position:  1994.4417789167298
+Sending to Arduino:  FBgetx;
+Arduino returned  1770
+Current x:  1999.3915264236468
+Goal  not yet reached, position:  1999.3915264236468
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1999.3915264236468
+2018-05-10 12:30:05.239216: distance:   22px  10.344mm
+'process' took 0:00:00.034367
+Arduino returned  1774
+Current x:  2003.3513244291803
+Goal  not yet reached, position:  2003.3513244291803
+2003.3513244291803
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2003.3513244291803
+Arduino returned  1777
+Current x:  2006.3211729333302
+2018-05-10 12:30:05.376130: distance:   13px   6.137mm
+'process' took 0:00:00.034158
+Goal  not yet reached, position:  2006.3211729333302
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2006.3211729333302
+2018-05-10 12:30:05.488621: distance:   -5px  -2.360mm
+'process' took 0:00:00.031481
+Arduino returned  1773
+Current x:  2002.3613749277968
+Goal  not yet reached, position:  2002.3613749277968
+Sending to Arduino:  FBgetx;
+Arduino returned  1775
+Current x:  2004.3412739305636
+2004.3412739305636
+Goal  not yet reached, position:  2004.3412739305636
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2004.3412739305636
+2018-05-10 12:30:05.636847: distance:   13px   6.120mm
+'process' took 0:00:00.031658
+Arduino returned  1779
+Current x:  2008.301071936097
+Goal  not yet reached, position:  2008.301071936097
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:05.752852: distance:   43px  20.006mm
+'process' took 0:00:00.030537
+Goal  not yet reached, position:  2008.301071936097
+Arduino returned  1783
+Current x:  2012.2608699416305
+Goal  not yet reached, position:  2012.2608699416305
+Sending to Arduino:  FBgetx;
+2012.2608699416305
+Goal  not yet reached, position:  2012.2608699416305
+2018-05-10 12:30:05.887437: distance:   44px  20.369mm
+'process' took 0:00:00.030370
+Arduino returned  1787
+Current x:  2016.220667947164
+Goal  not yet reached, position:  2016.220667947164
+Sending to Arduino:  FBgetx;
+Arduino returned  1790
+Current x:  2019.190516451314
+Goal  not yet reached, position:  2019.190516451314
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:06.037304: distance:   19px   8.812mm
+Goal  not yet reached, position:  2019.190516451314
+'process' took 0:00:00.031195
+2019.190516451314
+Arduino returned  1785
+Current x:  2014.2407689443971
+Goal  not yet reached, position:  2014.2407689443971
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:06.151507: distance:  -26px -12.405mm
+'process' took 0:00:00.030492
+Goal  not yet reached, position:  2014.2407689443971
+Arduino returned  1789
+Current x:  2018.2005669499306
+Goal  not yet reached, position:  2018.2005669499306
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2018.2005669499306
+2018-05-10 12:30:06.284594: distance:  -11px  -5.192mm
+'process' took 0:00:00.030412
+Arduino returned  1793
+Current x:  2021.1704154540807
+Goal  not yet reached, position:  2021.1704154540807
+2021.1704154540807
+Sending to Arduino:  FBgetx;
+Arduino returned  1797
+Current x:  2025.1302134596142
+Goal  not yet reached, position:  2025.1302134596142
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:06.436724: distance:   -6px  -2.824mm
+'process' took 0:00:00.030927
+Goal  not yet reached, position:  2025.1302134596142
+Arduino returned  1801
+Current x:  2029.0900114651477
+Goal  not yet reached, position:  2029.0900114651477
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2029.0900114651477
+2018-05-10 12:30:06.570467: distance:  -12px  -5.642mm
+'process' took 0:00:00.031360
+Arduino returned  1803
+Current x:  2031.0699104679143
+2031.0699104679143
+Goal  not yet reached, position:  2031.0699104679143
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2031.0699104679143
+2018-05-10 12:30:06.686694: distance:  -39px -18.359mm
+'process' took 0:00:00.030090
+Arduino returned  1798
+Current x:  2026.1201629609975
+Goal  not yet reached, position:  2026.1201629609975
+Sending to Arduino:  FBgetx;
+Arduino returned  1803
+Current x:  2031.0699104679143
+Goal  not yet reached, position:  2031.0699104679143
+2018-05-10 12:30:06.836429: distance:  -19px  -8.979mm
+'process' took 0:00:00.030720
+Sending to Arduino:  FBgetx;
+2031.0699104679143
+Goal  not yet reached, position:  2031.0699104679143
+Arduino returned  1807
+Current x:  2035.0297084734477
+Goal  not yet reached, position:  2035.0297084734477
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2035.0297084734477
+2018-05-10 12:30:06.970582: distance:    5px   2.346mm
+'process' took 0:00:00.031724
+Arduino returned  1811
+Current x:  2038.9895064789812
+Goal  not yet reached, position:  2038.9895064789812
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2038.9895064789812
+2018-05-10 12:30:07.086253: distance:    7px   3.269mm
+'process' took 0:00:00.032751
+2038.9895064789812
+Arduino returned  1815
+Current x:  2042.9493044845146
+Goal  not yet reached, position:  2042.9493044845146
+Sending to Arduino:  FBgetx;
+Arduino returned  1814
+Current x:  2041.9593549831313
+Goal  not yet reached, position:  2041.9593549831313
+2018-05-10 12:30:07.218519: distance:  -17px  -7.915mm
+'process' took 0:00:00.031977
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2041.9593549831313
+Arduino returned  1812
+Goal  not yet reached, position:  2041.9593549831313
+Current x:  2039.9794559803645
+2039.9794559803645
+2018-05-10 12:30:07.353411: distance:  -45px -21.410mm
+'process' took 0:00:00.033730
+Goal  not yet reached, position:  2039.9794559803645
+Sending to Arduino:  FBgetx;
+Arduino returned  1816
+Current x:  2043.939253985898
+Goal  not yet reached, position:  2043.939253985898
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2043.939253985898
+2018-05-10 12:30:07.504127: distance:  -31px -14.674mm
+'process' took 0:00:00.033923
+Arduino returned  1821
+Current x:  2048.8890014928147
+Goal  not yet reached, position:  2043.939253985898
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2048.8890014928147
+Arduino returned  1823
+Current x:  2050.8689004955813
+2050.8689004955813
+2018-05-10 12:30:07.622885: distance:  -30px -14.099mm
+'process' took 0:00:00.033045
+Goal  not yet reached, position:  2050.8689004955813
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2050.8689004955813
+Arduino returned  1814
+Current x:  2041.9593549831313
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2041.9593549831313
+2018-05-10 12:30:07.770600: distance:  -43px -20.275mm
+'process' took 0:00:00.032418
+Arduino returned  1783
+Current x:  2012.2608699416305
+Goal  not yet reached, position:  2012.2608699416305
+Sending to Arduino:  FBgetx;
+2012.2608699416305
+Goal  not yet reached, position:  2012.2608699416305
+2018-05-10 12:30:07.901506: distance:  -71px -33.781mm
+'process' took 0:00:00.031009
+Arduino returned  1684
+Current x:  1915.2458188060612
+Goal  not yet reached, position:  1915.2458188060612
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1915.2458188060612
+Arduino returned  1702
+Current x:  1932.0749603295783
+2018-05-10 12:30:08.017729: distance:  -51px -24.074mm
+'process' took 0:00:00.031429
+Goal  not yet reached, position:  1932.0749603295783
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1932.0749603295783
+Arduino returned  1706
+Current x:  1936.0347583351117
+1936.0347583351117
+2018-05-10 12:30:08.150173: distance:  -44px -20.665mm
+'process' took 0:00:00.030347
+Goal  not yet reached, position:  1936.0347583351117
+Sending to Arduino:  FBgetx;
+Arduino returned  1710
+Current x:  1939.9945563406452
+Goal  not yet reached, position:  1939.9945563406452
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1939.9945563406452
+2018-05-10 12:30:08.284309: distance:  -51px -23.941mm
+'process' took 0:00:00.031552
+Arduino returned  1714
+Current x:  1943.9543543461787
+Goal  not yet reached, position:  1943.9543543461787
+1943.9543543461787
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1943.9543543461787
+Arduino returned  1711
+Current x:  1940.9845058420285
+2018-05-10 12:30:08.436618: distance:  -76px -35.677mm
+'process' took 0:00:00.033369
+Goal  not yet reached, position:  1940.9845058420285
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1940.9845058420285
+Arduino returned  1715
+Current x:  1944.944303847562
+Goal  not yet reached, position:  1944.944303847562
+2018-05-10 12:30:08.570384: distance:  -77px -36.636mm
+'process' took 0:00:00.031855
+Sending to Arduino:  FBgetx;
+Arduino returned  1718
+1944.944303847562
+Current x:  1947.9141523517121
+Goal  not yet reached, position:  1947.9141523517121
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1947.9141523517121
+2018-05-10 12:30:08.686953: distance:  -71px -33.648mm
+'process' took 0:00:00.031370
+Arduino returned  1722
+Current x:  1951.8739503572456
+Goal  not yet reached, position:  1951.8739503572456
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1951.8739503572456
+2018-05-10 12:30:08.815159: distance:  -78px -36.862mm
+'process' took 0:00:00.030243
+Arduino returned  1726
+Current x:  1955.8337483627788
+Goal  not yet reached, position:  1955.8337483627788
+1955.8337483627788
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1955.8337483627788
+Arduino returned  1729
+Current x:  1958.803596866929
+2018-05-10 12:30:08.949320: distance:  -94px -44.620mm
+Goal  not yet reached, position:  1958.803596866929
+'process' took 0:00:00.029921
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1958.803596866929
+Arduino returned  1727
+Current x:  1956.8236978641623
+Goal  not yet reached, position:  1956.8236978641623
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:09.084922: distance: -113px -54.130mm
+'process' took 0:00:00.031362
+1956.8236978641623
+Goal  not yet reached, position:  1956.8236978641623
+Arduino returned  1731
+Current x:  1960.7834958696958
+Goal  not yet reached, position:  1960.7834958696958
+Sending to Arduino:  FBgetx;
+Arduino returned  1735
+Current x:  1964.7432938752293
+Goal  not yet reached, position:  1964.7432938752293
+2018-05-10 12:30:09.235342: distance:  -92px -43.701mm
+'process' took 0:00:00.032997
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1964.7432938752293
+Goal  not yet reached, position:  1964.7432938752293
+2018-05-10 12:30:09.349284: distance:  -89px -42.158mm
+Arduino returned  1739
+'process' took 0:00:00.031864
+Current x:  1968.7030918807625
+1968.7030918807625
+Goal  not yet reached, position:  1968.7030918807625
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1968.7030918807625
+Arduino returned  1745
+Current x:  1974.6427888890628
+Goal  not yet reached, position:  1974.6427888890628
+2018-05-10 12:30:09.501900: distance: -100px -47.446mm
+'process' took 0:00:00.032496
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1974.6427888890628
+Arduino returned  1744
+Current x:  1973.6528393876795
+Goal  not yet reached, position:  1973.6528393876795
+1973.6528393876795
+2018-05-10 12:30:09.634357: distance: -128px -61.215mm
+'process' took 0:00:00.031254
+Sending to Arduino:  FBgetx;
+Arduino returned  1747
+Current x:  1976.6226878918294
+Goal  not yet reached, position:  1976.6226878918294
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1976.6226878918294
+2018-05-10 12:30:09.754460: distance: -128px -61.143mm
+'process' took 0:00:00.038010
+Goal  not yet reached, position:  1976.6226878918294
+Arduino returned  1752
+Current x:  1981.5724353987462
+Goal  not yet reached, position:  1981.5724353987462
+Sending to Arduino:  FBgetx;
+Arduino returned  1756
+Current x:  1985.5322334042796
+1985.5322334042796
+Goal  not yet reached, position:  1985.5322334042796
+2018-05-10 12:30:09.912065: distance: -131px -62.328mm
+'process' took 0:00:00.031499
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1985.5322334042796
+Goal  not yet reached, position:  1985.5322334042796
+Arduino returned  1761
+Current x:  1990.4819809111966
+2018-05-10 12:30:10.033100: distance: -141px -67.275mm
+'process' took 0:00:00.030683
+Goal  not yet reached, position:  1990.4819809111966
+Sending to Arduino:  FBgetx;
+Arduino returned  1764
+Current x:  1993.4518294153465
+Goal  not yet reached, position:  1993.4518294153465
+1993.4518294153465
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1993.4518294153465
+2018-05-10 12:30:10.147782: distance: -152px -72.201mm
+'process' took 0:00:00.030273
+Arduino returned  1761
+Current x:  1990.4819809111966
+Goal  not yet reached, position:  1990.4819809111966
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:10.249160: distance: -162px -77.257mm
+'process' took 0:00:00.030410
+Goal  not yet reached, position:  1990.4819809111966
+Arduino returned  1765
+Current x:  1994.4417789167298
+Goal  not yet reached, position:  1994.4417789167298
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1994.4417789167298
+1994.4417789167298
+2018-05-10 12:30:10.399909: distance: -139px -66.135mm
+'process' took 0:00:00.030705
+Arduino returned  1770
+Goal  not yet reached, position:  1994.4417789167298
+Current x:  1999.3915264236468
+Goal  not yet reached, position:  1999.3915264236468
+Sending to Arduino:  FBgetx;
+Arduino returned  1774
+Current x:  2003.3513244291803
+Goal  not yet reached, position:  2003.3513244291803
+2018-05-10 12:30:10.532967: distance: -138px -65.659mm
+'process' took 0:00:00.030629
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2003.3513244291803
+Arduino returned  1778
+Current x:  2007.3111224347135
+Goal  not yet reached, position:  2007.3111224347135
+2007.3111224347135
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:10.667031: distance: -151px -71.526mm
+'process' took 0:00:00.031640
+Goal  not yet reached, position:  2007.3111224347135
+Arduino returned  1774
+Current x:  2003.3513244291803
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2003.3513244291803
+Goal  not yet reached, position:  2003.3513244291803
+2018-05-10 12:30:10.799086: distance: -185px -88.828mm
+'process' took 0:00:00.030409
+Arduino returned  1775
+Current x:  2004.3412739305636
+Goal  not yet reached, position:  2004.3412739305636
+Sending to Arduino:  FBgetx;
+Arduino returned  1779
+Current x:  2008.301071936097
+Goal  not yet reached, position:  2008.301071936097
+2008.301071936097
+2018-05-10 12:30:10.932973: distance: -166px -79.519mm
+'process' took 0:00:00.030926
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2008.301071936097
+Arduino returned  1783
+Current x:  2012.2608699416305
+Goal  not yet reached, position:  2008.301071936097
+Goal  not yet reached, position:  2012.2608699416305
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:11.071488: distance: -159px -75.863mm
+'process' took 0:00:00.032276
+Arduino returned  1787
+Current x:  2016.220667947164
+Goal  not yet reached, position:  2016.220667947164
+Sending to Arduino:  FBgetx;
+2016.220667947164
+Goal  not yet reached, position:  2016.220667947164
+2018-05-10 12:30:11.200183: distance: -162px -77.384mm
+'process' took 0:00:00.031305
+Arduino returned  1789
+Current x:  2018.2005669499306
+Goal  not yet reached, position:  2018.2005669499306
+Goal  not yet reached, position:  2018.2005669499306
+Sending to Arduino:  FBgetx;
+Arduino returned  1785
+Current x:  2014.2407689443971
+2018-05-10 12:30:11.335187: distance: -195px -92.842mm
+Goal  not yet reached, position:  2014.2407689443971
+'process' took 0:00:00.040659
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2014.2407689443971
+Arduino returned  1789
+Current x:  2018.2005669499306
+2018.2005669499306
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2018.2005669499306
+2018-05-10 12:30:11.465877: distance: -187px -89.789mm
+'process' took 0:00:00.030887
+Arduino returned  1793
+Current x:  2021.1704154540807
+Goal  not yet reached, position:  2021.1704154540807
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2021.1704154540807
+2018-05-10 12:30:11.598709: distance: -173px -82.832mm
+'process' took 0:00:00.030379
+Goal  not yet reached, position:  2021.1704154540807
+Arduino returned  1797
+Current x:  2025.1302134596142
+Goal  not yet reached, position:  2025.1302134596142
+2025.1302134596142
+Sending to Arduino:  FBgetx;
+Arduino returned  1801
+Current x:  2029.0900114651477
+Goal  not yet reached, position:  2029.0900114651477
+2018-05-10 12:30:11.733155: distance: -174px -83.117mm
+'process' took 0:00:00.030795
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2029.0900114651477
+Arduino returned  1798
+Current x:  2026.1201629609975
+Goal  not yet reached, position:  2026.1201629609975
+2018-05-10 12:30:11.866185: distance: -207px -99.275mm
+'process' took 0:00:00.031027
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2026.1201629609975
+Arduino returned  1801
+Current x:  2029.0900114651477
+2029.0900114651477
+Goal  not yet reached, position:  2029.0900114651477
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2029.0900114651477
+2018-05-10 12:30:12.017227: distance: -199px -95.775mm
+'process' took 0:00:00.049939
+Arduino returned  1805
+Current x:  2033.0498094706809
+Goal  not yet reached, position:  2033.0498094706809
+Sending to Arduino:  FBgetx;
+Arduino returned  1809
+Current x:  2037.0096074762143
+Goal  not yet reached, position:  2037.0096074762143
+Sending to Arduino:  FBgetx;
+2018-05-10 12:30:12.166365: distance: -194px -93.041mm
+'process' took 0:00:00.030122
+Goal  not yet reached, position:  2037.0096074762143
+2037.0096074762143
+Arduino returned  1813
+Current x:  2040.9694054817478
+Goal  not yet reached, position:  2040.9694054817478
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2040.9694054817478
+2018-05-10 12:30:12.298323: distance: -201px -96.511mm
+'process' took 0:00:00.030509
+Arduino returned  1816
+Current x:  2043.939253985898
+Goal  not yet reached, position:  2043.939253985898
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2043.939253985898
+2018-05-10 12:30:12.415737: distance: -228px -109.166mm
+'process' took 0:00:00.028865
+Arduino returned  1811
+Current x:  2038.9895064789812
+Goal  not yet reached, position:  2038.9895064789812
+2038.9895064789812
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2038.9895064789812
+Arduino returned  1815
+Current x:  2042.9493044845146
+Goal  not yet reached, position:  2042.9493044845146
+2018-05-10 12:30:12.566086: distance: -218px -104.796mm
+'process' took 0:00:00.030137
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2042.9493044845146
+Arduino returned  1820
+Current x:  2047.8990519914314
+Goal  not yet reached, position:  2047.8990519914314
+2018-05-10 12:30:12.697734: distance: -198px -95.070mm
+'process' took 0:00:00.030235
+Sending to Arduino:  FBgetx;
+2047.8990519914314
+Arduino returned  1823
+Current x:  2050.8689004955813
+Goal  not yet reached, position:  2050.8689004955813
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2050.8689004955813
+Goal  not yet reached, position:  2050.8689004955813
+Arduino returned  1816
+2018-05-10 12:30:12.831400: distance: -201px -96.511mm
+'process' took 0:00:00.030537
+Current x:  2043.939253985898
+Goal  not yet reached, position:  2043.939253985898
+Sending to Arduino:  FBgetx;
+Arduino returned  1823
+Current x:  2050.8689004955813
+Goal  not yet reached, position:  2050.8689004955813
+2050.8689004955813
+'process' took 0:00:00.029115
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2050.8689004955813
+Arduino returned  1823
+Goal  not yet reached, position:  2050.8689004955813
+Current x:  2050.8689004955813
+Goal  not yet reached, position:  2050.8689004955813
+'process' took 0:00:00.028963
+Sending to Arduino:  FBgetx;
+Arduino returned  1824
+Current x:  2051.8588499969646
+Goal  not yet reached, position:  2051.8588499969646
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2051.8588499969646
+2051.8588499969646
+'process' took 0:00:00.029342
+Arduino returned  1827
+Current x:  2054.828698501115
+Goal  not yet reached, position:  2051.8588499969646
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2054.828698501115
+Arduino returned  1831
+Current x:  2058.7884965066482
+'process' took 0:00:00.028819
+Goal  not yet reached, position:  2058.7884965066482
+Sending to Arduino:  FBgetx;
+Arduino returned  1828
+Current x:  2055.8186480024983
+Goal  not yet reached, position:  2058.7884965066482
+2055.8186480024983
+Goal  not yet reached, position:  2055.8186480024983
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028386
+Arduino returned  1832
+Current x:  2059.778446008032
+Goal  not yet reached, position:  2059.778446008032
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2059.778446008032
+'process' took 0:00:00.028944
+Arduino returned  1836
+Current x:  2063.7382440135652
+Goal  not yet reached, position:  2059.778446008032
+Goal  not yet reached, position:  2063.7382440135652
+Sending to Arduino:  FBgetx;
+2063.7382440135652
+Arduino returned  1840
+Current x:  2067.6980420190985
+'process' took 0:00:00.028781
+Goal  not yet reached, position:  2067.6980420190985
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2067.6980420190985
+Arduino returned  1843
+Current x:  2070.6678905232484
+Goal  not yet reached, position:  2070.6678905232484
+'process' took 0:00:00.031895
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2070.6678905232484
+Arduino returned  1843
+Current x:  2070.6678905232484
+Goal  not yet reached, position:  2070.6678905232484
+2070.6678905232484
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.031663
+Goal  not yet reached, position:  2070.6678905232484
+Arduino returned  1844
+Current x:  2071.6578400246317
+Goal  not yet reached, position:  2071.6578400246317
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.031607
+Goal  not yet reached, position:  2071.6578400246317
+Arduino returned  1848
+Current x:  2075.6176380301654
+Goal  not yet reached, position:  2075.6176380301654
+Sending to Arduino:  FBgetx;
+2075.6176380301654
+Arduino returned  1852
+Current x:  2079.577436035699
+Goal  not yet reached, position:  2079.577436035699
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.048947
+Goal  not yet reached, position:  2079.577436035699
+Arduino returned  1856
+Current x:  2083.5372340412323
+Goal  not yet reached, position:  2083.5372340412323
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2083.5372340412323
+'process' took 0:00:00.031611
+Arduino returned  1856
+Current x:  2083.5372340412323
+Goal  not yet reached, position:  2083.5372340412323
+2083.5372340412323
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2083.5372340412323
+Arduino returned  1856
+Current x:  2083.5372340412323
+'process' took 0:00:00.030601
+Goal  not yet reached, position:  2083.5372340412323
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2083.5372340412323
+'process' took 0:00:00.030025
+Arduino returned  1860
+Goal  not yet reached, position:  2083.5372340412323
+Current x:  2087.4970320467655
+2087.4970320467655
+Goal  not yet reached, position:  2087.4970320467655
+Sending to Arduino:  FBgetx;
+Arduino returned  1866
+Current x:  2093.4367290550663
+Goal  not yet reached, position:  2093.4367290550663
+'process' took 0:00:00.031139
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2093.4367290550663
+Goal  not yet reached, position:  2093.4367290550663
+Arduino returned  1870
+Current x:  2097.3965270605995
+'process' took 0:00:00.029679
+Goal  not yet reached, position:  2097.3965270605995
+2097.3965270605995
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2097.3965270605995
+Arduino returned  1868
+Current x:  2095.416628057833
+Goal  not yet reached, position:  2095.416628057833
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2095.416628057833
+'process' took 0:00:00.031496
+Arduino returned  1872
+Current x:  2099.376426063366
+Goal  not yet reached, position:  2099.376426063366
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2099.376426063366
+'process' took 0:00:00.031633
+2099.376426063366
+Arduino returned  1877
+Current x:  2104.3261735702827
+Goal  not yet reached, position:  2104.3261735702827
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2104.3261735702827
+Arduino returned  1881
+Current x:  2108.2859715758163
+'process' took 0:00:00.029980
+Goal  not yet reached, position:  2108.2859715758163
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2108.2859715758163
+Arduino returned  1884
+Current x:  2111.2558200799667
+2111.2558200799667
+Goal  not yet reached, position:  2111.2558200799667
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.032250
+Arduino returned  1881
+Current x:  2108.2859715758163
+Goal  not yet reached, position:  2108.2859715758163
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2108.2859715758163
+'process' took 0:00:00.031999
+Arduino returned  1886
+Current x:  2113.2357190827333
+Goal  not yet reached, position:  2113.2357190827333
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2113.2357190827333
+2113.2357190827333
+Arduino returned  1891
+Current x:  2117.1955170882666
+'process' took 0:00:00.031442
+Goal  not yet reached, position:  2117.1955170882666
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2117.1955170882666
+Arduino returned  1895
+Current x:  2121.1553150938
+Goal  not yet reached, position:  2121.1553150938
+'process' took 0:00:00.031754
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2121.1553150938
+Arduino returned  1898
+Current x:  2124.12516359795
+Goal  not yet reached, position:  2124.12516359795
+Sending to Arduino:  FBgetx;
+2124.12516359795
+Goal  not yet reached, position:  2124.12516359795
+'process' took 0:00:00.031305
+Arduino returned  1895
+Current x:  2121.1553150938
+Goal  not yet reached, position:  2121.1553150938
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2121.1553150938
+'process' took 0:00:00.031507
+Arduino returned  1899
+Current x:  2125.1151130993335
+Goal  not yet reached, position:  2125.1151130993335
+Sending to Arduino:  FBgetx;
+Arduino returned  1902
+2125.1151130993335
+Current x:  2128.084961603484
+Goal  not yet reached, position:  2128.084961603484
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.031771
+Goal  not yet reached, position:  2128.084961603484
+Arduino returned  1906
+Current x:  2132.044759609017
+Goal  not yet reached, position:  2132.044759609017
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.030645
+Goal  not yet reached, position:  2132.044759609017
+Arduino returned  1910
+Current x:  2136.0045576145503
+Goal  not yet reached, position:  2136.0045576145503
+2136.0045576145503
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.031947
+Goal  not yet reached, position:  2136.0045576145503
+Arduino returned  1912
+Current x:  2137.984456617317
+Goal  not yet reached, position:  2137.984456617317
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2137.984456617317
+Arduino returned  1908
+Current x:  2134.0246586117837
+'process' took 0:00:00.031179
+Goal  not yet reached, position:  2134.0246586117837
+Sending to Arduino:  FBgetx;
+2134.0246586117837
+Goal  not yet reached, position:  2134.0246586117837
+Arduino returned  1912
+Current x:  2137.984456617317
+'process' took 0:00:00.028765
+Goal  not yet reached, position:  2137.984456617317
+Sending to Arduino:  FBgetx;
+Arduino returned  1916
+Current x:  2141.9442546228506
+Goal  not yet reached, position:  2141.9442546228506
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028900
+Goal  not yet reached, position:  2141.9442546228506
+Arduino returned  1920
+Current x:  2145.9040526283843
+Goal  not yet reached, position:  2145.9040526283843
+Sending to Arduino:  FBgetx;
+2145.9040526283843
+Goal  not yet reached, position:  2145.9040526283843
+Arduino returned  1923
+Current x:  2148.8739011325342
+'process' took 0:00:00.029498
+Goal  not yet reached, position:  2148.8739011325342
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2148.8739011325342
+Arduino returned  1918
+Current x:  2143.9241536256172
+Goal  not yet reached, position:  2143.9241536256172
+'process' took 0:00:00.028552
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2143.9241536256172
+Arduino returned  1922
+Current x:  2147.883951631151
+2147.883951631151
+Goal  not yet reached, position:  2147.883951631151
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028531
+Goal  not yet reached, position:  2147.883951631151
+Arduino returned  1926
+Current x:  2151.843749636684
+Goal  not yet reached, position:  2151.843749636684
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028643
+Arduino returned  1930
+Current x:  2155.8035476422174
+Goal  not yet reached, position:  2155.8035476422174
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2155.8035476422174
+2155.8035476422174
+'process' took 0:00:00.028776
+Arduino returned  1934
+Current x:  2159.763345647751
+Goal  not yet reached, position:  2159.763345647751
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2159.763345647751
+Arduino returned  1928
+Current x:  2153.8236486394508
+'process' took 0:00:00.029343
+Goal  not yet reached, position:  2153.8236486394508
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2153.8236486394508
+2153.8236486394508
+'process' took 0:00:00.029086
+Goal  not yet reached, position:  2153.8236486394508
+Arduino returned  1932
+Current x:  2157.7834466449845
+Goal  not yet reached, position:  2157.7834466449845
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2157.7834466449845
+'process' took 0:00:00.029513
+Arduino returned  1937
+Current x:  2162.7331941519014
+Goal  not yet reached, position:  2162.7331941519014
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2162.7331941519014
+'process' took 0:00:00.028932
+Arduino returned  1942
+Current x:  2167.682941658818
+2167.682941658818
+Goal  not yet reached, position:  2167.682941658818
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2167.682941658818
+'process' took 0:00:00.029140
+Arduino returned  1944
+Current x:  2169.6628406615846
+Goal  not yet reached, position:  2169.6628406615846
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2169.6628406615846
+Arduino returned  1944
+Current x:  2169.6628406615846
+'process' took 0:00:00.028699
+Goal  not yet reached, position:  2169.6628406615846
+2169.6628406615846
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2169.6628406615846
+'process' took 0:00:00.029304
+Arduino returned  1946
+Current x:  2171.642739664351
+Goal  not yet reached, position:  2171.642739664351
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2171.642739664351
+Arduino returned  1946
+Current x:  2171.642739664351
+'process' took 0:00:00.029111
+Goal  not yet reached, position:  2171.642739664351
+Sending to Arduino:  FBgetx;
+2171.642739664351
+'process' took 0:00:00.029460
+Goal  not yet reached, position:  2171.642739664351
+Arduino returned  1948
+Current x:  2173.622638667118
+Goal  not yet reached, position:  2173.622638667118
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2173.622638667118
+'process' took 0:00:00.031343
+Arduino returned  1946
+Current x:  2171.642739664351
+Goal  not yet reached, position:  2171.642739664351
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2171.642739664351
+2171.642739664351
+Arduino returned  1950
+Current x:  2175.602537669885
+'process' took 0:00:00.034179
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2175.602537669885
+Goal  not yet reached, position:  2175.602537669885
+Arduino returned  1954
+Current x:  2179.5623356754186
+'process' took 0:00:00.030680
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2179.5623356754186
+Goal  not yet reached, position:  2179.5623356754186
+Arduino returned  1959
+Current x:  2184.512083182335
+2184.512083182335
+Goal  not yet reached, position:  2184.512083182335
+'process' took 0:00:00.029776
+Sending to Arduino:  FBgetx;
+Arduino returned  1962
+Current x:  2187.481931686485
+Goal  not yet reached, position:  2187.481931686485
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2187.481931686485
+'process' took 0:00:00.029169
+Arduino returned  1959
+Current x:  2184.512083182335
+Goal  not yet reached, position:  2184.512083182335
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2184.512083182335
+'process' took 0:00:00.029726
+2184.512083182335
+Arduino returned  1963
+Current x:  2188.4718811878683
+Goal  not yet reached, position:  2188.4718811878683
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2188.4718811878683
+'process' took 0:00:00.029719
+Arduino returned  1966
+Current x:  2191.4417296920183
+Goal  not yet reached, position:  2191.4417296920183
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2191.4417296920183
+'process' took 0:00:00.028960
+Arduino returned  1970
+Current x:  2195.401527697552
+Goal  not yet reached, position:  2195.401527697552
+2195.401527697552
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029797
+Goal  not yet reached, position:  2195.401527697552
+Arduino returned  1974
+Current x:  2199.3613257030856
+Goal  not yet reached, position:  2199.3613257030856
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028423
+Goal  not yet reached, position:  2199.3613257030856
+Arduino returned  1972
+Current x:  2197.381426700319
+Goal  not yet reached, position:  2197.381426700319
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.032613
+Goal  not yet reached, position:  2197.381426700319
+Arduino returned  1975
+Current x:  2200.351275204469
+2200.351275204469
+Goal  not yet reached, position:  2200.351275204469
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2200.351275204469
+Arduino returned  1979
+Current x:  2204.311073210002
+'process' took 0:00:00.029141
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2204.311073210002
+Arduino returned  1983
+Current x:  2208.2708712155354
+'process' took 0:00:00.028839
+Goal  not yet reached, position:  2208.2708712155354
+Sending to Arduino:  FBgetx;
+2208.2708712155354
+Goal  not yet reached, position:  2208.2708712155354
+Arduino returned  1987
+Current x:  2212.230669221069
+'process' took 0:00:00.029128
+Goal  not yet reached, position:  2212.230669221069
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2212.230669221069
+Arduino returned  1986
+Current x:  2211.240719719686
+'process' took 0:00:00.028472
+Goal  not yet reached, position:  2211.240719719686
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2211.240719719686
+Arduino returned  1987
+Current x:  2212.230669221069
+'process' took 0:00:00.029034
+2212.230669221069
+Goal  not yet reached, position:  2212.230669221069
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2212.230669221069
+Arduino returned  1991
+Current x:  2215.2005177252195
+'process' took 0:00:00.029190
+Goal  not yet reached, position:  2215.2005177252195
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2215.2005177252195
+Arduino returned  1995
+Current x:  2219.1603157307527
+'process' took 0:00:00.029115
+Goal  not yet reached, position:  2219.1603157307527
+Sending to Arduino:  FBgetx;
+2219.1603157307527
+Arduino returned  2000
+Current x:  2224.1100632376692
+Goal  not yet reached, position:  2224.1100632376692
+'process' took 0:00:00.029311
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2224.1100632376692
+Arduino returned  2001
+Current x:  2225.1000127390525
+Goal  not yet reached, position:  2225.1000127390525
+'process' took 0:00:00.029325
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2225.1000127390525
+Arduino returned  2003
+Current x:  2227.0799117418196
+2227.0799117418196
+Goal  not yet reached, position:  2227.0799117418196
+'process' took 0:00:00.030234
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2227.0799117418196
+Arduino returned  2007
+Current x:  2231.0397097473533
+Goal  not yet reached, position:  2231.0397097473533
+'process' took 0:00:00.029889
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2231.0397097473533
+Arduino returned  2012
+Current x:  2235.98945725427
+Goal  not yet reached, position:  2231.0397097473533
+'process' took 0:00:00.029718
+2235.98945725427
+Goal  not yet reached, position:  2235.98945725427
+Sending to Arduino:  FBgetx;
+Arduino returned  2016
+Current x:  2239.949255259803
+Goal  not yet reached, position:  2239.949255259803
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029696
+Goal  not yet reached, position:  2239.949255259803
+Arduino returned  2018
+Current x:  2241.9291542625697
+Goal  not yet reached, position:  2241.9291542625697
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029133
+Goal  not yet reached, position:  2241.9291542625697
+Arduino returned  2019
+Current x:  2242.919103763953
+2242.919103763953
+Goal  not yet reached, position:  2242.919103763953
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.032674
+Arduino returned  2022
+Current x:  2245.8889522681034
+Goal  not yet reached, position:  2245.8889522681034
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2245.8889522681034
+'process' took 0:00:00.029198
+Arduino returned  2026
+Current x:  2249.848750273637
+Goal  not yet reached, position:  2249.848750273637
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2249.848750273637
+2249.848750273637
+'process' took 0:00:00.029497
+Goal  not yet reached, position:  2249.848750273637
+Arduino returned  2030
+Current x:  2253.8085482791703
+Goal  not yet reached, position:  2253.8085482791703
+Sending to Arduino:  FBgetx;
+Arduino returned  2032
+Current x:  2255.788447281937
+'process' took 0:00:00.028817
+Goal  not yet reached, position:  2255.788447281937
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2255.788447281937
+'process' took 0:00:00.029384
+2255.788447281937
+Arduino returned  2028
+Current x:  2251.8286492764037
+Goal  not yet reached, position:  2251.8286492764037
+Sending to Arduino:  FBgetx;
+Arduino returned  2032
+Current x:  2255.788447281937
+Goal  not yet reached, position:  2255.788447281937
+'process' took 0:00:00.051725
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2255.788447281937
+Goal  not yet reached, position:  2255.788447281937
+'process' took 0:00:00.030265
+Arduino returned  2035
+Current x:  2258.758295786087
+2258.758295786087
+Goal  not yet reached, position:  2258.758295786087
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2258.758295786087
+'process' took 0:00:00.039111
+Arduino returned  2042
+Current x:  2265.687942295771
+Goal  not yet reached, position:  2265.687942295771
+Goal  not yet reached, position:  2265.687942295771
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.032384
+Arduino returned  2038
+Current x:  2261.728144290237
+Goal  not yet reached, position:  2261.728144290237
+2261.728144290237
+Goal  not yet reached, position:  2261.728144290237
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2261.728144290237
+'process' took 0:00:00.032560
+Arduino returned  2042
+Current x:  2265.687942295771
+Goal  not yet reached, position:  2265.687942295771
+Sending to Arduino:  FBgetx;
+Arduino returned  2046
+Current x:  2269.647740301304
+Goal  not yet reached, position:  2269.647740301304
+'process' took 0:00:00.035780
+Sending to Arduino:  FBgetx;
+2269.647740301304
+Goal  not yet reached, position:  2269.647740301304
+Arduino returned  2050
+Current x:  2273.6075383068373
+Goal  not yet reached, position:  2273.6075383068373
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.033430
+Arduino returned  2053
+Current x:  2276.5773868109873
+Goal  not yet reached, position:  2276.5773868109873
+Goal  not yet reached, position:  2276.5773868109873
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.032369
+Arduino returned  2049
+Goal  not yet reached, position:  2276.5773868109873
+Current x:  2272.617588805454
+2276.5773868109873
+Goal  not yet reached, position:  2272.617588805454
+Sending to Arduino:  FBgetx;
+Arduino returned  2052
+Current x:  2275.587437309604
+Goal  not yet reached, position:  2275.587437309604
+'process' took 0:00:00.031769
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2275.587437309604
+Arduino returned  2056
+Current x:  2279.5472353151376
+Goal  not yet reached, position:  2279.5472353151376
+'process' took 0:00:00.028998
+Sending to Arduino:  FBgetx;
+2279.5472353151376
+Goal  not yet reached, position:  2279.5472353151376
+Arduino returned  2060
+Current x:  2283.5070333206713
+Goal  not yet reached, position:  2283.5070333206713
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029500
+Arduino returned  2064
+Goal  not yet reached, position:  2283.5070333206713
+Current x:  2287.4668313262046
+Goal  not yet reached, position:  2287.4668313262046
+'process' took 0:00:00.028568
+Sending to Arduino:  FBgetx;
+Arduino returned  2060
+Current x:  2283.5070333206713
+Goal  not yet reached, position:  2283.5070333206713
+2283.5070333206713
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028704
+Goal  not yet reached, position:  2283.5070333206713
+Arduino returned  2061
+Current x:  2284.4969828220546
+Goal  not yet reached, position:  2284.4969828220546
+'process' took 0:00:00.031440
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2284.4969828220546
+Arduino returned  2066
+Current x:  2289.446730328971
+Goal  not yet reached, position:  2289.446730328971
+Sending to Arduino:  FBgetx;
+2289.446730328971
+Goal  not yet reached, position:  2289.446730328971
+'process' took 0:00:00.033992
+Arduino returned  2068
+Current x:  2291.426629331738
+Goal  not yet reached, position:  2291.426629331738
+Sending to Arduino:  FBgetx;
+Arduino returned  2019
+Current x:  2242.919103763953
+Goal  not yet reached, position:  2242.919103763953
+'process' took 0:00:00.033085
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2242.919103763953
+Arduino returned  2068
+Current x:  2291.426629331738
+Goal  not yet reached, position:  2291.426629331738
+2291.426629331738
+'process' took 0:00:00.029598
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2291.426629331738
+Arduino returned  2066
+Current x:  2289.446730328971
+Goal  not yet reached, position:  2289.446730328971
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2289.446730328971
+Arduino returned  2069
+Current x:  2292.416578833121
+'process' took 0:00:00.048852
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2292.416578833121
+2292.416578833121
+Arduino returned  2071
+Current x:  2294.3964778358877
+Goal  not yet reached, position:  2294.3964778358877
+'process' took 0:00:00.032327
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2294.3964778358877
+Arduino returned  2075
+Current x:  2298.3562758414214
+Goal  not yet reached, position:  2294.3964778358877
+Goal  not yet reached, position:  2298.3562758414214
+Sending to Arduino:  FBgetx;
+Arduino returned  2075
+Current x:  2298.3562758414214
+'process' took 0:00:00.046234
+Goal  not yet reached, position:  2298.3562758414214
+2298.3562758414214
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2298.3562758414214
+'process' took 0:00:00.028988
+Goal  not yet reached, position:  2298.3562758414214
+Arduino returned  2072
+Current x:  2295.3864273372715
+Goal  not yet reached, position:  2295.3864273372715
+Sending to Arduino:  FBgetx;
+Arduino returned  2077
+Current x:  2300.3361748441885
+'process' took 0:00:00.031934
+Goal  not yet reached, position:  2300.3361748441885
+Sending to Arduino:  FBgetx;
+2300.3361748441885
+Goal  not yet reached, position:  2300.3361748441885
+Arduino returned  2081
+Current x:  2304.2959728497217
+Goal  not yet reached, position:  2304.2959728497217
+'process' took 0:00:00.033527
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2304.2959728497217
+Arduino returned  2085
+Current x:  2308.255770855255
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2308.255770855255
+'process' took 0:00:00.033475
+Goal  not yet reached, position:  2308.255770855255
+Arduino returned  2086
+Current x:  2309.2457203566382
+2309.2457203566382
+Goal  not yet reached, position:  2309.2457203566382
+Sending to Arduino:  FBgetx;
+Arduino returned  2082
+Current x:  2305.285922351105
+Goal  not yet reached, position:  2305.285922351105
+'process' took 0:00:00.034416
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2305.285922351105
+Goal  not yet reached, position:  2305.285922351105
+Arduino returned  2086
+Current x:  2309.2457203566382
+'process' took 0:00:00.030715
+Goal  not yet reached, position:  2309.2457203566382
+Sending to Arduino:  FBgetx;
+2309.2457203566382
+Arduino returned  2091
+Current x:  2313.205518362172
+Goal  not yet reached, position:  2313.205518362172
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2313.205518362172
+'process' took 0:00:00.029705
+Arduino returned  2094
+Goal  not yet reached, position:  2313.205518362172
+Current x:  2316.175366866322
+Goal  not yet reached, position:  2316.175366866322
+Sending to Arduino:  FBgetx;
+Arduino returned  2097
+Current x:  2319.145215370472
+'process' took 0:00:00.030103
+Goal  not yet reached, position:  2319.145215370472
+2319.145215370472
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2319.145215370472
+Goal  not yet reached, position:  2319.145215370472
+'process' took 0:00:00.029533
+Arduino returned  2094
+Current x:  2316.175366866322
+Goal  not yet reached, position:  2316.175366866322
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2316.175366866322
+'process' took 0:00:00.029058
+Arduino returned  2101
+Current x:  2323.1050133760054
+Goal  not yet reached, position:  2316.175366866322
+2323.1050133760054
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2323.1050133760054
+'process' took 0:00:00.030134
+Goal  not yet reached, position:  2323.1050133760054
+Arduino returned  2106
+Current x:  2328.0547608829224
+Goal  not yet reached, position:  2328.0547608829224
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.030281
+Goal  not yet reached, position:  2328.0547608829224
+Arduino returned  2110
+Current x:  2332.0145588884557
+2332.0145588884557
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2332.0145588884557
+'process' took 0:00:00.030354
+Arduino returned  2108
+Current x:  2330.034659885689
+Goal  not yet reached, position:  2330.034659885689
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2330.034659885689
+Arduino returned  2111
+Current x:  2333.004508389839
+'process' took 0:00:00.029807
+Goal  not yet reached, position:  2333.004508389839
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  2333.004508389839
+Arduino returned  2115
+Current x:  2336.9643063953727
+2336.9643063953727
+'process' took 0:00:00.029100
+Goal Reached! ##########################################
+Sending to Arduino:  FBgetx;
+Arduino returned  2119
+Current x:  2340.924104400906
+Sending to Arduino:  FBstop;
+'process' took 0:00:00.029030
+'process' took 0:00:00.029074
+2340.924104400906
+'process' took 0:00:00.054938
+2340.924104400906
+'process' took 0:00:00.030601
+Arduino returned  OK
+Sending to Arduino:  HSdn499.41759876726974;
+'process' took 0:00:00.028944
+'process' took 0:00:00.029343
+2340.924104400906
+'process' took 0:00:00.029299
+'process' took 0:00:00.028999
+Arduino returned  13
+Arduino returned  23
+Arduino returned  35
+2340.924104400906
+'process' took 0:00:00.029098
+Arduino returned  48
+Arduino returned  60
+Arduino returned  73
+'process' took 0:00:00.029817
+Arduino returned  86
+Arduino returned  99
+2340.924104400906
+Arduino returned  113
+'process' took 0:00:00.032731
+Arduino returned  125
+Arduino returned  137
+'process' took 0:00:00.030386
+Arduino returned  150
+2340.924104400906
+Arduino returned  163
+Arduino returned  175
+'process' took 0:00:00.030047
+Arduino returned  187
+Arduino returned  199
+'process' took 0:00:00.029593
+Arduino returned  202
+2340.924104400906
+Arduino returned  209
+'process' took 0:00:00.029336
+Arduino returned  220
+Arduino returned  232
+'process' took 0:00:00.029636
+Arduino returned  245
+Arduino returned  258
+'process' took 0:00:00.029429
+2340.924104400906
+Arduino returned  271
+Arduino returned  284
+'process' took 0:00:00.029607
+Arduino returned  298
+Arduino returned  311
+'process' took 0:00:00.029732
+Arduino returned  323
+Arduino returned  335
+2340.924104400906
+'process' took 0:00:00.029402
+Arduino returned  348
+Arduino returned  360
+'process' took 0:00:00.029336
+Arduino returned  372
+Arduino returned  384
+'process' took 0:00:00.029229
+2340.924104400906
+Arduino returned  390
+Arduino returned  394
+'process' took 0:00:00.029452
+Arduino returned  405
+Arduino returned  417
+'process' took 0:00:00.029641
+Arduino returned  429
+2340.924104400906
+Arduino returned  442
+'process' took 0:00:00.029616
+Arduino returned  455
+Arduino returned  468
+Arduino returned  482
+'process' took 0:00:00.030257
+Arduino returned  495
+2340.924104400906
+Arduino returned  508
+'process' took 0:00:00.030814
+'process' took 0:00:00.030084
+'process' took 0:00:00.030421
+2340.924104400906
+'process' took 0:00:00.030159
+Arduino returned  508
+'process' took 0:00:00.029906
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+2340.924104400906
+Arduino returned  2123
+Current x:  2344.8839024064396
+'process' took 0:00:00.029437
+'process' took 0:00:00.029679
+2344.8839024064396
+'process' took 0:00:00.033803
+'process' took 0:00:00.029807
+2344.8839024064396
+'process' took 0:00:00.030154
+'process' took 0:00:00.030490
+'process' took 0:00:00.032757
+2344.8839024064396
+'process' took 0:00:00.032605
+'process' took 0:00:00.031348
+2344.8839024064396
+'process' took 0:00:00.032817
+'process' took 0:00:00.032948
+2344.8839024064396
+'process' took 0:00:00.031856
+2344.8839024064396
+'process' took 0:00:00.030543
+'process' took 0:00:00.029461
+2344.8839024064396
+'process' took 0:00:00.030010
+'process' took 0:00:00.029962
+Sending to Arduino:  HSup200;
+'process' took 0:00:00.029817
+2344.8839024064396
+'process' took 0:00:00.029137
+'process' took 0:00:00.030414
+'process' took 0:00:00.029946
+2344.8839024064396
+'process' took 0:00:00.030092
+'process' took 0:00:00.029704
+2344.8839024064396
+'process' took 0:00:00.029904
+'process' took 0:00:00.030012
+'process' took 0:00:00.029961
+2344.8839024064396
+'process' took 0:00:00.030010
+'process' took 0:00:00.030234
+2344.8839024064396
+'process' took 0:00:00.030830
+'process' took 0:00:00.030674
+'process' took 0:00:00.030995
+2344.8839024064396
+'process' took 0:00:00.031257
+'process' took 0:00:00.030012
+2344.8839024064396
+'process' took 0:00:00.030268
+'process' took 0:00:00.030096
+2344.8839024064396
+'process' took 0:00:00.030586
+'process' took 0:00:00.031016
+2344.8839024064396
+'process' took 0:00:00.029187
+'process' took 0:00:00.050338
+2344.8839024064396
+'process' took 0:00:00.029160
+'process' took 0:00:00.033038
+2344.8839024064396
+'process' took 0:00:00.032811
+2344.8839024064396
+'process' took 0:00:00.033649
+'process' took 0:00:00.032658
+2344.8839024064396
+'process' took 0:00:00.030058
+'process' took 0:00:00.029808
+2344.8839024064396
+'process' took 0:00:00.029339
+'process' took 0:00:00.029117
+2344.8839024064396
+'process' took 0:00:00.051858
+'process' took 0:00:00.029472
+2344.8839024064396
+'process' took 0:00:00.029570
+'process' took 0:00:00.029278
+2344.8839024064396
+'process' took 0:00:00.029440
+'process' took 0:00:00.029643
+'process' took 0:00:00.029491
+2344.8839024064396
+'process' took 0:00:00.029064
+'process' took 0:00:00.029080
+2344.8839024064396
+'process' took 0:00:00.029822
+'process' took 0:00:00.029400
+2344.8839024064396
+'process' took 0:00:00.030660
+'process' took 0:00:00.029912
+2344.8839024064396
+'process' took 0:00:00.030877
+'process' took 0:00:00.030565
+'process' took 0:00:00.029889
+2344.8839024064396
+'process' took 0:00:00.030267
+'process' took 0:00:00.029927
+2344.8839024064396
+'process' took 0:00:00.030507
+'process' took 0:00:00.029977
+2344.8839024064396
+'process' took 0:00:00.030024
+'process' took 0:00:00.030345
+'process' took 0:00:00.030392
+2344.8839024064396
+'process' took 0:00:00.030905
+'process' took 0:00:00.030414
+2344.8839024064396
+'process' took 0:00:00.030059
+'process' took 0:00:00.029894
+2344.8839024064396
+'process' took 0:00:00.029815
+'process' took 0:00:00.029795
+2344.8839024064396
+'process' took 0:00:00.039516
+'process' took 0:00:00.030667
+2344.8839024064396
+'process' took 0:00:00.030328
+'process' took 0:00:00.029765
+2344.8839024064396
+'process' took 0:00:00.029590
+'process' took 0:00:00.029794
+2344.8839024064396
+'process' took 0:00:00.029477
+'process' took 0:00:00.029706
+2344.8839024064396
+'process' took 0:00:00.030074
+'process' took 0:00:00.029673
+'process' took 0:00:00.029650
+2344.8839024064396
+'process' took 0:00:00.029597
+'process' took 0:00:00.029438
+2344.8839024064396
+'process' took 0:00:00.036691
+'process' took 0:00:00.033371
+2344.8839024064396
+'process' took 0:00:00.032840
+'process' took 0:00:00.031409
+2344.8839024064396
+'process' took 0:00:00.033032
+'process' took 0:00:00.032734
+2344.8839024064396
+'process' took 0:00:00.029954
+'process' took 0:00:00.053049
+2344.8839024064396
+'process' took 0:00:00.048367
+2344.8839024064396
+'process' took 0:00:00.032576
+'process' took 0:00:00.032737
+2344.8839024064396
+'process' took 0:00:00.030799
+'process' took 0:00:00.029987
+2344.8839024064396
+'process' took 0:00:00.032365
+2344.8839024064396
+'process' took 0:00:00.052477
+'process' took 0:00:00.050934
+2344.8839024064396
+'process' took 0:00:00.028035
+'process' took 0:00:00.028818
+2344.8839024064396
+'process' took 0:00:00.028250
+2344.8839024064396
+'process' took 0:00:00.028648
+'process' took 0:00:00.028580
+2344.8839024064396
+'process' took 0:00:00.051350

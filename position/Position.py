@@ -5,7 +5,7 @@ from controlling.Config import Config
 
 
 class Position(object):
-    _movement_engine = None
+    _movement_engine = None 
     _telescope_engine = None
     _should_calc = None
     _position_output = None
@@ -50,11 +50,9 @@ class Position(object):
         return current_x
 
     def _calculate_z_from_x(self, x):
-        return (math.cos(Config.POSITION_GROUND_TO_CABLE_ANGLE) * x) \
-               + Config.POSITION_START_HEIGHT \
-               - Config.POSITION_TELESCOPE_HEIGHT \
+        return (math.tan(Config.POSITION_GROUND_TO_CABLE_ANGLE) * x) \
+               + Config.DISTANCE_BOTTOM_MAGNET_TO_TOP_LOAD \
                - self._telescope_engine.get_z()
-
 
     def get_current_x(self):
         return self._x_pos
