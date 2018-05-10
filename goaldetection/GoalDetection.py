@@ -148,8 +148,8 @@ class GoalDetection(object):
 
     def start(self, queue):
         self._camera = picamera.PiCamera()
-        self._camera.resolution = (1920, 1080)
-        rawCapture = PiRGBArray(self._camera, size=(1920, 1080))
+        self._camera.resolution = (1280, 720)
+        rawCapture = PiRGBArray(self._camera, size=(1280, 720))
         sleep(0.1)
         for frame in self._camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
             print_elapsed_time(self.process, frame.array, queue)

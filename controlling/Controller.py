@@ -81,10 +81,11 @@ class Controller(object):
         while not self._goal_found:
             value = self._queue.get()
             print("goal detection value: ", value)
-            if Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE + Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE_THRESHOLD > value > Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE - Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE_THRESHOLD:
+            if Config.CONTROLLER_GOAL_DETECTION_THRESHOLD > value > -Config.CONTROLLER_GOAL_DETECTION_THRESHOLD:
                 print("goal found")
                 self._on_goal_found()
             elif value < Config.CONTROLLER_DISTANCE_TO_GOAL_SLOWER and self.reverted is False:
+                print("Goal slower speed set")
                 self._movement.set_speed(Config.CONTROLLER_SEARCH_GOAL_SPEED)
 
     def _fail_safe(self):
@@ -119,8 +120,21 @@ class Controller(object):
     def _on_goal_found(self):
         self._logger.major_step("Goal found")
         self._goal_found = True
+        self._block_until_goal_reached()
         self._movement.stop()
         self._deliver_load()
+
+    def _block_until_goal_reached(self):
+        goal_reached = False
+        goal_position = self._position.get_current_x() + Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE
+        while not goal_reached:
+            position = self._position.get_current_x()
+            if position >= goal_position:
+                print("Goal Reached!")
+                goal_reached = True
+            else:
+                print("Goal  not yet reached, position: ", position)
+            time.sleep(0.05)
 
     def _deliver_load(self):
         self._logger.major_step("Delivering load")
