@@ -16,6 +16,6 @@ class PositionLoadComparer(object):
                 print("Load Reached!")
                 self._check_for_load = False
             else:
-                print("goal not yet reached, position: ", position)
+                print("load  not yet reached, position: ", position)
 
-            time.sleep(0.1)
+            time.sleep(0.05)
