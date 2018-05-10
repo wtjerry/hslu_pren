@@ -22,9 +22,13 @@ class Position(object):
         self._should_calc = True
         while self._should_calc:
             if self._movement_engine.is_moving:
-                self._x_pos = self._calculate_x()
+                arduino_x = self._movement_engine.get_x()
+                current_x = Config.POSITION_START_X_POS + \
+                    (math.cos(Config.POSITION_GROUND_TO_CABLE_ANGLE) * arduino_x)
+                print("Current x: ", current_x)
+                self._x_pos = current_x
 
-            self._z_pos = self._calculate_z_from_x(self._x_pos)
+            self._z_pos = self._calculate_z_from_arduino_x(arduino_x)
             time.sleep(0.05)
 
     def start_position_output(self):
@@ -40,19 +44,11 @@ class Position(object):
         self._position_output = False
         self._should_calc = False
 
-    def _calculate_x(self):
-        # return (self._xposition_sensor.get_position() +
-        #        (self._START_X_POS + self._movement_engine.get_x())) \
-        #       / 2
-        current_x = Config.POSITION_START_X_POS + \
-                    (math.cos(Config.POSITION_GROUND_TO_CABLE_ANGLE) * self._movement_engine.get_x())
-        print("Current x: ", current_x)
-        return current_x
-
-    def _calculate_z_from_x(self, x):
-        return (math.tan(Config.POSITION_GROUND_TO_CABLE_ANGLE) * x) \
-               + Config.DISTANCE_BOTTOM_MAGNET_TO_TOP_LOAD \
-               - self._telescope_engine.get_z()
+    def _calculate_z_from_arduino_x(self, arduino_x):
+        arduino_x = math.cos(Config.POSITION_GROUND_TO_CABLE_ANGLE) * arduino_x
+        return (math.tan(Config.POSITION_GROUND_TO_CABLE_ANGLE) * arduino_x) \
+            + Config.DISTANCE_BOTTOM_MAGNET_TO_TOP_LOAD \
+            - self._telescope_engine.get_z()
 
     def get_current_x(self):
         return self._x_pos
