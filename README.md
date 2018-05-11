@@ -52,9 +52,17 @@ start
 
 ## Gui
 It reads from a named pipe. It's path is specified in Gui.py
+Make sure the pipe exists. Create it via:
+``` sh
+mkfifo pos_queue
+```
 To test it locally just write to the pipe, eg:
 ``` sh
 echo "new position x: '135.21' z: '98.2323'" > pos_queue
+```
+To actually use it just pipe the output of nc to the pipe:
+``` sh
+nc IP 12345 > pos_queue
 ```
 
 
