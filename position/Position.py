@@ -26,14 +26,15 @@ class Position(object):
                 self._x_pos_horizontal = self._calculate_x_horizontal(x_pos_on_rope)
                 self._z_pos_bottom_magnet_when_telescope_in = self._calculate_z_bottom_magnet_when_telescope_in(
                     self._x_pos_horizontal)
-                print("Horizontal x: {x}, Telescope in z: {z_telescope_in}, Telescope moving z: {z_telescope_moving}"
-                      .format(x=self._x_pos_horizontal, z_telescope_in=self.get_current_z_telescope_when_in(),
-                              z_telescope_moving=self.get_current_z_while_telescope_is_moving()))
+                print("Horizontal x: {x}, Telescope in z: {z_telescope_in}"
+                      .format(x=self._x_pos_horizontal, z_telescope_in=self.get_current_z_telescope_when_in()))
             time.sleep(0.05)
 
     def start_position_output(self):
         self._position_output = True
         while self._position_output:
+            print("Horizontal x: {x}, Telescope moving z: {z_telescope_moving}"
+                  .format(x=self._x_pos_horizontal, z_telescope_moving=self.get_current_z_while_telescope_is_moving()))
             self._position_sender.send(self.get_current_x(), self.get_current_z_while_telescope_is_moving())
             time.sleep(0.2)
 
