@@ -12,6 +12,8 @@ class Communication(object):
 
     def __init__(self):
         self._connection = serial.Serial(self._PORT, self._BAUDRATE, timeout=self._TIMEOUT)
+        self._connection.reset_input_buffer();
+        self._connection.reset_output_buffer();
         self._lock = threading.Lock()
         time.sleep(2)
 
