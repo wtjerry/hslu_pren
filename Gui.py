@@ -18,9 +18,10 @@ def update_label():
     while True:
         with open(pipe_path, "r") as f:
             l = f.readline().rstrip()
-            x, z = extract_x_and_z(l)
-            app.queueFunction(app.setLabel, "pos_x_value", x) 
-            app.queueFunction(app.setLabel, "pos_z_value", z) 
+            if "new position" in l:
+                x, z = extract_x_and_z(l)
+                app.queueFunction(app.setLabel, "pos_x_value", x) 
+                app.queueFunction(app.setLabel, "pos_z_value", z) 
 
 
 app = gui()

@@ -1,6 +1,4 @@
-from arduinocommunication.communication import Communication
 from controlling.Config import Config
-from controlling.Dummies.Dummy import Dummy
 from controlling.Dummies.DummyCommunication import DummyCommunication
 from controlling.Dummies.DummyTiltEngine import DummyTiltEngine
 from controlling.PositionLoadComparer import PositionLoadComparer
@@ -19,7 +17,7 @@ from engines.MovementEngine import MovementEngine
 class Binding(object):
 
     def __init__(self, position_sender):
-        self._communication = Communication() if Config.BINDING_USE_REAL_MOVEMENT or Config.BINDING_USE_REAL_POSITION else DummyCommunication()
+        self._communication = self._get_real_communication() if Config.BINDING_USE_REAL_MOVEMENT or Config.BINDING_USE_REAL_POSITION else DummyCommunication()
         self.movement_engine = MovementEngine(self._communication) if Config.BINDING_USE_REAL_MOVEMENT else DummyMovementEngine()
         self.goal_detection = self._get_real_goal_detection() if Config.BINDING_USE_REAL_GOAL_DETECTION else DummyGoalDetection()
         self.magnet = self.get_real_magnet() if Config.BINDING_USE_REAL_MAGNET else DummyMagnet()
@@ -31,6 +29,10 @@ class Binding(object):
             else DummyLoadPositionComparer(self.position)
 
         self.tilt_controller = TiltController(self.position, self.tilt_engine)
+
+    def _get_real_communication(self):
+        from arduinocommunication.communication import Communication
+        return Communication()
 
     def _get_real_position(self, position_sender):
         from position.XPositionSensor import XPositionSensor
