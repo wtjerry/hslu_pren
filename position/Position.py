@@ -5,12 +5,12 @@ from controlling.Config import Config
 
 
 class Position(object):
-    _movement_engine = None 
+    _movement_engine = None
     _telescope_engine = None
     _should_calc = None
     _position_output = None
-    _x_pos = 0
-    _z_pos = 0
+    _x_pos_horizontal = 0
+    _z_pos_bottom_magnet_when_telescope_in = 0
 
     def __init__(self, x_position_sensor, movement_engine, telescope_engine, position_sender):
         self._xposition_sensor = x_position_sensor
@@ -22,19 +22,19 @@ class Position(object):
         self._should_calc = True
         while self._should_calc:
             if self._movement_engine.is_moving:
-                arduino_x = self._movement_engine.get_x()
-                current_x = Config.POSITION_START_X_POS + \
-                    (math.cos(Config.POSITION_GROUND_TO_CABLE_ANGLE) * arduino_x)
-                print("Current x: ", current_x)
-                self._x_pos = current_x
-
-                self._z_pos = self._calculate_z_from_arduino_distance(arduino_x)
+                x_pos_on_rope = self._movement_engine.get_x()
+                self._x_pos_horizontal = self._calculate_x_horizontal(x_pos_on_rope)
+                self._z_pos_bottom_magnet_when_telescope_in = self._calculate_z_bottom_magnet_when_telescope_in(
+                    self._x_pos_horizontal)
+                print("Horizontal x: {x}, Telescope in z: {z_telescope_in}, Telescope moving z: {z_telescope_moving}"
+                      .format(x=self._x_pos_horizontal, z_telescope_in=self.get_current_z_telescope_when_in(),
+                              z_telescope_moving=self.get_current_z_while_telescope_is_moving()))
             time.sleep(0.05)
 
     def start_position_output(self):
         self._position_output = True
         while self._position_output:
-            self._position_sender.send(self._x_pos, self._z_pos)
+            self._position_sender.send(self.get_current_x(), self.get_current_z_while_telescope_is_moving())
             time.sleep(0.2)
 
     def stop_output(self):
@@ -44,12 +44,21 @@ class Position(object):
         self._position_output = False
         self._should_calc = False
 
-    def _calculate_z_from_arduino_distance(self, arduino_distance):
-        arduino_z = math.sin(Config.POSITION_GROUND_TO_CABLE_ANGLE) * arduino_distance
-        return arduino_z + Config.DISTANCE_BOTTOM_MAGNET_TO_TOP_LOAD
+    def _calculate_x_horizontal(self, x_pos_on_rope):
+        return 0.9868 * x_pos_on_rope + 287.12
+
+    def _calculate_z_bottom_magnet_when_telescope_in(self, x_pos_horizontal):
+        return -0.000000000006079 * x_pos_horizontal ** 4 \
+               + 0.000000042190949 * x_pos_horizontal ** 3 \
+               - 0.000041455473666 * x_pos_horizontal ** 2 \
+               - 0.107742650963210 * x_pos_horizontal \
+               + 1.370961454271310 - 465 + (100 + x_pos_horizontal) * 0.142857 + 600
 
     def get_current_x(self):
-        return self._x_pos
+        return self._x_pos_horizontal
 
-    def get_current_z(self):
-        return self._z_pos
+    def get_current_z_telescope_when_in(self):
+        return self._z_pos_bottom_magnet_when_telescope_in - Config.POSITION_LOAD_HEIGHT
+
+    def get_current_z_while_telescope_is_moving(self):
+        return self.get_current_z_telescope_when_in() - self._telescope_engine.get_z()

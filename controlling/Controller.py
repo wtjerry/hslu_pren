@@ -138,7 +138,7 @@ class Controller(object):
 
     def _deliver_load(self):
         self._logger.major_step("Delivering load")
-        self._telescope.down(self._position.get_current_z())
+        self._telescope.down(self._position.get_current_z_telescope_when_in())
         self._magnet.stop()
         time.sleep(2)
         self._telescope.up(Config.CONTROLLER_END_TELESCOPE_HEIGHT)
