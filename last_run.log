@@ -1,0 +1,1281 @@
+starting socket server
+waiting for a connection
+Start balancing
+Sending to Arduino:  FBstart3;
+Arduino returned  OK
+load  not yet reached, position:  0
+Sending to Arduino:  FBgetx;
+Arduino returned  21
+Horizontal x: 306.856, Telescope in z: 108.69339451018601, Telescope moving z: 108.69339451018601
+load  not yet reached, position:  306.856
+load  not yet reached, position:  306.856
+Sending to Arduino:  FBgetx;
+Arduino returned  29
+Horizontal x: 314.7504, Telescope in z: 108.85793449872119, Telescope moving z: 108.85793449872119
+load  not yet reached, position:  314.7504
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  314.7504
+Arduino returned  39
+Horizontal x: 324.6184, Telescope in z: 109.06270463044729, Telescope moving z: 109.06270463044729
+load  not yet reached, position:  324.6184
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  324.6184
+Arduino returned  47
+Horizontal x: 332.5128, Telescope in z: 109.2259206760449, Telescope moving z: 109.2259206760449
+load  not yet reached, position:  332.5128
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  332.5128
+Arduino returned  55
+Horizontal x: 340.4072, Telescope in z: 109.38871274814176, Telescope moving z: 109.38871274814176
+load  not yet reached, position:  340.4072
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  340.4072
+Arduino returned  62
+Horizontal x: 347.3148, Telescope in z: 109.53088695781014, Telescope moving z: 109.53088695781014
+load  not yet reached, position:  347.3148
+Sending to Arduino:  FBgetx;
+Arduino returned  70
+Horizontal x: 355.2092, Telescope in z: 109.69315422872597, Telescope moving z: 109.69315422872597
+load  not yet reached, position:  355.2092
+load  not yet reached, position:  355.2092
+Sending to Arduino:  FBgetx;
+Arduino returned  78
+Horizontal x: 363.10360000000003, Telescope in z: 109.85528463306457, Telescope moving z: 109.85528463306457
+load  not yet reached, position:  363.10360000000003
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  363.10360000000003
+Arduino returned  87
+Horizontal x: 371.9848, Telescope in z: 110.03764069203953, Telescope moving z: 110.03764069203953
+load  not yet reached, position:  371.9848
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  371.9848
+Arduino returned  94
+Horizontal x: 378.8924, Telescope in z: 110.17952933687673, Telescope moving z: 110.17952933687673
+load  not yet reached, position:  378.8924
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  378.8924
+Arduino returned  100
+Horizontal x: 383.82640000000004, Telescope in z: 110.28094851061246, Telescope moving z: 110.28094851061246
+load  not yet reached, position:  383.82640000000004
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  383.82640000000004
+Arduino returned  101
+Horizontal x: 384.8132, Telescope in z: 110.30124182947742, Telescope moving z: 110.30124182947742
+load  not yet reached, position:  384.8132
+Sending to Arduino:  FBgetx;
+Arduino returned  107
+Horizontal x: 390.73400000000004, Telescope in z: 110.42308403594905, Telescope moving z: 110.42308403594905
+load  not yet reached, position:  390.73400000000004
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  390.73400000000004
+Arduino returned  116
+Horizontal x: 399.6152, Telescope in z: 110.60617976026776, Telescope moving z: 110.60617976026776
+load  not yet reached, position:  399.6152
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  399.6152
+Arduino returned  123
+Horizontal x: 406.5228, Telescope in z: 110.7489404570398, Telescope moving z: 110.7489404570398
+load  not yet reached, position:  406.5228
+Sending to Arduino:  FBgetx;
+Arduino returned  131
+Horizontal x: 414.4172, Telescope in z: 110.91256331231835, Telescope moving z: 110.91256331231835
+load  not yet reached, position:  414.4172
+load  not yet reached, position:  414.4172
+Sending to Arduino:  FBgetx;
+Arduino returned  139
+Horizontal x: 422.3116, Telescope in z: 111.0767762291224, Telescope moving z: 111.0767762291224
+load  not yet reached, position:  422.3116
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  422.3116
+Arduino returned  147
+Horizontal x: 430.206, Telescope in z: 111.24167372290856, Telescope moving z: 111.24167372290856
+load  not yet reached, position:  430.206
+load  not yet reached, position:  430.206
+Sending to Arduino:  FBgetx;
+Arduino returned  156
+Horizontal x: 439.0872, Telescope in z: 111.42811864205936, Telescope moving z: 111.42811864205936
+load  not yet reached, position:  439.0872
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  439.0872
+Arduino returned  165
+Horizontal x: 447.9684, Telescope in z: 111.61568177672484, Telescope moving z: 111.61568177672484
+load  not yet reached, position:  447.9684
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  447.9684
+Arduino returned  173
+Horizontal x: 455.8628, Telescope in z: 111.78345004450091, Telescope moving z: 111.78345004450091
+load  not yet reached, position:  455.8628
+Sending to Arduino:  FBgetx;
+Arduino returned  178
+Horizontal x: 460.7968, Telescope in z: 111.88884779885274, Telescope moving z: 111.88884779885274
+load  not yet reached, position:  460.7968
+Sending to Arduino:  FBgetx;
+Arduino returned  184
+Horizontal x: 466.7176, Telescope in z: 112.01591346350898, Telescope moving z: 112.01591346350898
+load  not yet reached, position:  466.7176
+Sending to Arduino:  FBgetx;
+Arduino returned  190
+Horizontal x: 472.63840000000005, Telescope in z: 112.14365732804822, Telescope moving z: 112.14365732804822
+load  not yet reached, position:  472.63840000000005
+load  not yet reached, position:  472.63840000000005
+Sending to Arduino:  FBgetx;
+Arduino returned  196
+Horizontal x: 478.55920000000003, Telescope in z: 112.27211771230031, Telescope moving z: 112.27211771230031
+load  not yet reached, position:  478.55920000000003
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  478.55920000000003
+Arduino returned  204
+Horizontal x: 485.46680000000003, Telescope in z: 112.42294463540958, Telescope moving z: 112.42294463540958
+load  not yet reached, position:  485.46680000000003
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  485.46680000000003
+Arduino returned  212
+Horizontal x: 493.3612, Telescope in z: 112.59665330271304, Telescope moving z: 112.59665330271304
+load  not yet reached, position:  493.3612
+Sending to Arduino:  FBgetx;
+Arduino returned  219
+Horizontal x: 500.2688, Telescope in z: 112.74988378368585, Telescope moving z: 112.74988378368585
+load  not yet reached, position:  500.2688
+load  not yet reached, position:  500.2688
+Sending to Arduino:  FBgetx;
+Arduino returned  220
+Horizontal x: 501.2556, Telescope in z: 112.77187168656587, Telescope moving z: 112.77187168656587
+load  not yet reached, position:  501.2556
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  501.2556
+Arduino returned  227
+Horizontal x: 508.1632, Telescope in z: 112.9264960727437, Telescope moving z: 112.9264960727437
+load  not yet reached, position:  508.1632
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  508.1632
+Arduino returned  235
+Horizontal x: 516.0576, Telescope in z: 113.10478420518695, Telescope moving z: 113.10478420518695
+load  not yet reached, position:  516.0576
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  516.0576
+Arduino returned  243
+Horizontal x: 523.952, Telescope in z: 113.28483596742615, Telescope moving z: 113.28483596742615
+load  not yet reached, position:  523.952
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  523.952
+Arduino returned  251
+Horizontal x: 531.8464, Telescope in z: 113.46673857921496, Telescope moving z: 113.46673857921496
+load  not yet reached, position:  531.8464
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  531.8464
+Arduino returned  259
+Horizontal x: 539.7408, Telescope in z: 113.65057869365108, Telescope moving z: 113.65057869365108
+load  not yet reached, position:  539.7408
+Sending to Arduino:  FBgetx;
+Arduino returned  267
+load  not yet reached, position:  539.7408
+Horizontal x: 547.6351999999999, Telescope in z: 113.8364423971754, Telescope moving z: 113.8364423971754
+load  not yet reached, position:  547.6351999999999
+Sending to Arduino:  FBgetx;
+Arduino returned  276
+Horizontal x: 556.5164, Telescope in z: 114.04806434507714, Telescope moving z: 114.04806434507714
+load  not yet reached, position:  556.5164
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  556.5164
+Arduino returned  285
+Horizontal x: 565.3976, Telescope in z: 114.26247652624693, Telescope moving z: 114.26247652624693
+load  not yet reached, position:  565.3976
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  565.3976
+Arduino returned  292
+Horizontal x: 572.3052, Telescope in z: 114.43124745639858, Telescope moving z: 114.43124745639858
+load  not yet reached, position:  572.3052
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  572.3052
+Arduino returned  300
+Horizontal x: 579.2128, Telescope in z: 114.60183499799405, Telescope moving z: 114.60183499799405
+load  not yet reached, position:  579.2128
+Sending to Arduino:  FBgetx;
+Arduino returned  308
+Horizontal x: 587.1072, Telescope in z: 114.79908811059431, Telescope moving z: 114.79908811059431
+load  not yet reached, position:  587.1072
+load  not yet reached, position:  587.1072
+Sending to Arduino:  FBgetx;
+Arduino returned  316
+Horizontal x: 595.0016, Telescope in z: 114.99886943114115, Telescope moving z: 114.99886943114115
+load  not yet reached, position:  595.0016
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  595.0016
+Arduino returned  324
+Horizontal x: 602.896, Telescope in z: 115.2012610794797, Telescope moving z: 115.2012610794797
+load  not yet reached, position:  602.896
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  602.896
+Arduino returned  331
+Horizontal x: 609.8036, Telescope in z: 115.38055918185103, Telescope moving z: 115.38055918185103
+load  not yet reached, position:  609.8036
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  609.8036
+Arduino returned  339
+Horizontal x: 617.6980000000001, Telescope in z: 115.58806456066071, Telescope moving z: 115.58806456066071
+load  not yet reached, position:  617.6980000000001
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  617.6980000000001
+Arduino returned  339
+Horizontal x: 617.6980000000001, Telescope in z: 115.58806456066071, Telescope moving z: 115.58806456066071
+load  not yet reached, position:  617.6980000000001
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  617.6980000000001
+Arduino returned  347
+Horizontal x: 625.5924, Telescope in z: 115.79841320536303, Telescope moving z: 115.79841320536303
+load  not yet reached, position:  625.5924
+Sending to Arduino:  FBgetx;
+Arduino returned  355
+Horizontal x: 633.4868, Telescope in z: 116.01168504000941, Telescope moving z: 116.01168504000941
+load  not yet reached, position:  633.4868
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  633.4868
+Arduino returned  362
+Horizontal x: 640.3944, Telescope in z: 116.20075822394858, Telescope moving z: 116.20075822394858
+load  not yet reached, position:  640.3944
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  640.3944
+Arduino returned  370
+Horizontal x: 648.2888, Telescope in z: 116.41972448725033, Telescope moving z: 116.41972448725033
+load  not yet reached, position:  648.2888
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  648.2888
+Arduino returned  378
+Horizontal x: 656.1831999999999, Telescope in z: 116.64184056568905, Telescope moving z: 116.64184056568905
+load  not yet reached, position:  656.1831999999999
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  656.1831999999999
+Arduino returned  386
+Horizontal x: 664.0776000000001, Telescope in z: 116.86718418752218, Telescope moving z: 116.86718418752218
+load  not yet reached, position:  664.0776000000001
+Sending to Arduino:  FBgetx;
+load  not yet reached, position:  664.0776000000001
+Arduino returned  395
+Horizontal x: 672.9588, Telescope in z: 117.12464973823427, Telescope moving z: 117.12464973823427
+Load Reached!
+Sending to Arduino:  FBgetx;
+Arduino returned  404
+Horizontal x: 680.8532, Telescope in z: 117.35710738485324, Telescope moving z: 117.35710738485324
+Sending to Arduino:  FBstop;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  413
+Horizontal x: 689.7344, Telescope in z: 117.62276989800444, Telescope moving z: 117.62276989800444
+Sending to Arduino:  HSdn170;
+Arduino returned  22
+Arduino returned  27
+Arduino returned  32
+Arduino returned  37
+Arduino returned  42
+Arduino returned  48
+Arduino returned  52
+Arduino returned  57
+Arduino returned  62
+Arduino returned  68
+Arduino returned  74
+Arduino returned  79
+Arduino returned  84
+Arduino returned  89
+Arduino returned  94
+Arduino returned  99
+Arduino returned  104
+Arduino returned  109
+Arduino returned  114
+Arduino returned  120
+Arduino returned  124
+Arduino returned  128
+Arduino returned  134
+Arduino returned  137
+Arduino returned  143
+Arduino returned  148
+Arduino returned  144
+Arduino returned  148
+Arduino returned  151
+Arduino returned  155
+Arduino returned  160
+Arduino returned  164
+Arduino returned  169
+Arduino returned  174
+Arduino returned  174
+Arduino returned  OK
+Sending to Arduino:  HSup180;
+Arduino returned  161
+Arduino returned  157
+Arduino returned  152
+Arduino returned  148
+Arduino returned  150
+Arduino returned  148
+Arduino returned  144
+Arduino returned  139
+Arduino returned  134
+Arduino returned  130
+Arduino returned  125
+Arduino returned  120
+Arduino returned  115
+Arduino returned  110
+Arduino returned  105
+Arduino returned  99
+Arduino returned  95
+Arduino returned  90
+Arduino returned  85
+Arduino returned  80
+Arduino returned  74
+Arduino returned  69
+Arduino returned  63
+Arduino returned  59
+Arduino returned  53
+Arduino returned  49
+Arduino returned  43
+Arduino returned  38
+Arduino returned  33
+Arduino returned  28
+Arduino returned  23
+Arduino returned  18
+Arduino returned  14
+Arduino returned  9
+Arduino returned  4
+Arduino returned  0
+Arduino returned  0
+Arduino returned  OK
+Sending to Arduino:  FBstart4;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  451
+Horizontal x: 727.2328, Telescope in z: 118.7952651185787, Telescope moving z: 118.7952651185787
+Sending to Arduino:  FBgetx;
+Arduino returned  458
+Horizontal x: 734.1404, Telescope in z: 119.0206205938569, Telescope moving z: 119.0206205938569
+Sending to Arduino:  FBgetx;
+Arduino returned  470
+Horizontal x: 745.982, Telescope in z: 119.41403296124031, Telescope moving z: 119.41403296124031
+Sending to Arduino:  FBgetx;
+Arduino returned  482
+Horizontal x: 757.8235999999999, Telescope in z: 119.8166067895508, Telescope moving z: 119.8166067895508
+Sending to Arduino:  FBgetx;
+Arduino returned  498
+Horizontal x: 772.6256000000001, Telescope in z: 120.33306997073691, Telescope moving z: 120.33306997073691
+Sending to Arduino:  FBgetx;
+Arduino returned  510
+Horizontal x: 784.4672, Telescope in z: 120.75712359067899, Telescope moving z: 120.75712359067899
+Sending to Arduino:  FBgetx;
+Arduino returned  524
+Horizontal x: 798.2824, Telescope in z: 121.26441312827092, Telescope moving z: 121.26441312827092
+Sending to Arduino:  FBgetx;
+Arduino returned  539
+Horizontal x: 813.0844, Telescope in z: 121.82334087127703, Telescope moving z: 121.82334087127703
+'process' took 0:00:00.153090
+Sending to Arduino:  FBgetx;
+Arduino returned  551
+Horizontal x: 824.926, Telescope in z: 122.28224446110926, Telescope moving z: 122.28224446110926
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028774
+Arduino returned  567
+Horizontal x: 840.7148, Telescope in z: 122.91079082858369, Telescope moving z: 122.91079082858369
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028728
+Arduino returned  578
+Horizontal x: 851.5696, Telescope in z: 123.35421529858297, Telescope moving z: 123.35421529858297
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028738
+Arduino returned  586
+Horizontal x: 859.464, Telescope in z: 123.68259914394451, Telescope moving z: 123.68259914394451
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028818
+Arduino returned  601
+Horizontal x: 873.2792000000001, Telescope in z: 124.26942132261877, Telescope moving z: 124.26942132261877
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028429
+Arduino returned  618
+Horizontal x: 890.0548, Telescope in z: 125.00319713667221, Telescope moving z: 125.00319713667221
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.036317
+Arduino returned  634
+Horizontal x: 905.8436, Telescope in z: 125.71555051058817, Telescope moving z: 125.71555051058817
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028374
+Arduino returned  651
+Horizontal x: 922.6192, Telescope in z: 126.4960742992406, Telescope moving z: 126.4960742992406
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028094
+Arduino returned  671
+Horizontal x: 942.3552, Telescope in z: 127.44628280704893, Telescope moving z: 127.44628280704893
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028591
+Arduino returned  686
+Horizontal x: 957.1572, Telescope in z: 128.18211532734574, Telescope moving z: 128.18211532734574
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029064
+Arduino returned  647
+Horizontal x: 918.672, Telescope in z: 126.31020054315309, Telescope moving z: 126.31020054315309
+Sending to Arduino:  FBgetx;
+Arduino returned  713
+Horizontal x: 982.814, Telescope in z: 129.5058079651335, Telescope moving z: 129.5058079651335
+'process' took 0:00:00.028483
+Sending to Arduino:  FBgetx;
+Arduino returned  725
+Horizontal x: 994.6556, Telescope in z: 130.13781512008046, Telescope moving z: 130.13781512008046
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028872
+Arduino returned  742
+Horizontal x: 1011.4312, Telescope in z: 131.05641475990944, Telescope moving z: 131.05641475990944
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028505
+Arduino returned  758
+Horizontal x: 1027.22, Telescope in z: 131.94629221760374, Telescope moving z: 131.94629221760374
+'process' took 0:00:00.028123
+Sending to Arduino:  FBgetx;
+Arduino returned  774
+Horizontal x: 1043.0088, Telescope in z: 132.86113544030223, Telescope moving z: 132.86113544030223
+Sending to Arduino:  FBgetx;
+Arduino returned  786
+Horizontal x: 1054.8504, Telescope in z: 133.5638937875516, Telescope moving z: 133.5638937875516
+'process' took 0:00:00.028811
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028231
+Arduino returned  798
+Horizontal x: 1065.7051999999999, Telescope in z: 134.22076635204985, Telescope moving z: 134.22076635204985
+Sending to Arduino:  FBgetx;
+Arduino returned  814
+Horizontal x: 1081.4940000000001, Telescope in z: 135.19812943292982, Telescope moving z: 135.19812943292982
+'process' took 0:00:00.028939
+Sending to Arduino:  FBgetx;
+Arduino returned  817
+Horizontal x: 1084.4544, Telescope in z: 135.38430269735295, Telescope moving z: 135.38430269735295
+'process' took 0:00:00.028918
+Sending to Arduino:  FBgetx;
+Arduino returned  833
+Horizontal x: 1100.2432, Telescope in z: 136.39294989891346, Telescope moving z: 136.39294989891346
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028662
+Arduino returned  845
+Horizontal x: 1112.0848, Telescope in z: 137.1669693838952, Telescope moving z: 137.1669693838952
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028835
+Arduino returned  861
+Horizontal x: 1127.8736, Telescope in z: 138.22266382595393, Telescope moving z: 138.22266382595393
+Sending to Arduino:  FBgetx;
+Arduino returned  878
+'process' took 0:00:00.028327
+Horizontal x: 1144.6492, Telescope in z: 139.37433969843153, Telescope moving z: 139.37433969843153
+Sending to Arduino:  FBgetx;
+Arduino returned  890
+Horizontal x: 1156.4908, Telescope in z: 140.20611681067714, Telescope moving z: 140.20611681067714
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029868
+Arduino returned  902
+Horizontal x: 1167.3456, Telescope in z: 140.98240695233778, Telescope moving z: 140.98240695233778
+Sending to Arduino:  FBgetx;
+Arduino returned  914
+Horizontal x: 1179.1871999999998, Telescope in z: 141.84448316253963, Telescope moving z: 141.84448316253963
+'process' took 0:00:00.028612
+Sending to Arduino:  FBgetx;
+Arduino returned  926
+Horizontal x: 1191.0288, Telescope in z: 142.7225673699936, Telescope moving z: 142.7225673699936
+'process' took 0:00:00.028531
+Sending to Arduino:  FBgetx;
+Arduino returned  936
+Horizontal x: 1200.8968, Telescope in z: 143.4666287541171, Telescope moving z: 143.4666287541171
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029293
+Arduino returned  941
+Horizontal x: 1205.8308000000002, Telescope in z: 143.8428865872911, Telescope moving z: 143.8428865872911
+Sending to Arduino:  FBgetx;
+Arduino returned  961
+Horizontal x: 1225.5668, Telescope in z: 145.37631528348606, Telescope moving z: 145.37631528348606
+'process' took 0:00:00.029498
+Sending to Arduino:  FBgetx;
+Arduino returned  973
+Horizontal x: 1237.4084, Telescope in z: 146.3183535376303, Telescope moving z: 146.3183535376303
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028109
+Arduino returned  985
+Horizontal x: 1249.25, Telescope in z: 147.2770272715261, Telescope moving z: 147.2770272715261
+Sending to Arduino:  FBgetx;
+Arduino returned  998
+Horizontal x: 1261.0916, Telescope in z: 148.25245562216588, Telescope moving z: 148.25245562216588
+'process' took 0:00:00.028750
+Sending to Arduino:  FBgetx;
+Arduino returned  1010
+Horizontal x: 1272.9332, Telescope in z: 149.24475485784353, Telescope moving z: 149.24475485784353
+'process' took 0:00:00.028250
+Sending to Arduino:  FBgetx;
+Arduino returned  1022
+Horizontal x: 1284.7748000000001, Telescope in z: 150.25403837815384, Telescope moving z: 150.25403837815384
+Sending to Arduino:  FBgetx;
+Arduino returned  1034
+Horizontal x: 1296.6163999999999, Telescope in z: 151.28041671399296, Telescope moving z: 151.28041671399296
+'process' took 0:00:00.032097
+Sending to Arduino:  FBgetx;
+Arduino returned  1046
+Horizontal x: 1308.458, Telescope in z: 152.3239975275588, Telescope moving z: 152.3239975275588
+Sending to Arduino:  FBgetx;
+Arduino returned  1055
+Horizontal x: 1317.3392, Telescope in z: 153.1180354114369, Telescope moving z: 153.1180354114369
+'process' took 0:00:00.029703
+Sending to Arduino:  FBgetx;
+Arduino returned  1061
+Horizontal x: 1323.2600000000002, Telescope in z: 153.65282390202265, Telescope moving z: 153.65282390202265
+'process' took 0:00:00.028256
+Sending to Arduino:  FBgetx;
+Arduino returned  1073
+Horizontal x: 1335.1016, Telescope in z: 154.73548907142106, Telescope moving z: 154.73548907142106
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028737
+Arduino returned  1085
+Horizontal x: 1346.9432000000002, Telescope in z: 155.83568680873805, Telescope moving z: 155.83568680873805
+Sending to Arduino:  FBgetx;
+Arduino returned  1097
+Horizontal x: 1357.7980000000002, Telescope in z: 156.8596848645014, Telescope moving z: 156.8596848645014
+'process' took 0:00:00.028488
+Sending to Arduino:  FBgetx;
+Arduino returned  1110
+Horizontal x: 1370.6264, Telescope in z: 158.08905899934314, Telescope moving z: 158.08905899934314
+'process' took 0:00:00.028201
+Sending to Arduino:  FBgetx;
+Arduino returned  1123
+Horizontal x: 1383.4548, Telescope in z: 159.33933553654435, Telescope moving z: 159.33933553654435
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.027907
+Arduino returned  1134
+Horizontal x: 1394.3096, Telescope in z: 160.41366981128, Telescope moving z: 160.41366981128
+Sending to Arduino:  FBgetx;
+Arduino returned  1146
+Horizontal x: 1406.1511999999998, Telescope in z: 161.6029050676418, Telescope moving z: 161.6029050676418
+'process' took 0:00:00.028905
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028022
+Arduino returned  1158
+Horizontal x: 1417.9928, Telescope in z: 162.81020268281196, Telescope moving z: 162.81020268281196
+Sending to Arduino:  FBgetx;
+Arduino returned  1170
+Horizontal x: 1429.8344000000002, Telescope in z: 164.03564091482679, Telescope moving z: 164.03564091482679
+'process' took 0:00:00.029036
+Sending to Arduino:  FBgetx;
+Arduino returned  1181
+Horizontal x: 1440.6891999999998, Telescope in z: 165.17495976099667, Telescope moving z: 165.17495976099667
+'process' took 0:00:00.029061
+Sending to Arduino:  FBgetx;
+Arduino returned  1193
+Horizontal x: 1452.5308, Telescope in z: 166.43537578222958, Telescope moving z: 166.43537578222958
+'process' took 0:00:00.028387
+Sending to Arduino:  FBgetx;
+Arduino returned  1205
+Horizontal x: 1463.3856, Telescope in z: 167.60687762799273, Telescope moving z: 167.60687762799273
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.028578
+Arduino returned  1217
+Horizontal x: 1475.2271999999998, Telescope in z: 168.9025281907921, Telescope moving z: 168.9025281907921
+Sending to Arduino:  FBgetx;
+Arduino returned  1230
+Horizontal x: 1488.0556000000001, Telescope in z: 170.32700397043652, Telescope moving z: 170.32700397043652
+'process' took 0:00:00.028462
+Sending to Arduino:  FBgetx;
+Arduino returned  1243
+Horizontal x: 1500.884, Telescope in z: 171.77324425464985, Telescope moving z: 171.77324425464985
+'process' took 0:00:00.030637
+Sending to Arduino:  FBgetx;
+Arduino returned  1259
+Horizontal x: 1516.6727999999998, Telescope in z: 173.5832194356733, Telescope moving z: 173.5832194356733
+Sending to Arduino:  FBgetx;
+Arduino returned  1270
+Horizontal x: 1527.5276, Telescope in z: 174.84683469001135, Telescope moving z: 174.84683469001135
+'process' took 0:00:00.033764
+Sending to Arduino:  FBgetx;
+Arduino returned  1281
+Horizontal x: 1538.3824, Telescope in z: 176.12618712672145, Telescope moving z: 176.12618712672145
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.033282
+Arduino returned  1280
+Horizontal x: 1537.3955999999998, Telescope in z: 176.00923105649133, Telescope moving z: 176.00923105649133
+Sending to Arduino:  FBgetx;
+Arduino returned  1288
+Horizontal x: 1545.29, Telescope in z: 176.9485315790945, Telescope moving z: 176.9485315790945
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.032634
+Arduino returned  1294
+Horizontal x: 1550.2240000000002, Telescope in z: 177.53983679324347, Telescope moving z: 177.53983679324347
+Sending to Arduino:  FBgetx;
+Arduino returned  1304
+Horizontal x: 1560.092, Telescope in z: 178.73225240972943, Telescope moving z: 178.73225240972943
+'process' took 0:00:00.028969
+Sending to Arduino:  FBgetx;
+Arduino returned  1315
+Horizontal x: 1570.9468000000002, Telescope in z: 180.05903462353143, Telescope moving z: 180.05903462353143
+Sending to Arduino:  FBgetx;
+Arduino returned  1327
+Horizontal x: 1582.7884, Telescope in z: 181.5245408599854, Telescope moving z: 181.5245408599854
+'process' took 0:00:00.033654
+Sending to Arduino:  FBgetx;
+Arduino returned  1339
+Horizontal x: 1594.63, Telescope in z: 183.00897904731107, Telescope moving z: 183.00897904731107
+Sending to Arduino:  FBgetx;
+Arduino returned  1352
+Horizontal x: 1607.4584, Telescope in z: 184.63852566311078, Telescope moving z: 184.63852566311078
+'process' took 0:00:00.032738
+Sending to Arduino:  FBgetx;
+Arduino returned  1365
+Horizontal x: 1620.2867999999999, Telescope in z: 186.29037389552434, Telescope moving z: 186.29037389552434
+Sending to Arduino:  FBgetx;
+Arduino returned  1376
+Horizontal x: 1631.1416, Telescope in z: 187.70553842835596, Telescope moving z: 187.70553842835596
+'process' took 0:00:00.046256
+Sending to Arduino:  FBgetx;
+Arduino returned  1388
+Horizontal x: 1642.9832000000001, Telescope in z: 189.2676195712844, Telescope moving z: 189.2676195712844
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.030179
+Arduino returned  1404
+Horizontal x: 1657.7851999999998, Telescope in z: 191.2470582292458, Telescope moving z: 191.2470582292458
+Sending to Arduino:  FBgetx;
+Arduino returned  1413
+Horizontal x: 1666.6664, Telescope in z: 192.44905014156006, Telescope moving z: 192.44905014156006
+2018-05-11 08:24:51.620572: distance:  186px  83.036mm
+'process' took 0:00:00.048394
+Sending to Arduino:  FBgetx;
+goal detection value:  83.03602643247801
+Goal slower speed set
+Arduino returned  1419
+Horizontal x: 1672.5872, Telescope in z: 193.25635312026884, Telescope moving z: 193.25635312026884
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1429
+Horizontal x: 1682.4551999999999, Telescope in z: 194.61248647033005, Telescope moving z: 194.61248647033005
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:51.780515: distance:  147px  65.685mm
+'process' took 0:00:00.053600
+goal detection value:  65.68453909560486
+Goal slower speed set
+Arduino returned  1431
+Horizontal x: 1684.4288000000001, Telescope in z: 194.88530798944237, Telescope moving z: 194.88530798944237
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1430
+Horizontal x: 1683.442, Telescope in z: 194.74883076386283, Telescope moving z: 194.74883076386283
+2018-05-11 08:24:51.904381: distance:   86px  39.157mm
+goal detection value:  39.156711808667865
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+'process' took 0:00:00.031927
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1434
+Horizontal x: 1687.3892, Telescope in z: 195.29553732951388, Telescope moving z: 195.29553732951388
+2018-05-11 08:24:52.020262: distance:   89px  41.008mm
+'process' took 0:00:00.030552
+Sending to Arduino:  FBgetx;
+goal detection value:  41.00830850939816
+Goal slower speed set
+Arduino returned  1436
+Horizontal x: 1689.3627999999999, Telescope in z: 195.56968834430444, Telescope moving z: 195.56968834430444
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1440
+Horizontal x: 1693.31, Telescope in z: 196.11958609989313, Telescope moving z: 196.11958609989313
+2018-05-11 08:24:52.170147: distance:  140px  62.888mm
+'process' took 0:00:00.031403
+Sending to Arduino:  FBgetx;
+goal detection value:  62.88787044393348
+Goal slower speed set
+Arduino returned  1442
+Horizontal x: 1695.2836000000002, Telescope in z: 196.39533293888178, Telescope moving z: 196.39533293888178
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1446
+Horizontal x: 1699.2307999999998, Telescope in z: 196.94842276812153, Telescope moving z: 196.94842276812153
+2018-05-11 08:24:52.304363: distance:  185px  81.575mm
+'process' took 0:00:00.032646
+goal detection value:  81.57501949803888
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1449
+Horizontal x: 1702.1912000000002, Telescope in z: 197.3646369384822, Telescope moving z: 197.3646369384822
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:52.420217: distance:  187px  81.979mm
+'process' took 0:00:00.031327
+goal detection value:  81.97921442894449
+Goal slower speed set
+Arduino returned  1452
+Horizontal x: 1705.1516000000001, Telescope in z: 197.78204851035724, Telescope moving z: 197.78204851035724
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1454
+Horizontal x: 1707.1252, Telescope in z: 198.06098817389983, Telescope moving z: 198.06098817389983
+2018-05-11 08:24:52.554585: distance:  158px  69.489mm
+'process' took 0:00:00.030674
+Sending to Arduino:  FBgetx;
+goal detection value:  69.48892307907607
+Goal slower speed set
+Arduino returned  1456
+Horizontal x: 1709.0988000000002, Telescope in z: 198.3404601015091, Telescope moving z: 198.3404601015091
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1456
+Horizontal x: 1709.0988000000002, Telescope in z: 198.3404601015091, Telescope moving z: 198.3404601015091
+2018-05-11 08:24:52.705096: distance:  118px  51.962mm
+'process' took 0:00:00.032132
+goal detection value:  51.962140279344794
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1459
+Horizontal x: 1712.0592000000001, Telescope in z: 198.76066605368078, Telescope moving z: 198.76066605368078
+Sending to Arduino:  FBgetx;
+Arduino returned  1461
+Horizontal x: 1714.0328, Telescope in z: 199.04146876909084, Telescope moving z: 199.04146876909084
+2018-05-11 08:24:52.822499: distance:   96px  43.285mm
+'process' took 0:00:00.032184
+goal detection value:  43.28514154092182
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1465
+Horizontal x: 1717.98, Telescope in z: 199.60467130353618, Telescope moving z: 199.60467130353618
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:52.957673: distance:   91px  40.986mm
+'process' took 0:00:00.034076
+goal detection value:  40.98560184395747
+Arduino returned  1468
+Horizontal x: 1720.9404, Telescope in z: 200.02847075331874, Telescope moving z: 200.02847075331874
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1472
+Horizontal x: 1724.8876, Telescope in z: 200.59540019759083, Telescope moving z: 200.59540019759083
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:53.107028: distance:   79px  35.715mm
+goal detection value:  35.71495461450751
+Goal slower speed set
+'process' took 0:00:00.034380
+Arduino returned  1475
+Horizontal x: 1727.848, Telescope in z: 201.02199497406264, Telescope moving z: 201.02199497406264
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1478
+Horizontal x: 1730.8084, Telescope in z: 201.44978781114355, Telescope moving z: 201.44978781114355
+2018-05-11 08:24:53.239163: distance:   73px  33.002mm
+'process' took 0:00:00.034448
+goal detection value:  33.00242641593732
+Goal slower speed set
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1482
+Horizontal x: 1734.7556, Telescope in z: 202.02204194663824, Telescope moving z: 202.02204194663824
+2018-05-11 08:24:53.355839: distance:   61px  27.504mm
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.032691
+goal detection value:  27.504100354127402
+Goal slower speed set
+Arduino returned  1484
+Horizontal x: 1736.7292000000002, Telescope in z: 202.30896774347843, Telescope moving z: 202.30896774347843
+Sending to Arduino:  FBsetspeed2;
+Arduino returned  OK
+Sending to Arduino:  FBgetx;
+Arduino returned  1483
+Horizontal x: 1735.7424, Telescope in z: 202.16543828423022, Telescope moving z: 202.16543828423022
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:53.514036: distance:   43px  19.483mm
+'process' took 0:00:00.041457
+goal detection value:  19.48278181993935
+goal found
+Goal  not yet reached, position:  1735.7424
+Arduino returned  1486
+Horizontal x: 1738.7028, Telescope in z: 202.59642602617356, Telescope moving z: 202.59642602617356
+Goal  not yet reached, position:  1738.7028
+Sending to Arduino:  FBgetx;
+Arduino returned  1489
+Horizontal x: 1741.6632, Telescope in z: 203.0286118541972, Telescope moving z: 203.0286118541972
+Goal  not yet reached, position:  1741.6632
+2018-05-11 08:24:53.636012: distance:   54px  24.413mm
+'process' took 0:00:00.031988
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1741.6632
+Arduino returned  1492
+Horizontal x: 1744.6236, Telescope in z: 203.46199574910048, Telescope moving z: 203.46199574910048
+Goal  not yet reached, position:  1744.6236
+Sending to Arduino:  FBgetx;
+Arduino returned  1494
+Horizontal x: 1745.6104, Telescope in z: 203.60672327955353, Telescope moving z: 203.60672327955353
+2018-05-11 08:24:53.772607: distance:   62px  27.955mm
+'process' took 0:00:00.035022
+Goal  not yet reached, position:  1745.6104
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1745.6104
+Arduino returned  1497
+Horizontal x: 1748.5708, Telescope in z: 204.04170454772805, Telescope moving z: 204.04170454772805
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1748.5708
+2018-05-11 08:24:53.908043: distance:   52px  23.395mm
+'process' took 0:00:00.036107
+Arduino returned  1501
+Horizontal x: 1752.518, Telescope in z: 204.62354308462102, Telescope moving z: 204.62354308462102
+1752.518
+Goal  not yet reached, position:  1752.518
+Sending to Arduino:  FBgetx;
+Arduino returned  1504
+Goal  not yet reached, position:  1752.518
+Horizontal x: 1755.4784, Telescope in z: 205.0613195460552, Telescope moving z: 205.0613195460552
+Goal  not yet reached, position:  1755.4784
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:54.074309: distance:   40px  18.016mm
+'process' took 0:00:00.038915
+Arduino returned  1507
+Horizontal x: 1758.4388, Telescope in z: 205.50029383660137, Telescope moving z: 205.50029383660137
+Goal  not yet reached, position:  1758.4388
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1758.4388
+Arduino returned  1508
+Horizontal x: 1759.4256, Telescope in z: 205.64688477039266, Telescope moving z: 205.64688477039266
+1759.4256
+2018-05-11 08:24:54.206535: distance:   31px  13.949mm
+'process' took 0:00:00.032663
+Goal  not yet reached, position:  1759.4256
+Sending to Arduino:  FBgetx;
+Arduino returned  1506
+Horizontal x: 1757.4520000000002, Telescope in z: 205.35383598583684, Telescope moving z: 205.35383598583684
+Goal  not yet reached, position:  1757.4520000000002
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:54.320553: distance:    4px   1.837mm
+'process' took 0:00:00.031636
+Arduino returned  1509
+Horizontal x: 1760.4124000000002, Telescope in z: 205.79360878387132, Telescope moving z: 205.79360878387132
+Goal  not yet reached, position:  1760.4124000000002
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1760.4124000000002
+Arduino returned  1512
+Horizontal x: 1763.3728, Telescope in z: 206.23457926695863, Telescope moving z: 206.23457926695863
+Goal  not yet reached, position:  1763.3728
+2018-05-11 08:24:54.456128: distance:   19px   8.622mm
+'process' took 0:00:00.036714
+Sending to Arduino:  FBgetx;
+1763.3728
+Arduino returned  1515
+Horizontal x: 1766.3332, Telescope in z: 206.67674733372195, Telescope moving z: 206.67674733372195
+Goal  not yet reached, position:  1766.3332
+Sending to Arduino:  FBgetx;
+Arduino returned  1518
+Horizontal x: 1769.2936, Telescope in z: 207.1201128715789, Telescope moving z: 207.1201128715789
+Goal  not yet reached, position:  1769.2936
+2018-05-11 08:24:54.603076: distance:   22px   9.946mm
+'process' took 0:00:00.031829
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1769.2936
+Arduino returned  1521
+Horizontal x: 1772.254, Telescope in z: 207.56467575674122, Telescope moving z: 207.56467575674122
+Goal  not yet reached, position:  1772.254
+Sending to Arduino:  FBgetx;
+1772.254
+2018-05-11 08:24:54.723461: distance:   14px   6.312mm
+Goal  not yet reached, position:  1772.254
+'process' took 0:00:00.035215
+Arduino returned  1525
+Horizontal x: 1776.2012, Telescope in z: 208.1592885756063, Telescope moving z: 208.1592885756063
+Goal  not yet reached, position:  1776.2012
+Sending to Arduino:  FBgetx;
+Arduino returned  1528
+Horizontal x: 1779.1616, Telescope in z: 208.6066447268022, Telescope moving z: 208.6066447268022
+Goal  not yet reached, position:  1779.1616
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1779.1616
+2018-05-11 08:24:54.902460: distance:    3px   1.358mm
+'process' took 0:00:00.034288
+Arduino returned  1531
+Horizontal x: 1782.1219999999998, Telescope in z: 209.05519773174444, Telescope moving z: 209.05519773174444
+Goal  not yet reached, position:  1782.1219999999998
+1782.1219999999998
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1782.1219999999998
+Arduino returned  1528
+Horizontal x: 1779.1616, Telescope in z: 208.6066447268022, Telescope moving z: 208.6066447268022
+2018-05-11 08:24:55.034809: distance:  -14px  -6.319mm
+'process' took 0:00:00.032033
+Goal  not yet reached, position:  1779.1616
+Sending to Arduino:  FBgetx;
+Arduino returned  1530
+Horizontal x: 1781.1352000000002, Telescope in z: 208.905547090089, Telescope moving z: 208.905547090089
+Goal  not yet reached, position:  1781.1352000000002
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1781.1352000000002
+Arduino returned  1532
+Horizontal x: 1783.1088, Telescope in z: 209.20498133809213, Telescope moving z: 209.20498133809213
+2018-05-11 08:24:55.169900: distance:  -21px  -9.587mm
+'process' took 0:00:00.033789
+Goal  not yet reached, position:  1783.1088
+Sending to Arduino:  FBgetx;
+Arduino returned  1533
+Horizontal x: 1784.0956, Telescope in z: 209.35489790247215, Telescope moving z: 209.35489790247215
+1784.0956
+Goal  not yet reached, position:  1784.0956
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:55.301930: distance:  -11px  -5.019mm
+'process' took 0:00:00.032636
+Arduino returned  1533
+Horizontal x: 1784.0956, Telescope in z: 209.35489790247215, Telescope moving z: 209.35489790247215
+Goal  not yet reached, position:  1784.0956
+Sending to Arduino:  FBgetx;
+Arduino returned  1533
+Horizontal x: 1784.0956, Telescope in z: 209.35489790247215, Telescope moving z: 209.35489790247215
+Goal  not yet reached, position:  1784.0956
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:55.434709: distance:  -15px  -6.807mm
+'process' took 0:00:00.032305
+Goal  not yet reached, position:  1784.0956
+Arduino returned  1536
+Horizontal x: 1787.056, Telescope in z: 209.80544527513104, Telescope moving z: 209.80544527513104
+1787.056
+Goal  not yet reached, position:  1787.056
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:55.549890: distance:  -29px -13.160mm
+'process' took 0:00:00.031854
+Goal  not yet reached, position:  1787.056
+Arduino returned  1540
+Horizontal x: 1791.0032, Telescope in z: 210.40803608954974, Telescope moving z: 210.40803608954974
+Goal  not yet reached, position:  1791.0032
+Sending to Arduino:  FBgetx;
+Arduino returned  1544
+Horizontal x: 1794.9504000000002, Telescope in z: 211.01275329756288, Telescope moving z: 211.01275329756288
+Goal  not yet reached, position:  1794.9504000000002
+2018-05-11 08:24:55.684102: distance:  -38px -17.217mm
+'process' took 0:00:00.032057
+Sending to Arduino:  FBgetx;
+Arduino returned  1546
+Goal  not yet reached, position:  1794.9504000000002
+Horizontal x: 1796.924, Telescope in z: 211.31590913830019, Telescope moving z: 211.31590913830019
+1796.924
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1796.924
+Arduino returned  1543
+Horizontal x: 1793.9636, Telescope in z: 210.86137467394866, Telescope moving z: 210.86137467394866
+2018-05-11 08:24:55.816606: distance:  -58px -26.279mm
+'process' took 0:00:00.031478
+Goal  not yet reached, position:  1793.9636
+Sending to Arduino:  FBgetx;
+Arduino returned  1545
+Horizontal x: 1795.9371999999998, Telescope in z: 211.16426478849945, Telescope moving z: 211.16426478849945
+Goal  not yet reached, position:  1795.9371999999998
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1795.9371999999998
+2018-05-11 08:24:55.954167: distance:  -58px -26.479mm
+'process' took 0:00:00.035533
+Arduino returned  1549
+Horizontal x: 1799.8844, Telescope in z: 211.77163925422815, Telescope moving z: 211.77163925422815
+Goal  not yet reached, position:  1799.8844
+1799.8844
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1799.8844
+Arduino returned  1551
+Horizontal x: 1801.8580000000002, Telescope in z: 212.0761234645381, Telescope moving z: 212.0761234645381
+2018-05-11 08:24:56.087757: distance:  -49px -22.285mm
+'process' took 0:00:00.035544
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1801.8580000000002
+Arduino returned  1555
+Horizontal x: 1805.8052000000002, Telescope in z: 212.68668547127862, Telescope moving z: 212.68668547127862
+Goal  not yet reached, position:  1805.8052000000002
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:56.217044: distance:  -55px -25.014mm
+Goal  not yet reached, position:  1805.8052000000002
+'process' took 0:00:00.032903
+Arduino returned  1559
+Horizontal x: 1809.7523999999999, Telescope in z: 213.29937174199426, Telescope moving z: 213.29937174199426
+1809.7523999999999
+Goal  not yet reached, position:  1809.7523999999999
+Sending to Arduino:  FBgetx;
+Arduino returned  1561
+Horizontal x: 1811.726, Telescope in z: 213.60651127397256, Telescope moving z: 213.60651127397256
+Goal  not yet reached, position:  1811.726
+2018-05-11 08:24:56.353689: distance:  -69px -31.382mm
+'process' took 0:00:00.034897
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1811.726
+Arduino returned  1565
+Horizontal x: 1815.6732000000002, Telescope in z: 214.22238270706197, Telescope moving z: 214.22238270706197
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1815.6732000000002
+Arduino returned  1566
+Horizontal x: 1816.6599999999999, Telescope in z: 214.3766822448352, Telescope moving z: 214.3766822448352
+Goal  not yet reached, position:  1816.6599999999999
+2018-05-11 08:24:56.502693: distance:  -80px -36.401mm
+'process' took 0:00:00.034640
+1816.6599999999999
+Sending to Arduino:  FBgetx;
+Arduino returned  1563
+Horizontal x: 1813.6996, Telescope in z: 213.91418162467352, Telescope moving z: 213.91418162467352
+Goal  not yet reached, position:  1813.6996
+Sending to Arduino:  FBgetx;
+Arduino returned  1566
+Horizontal x: 1816.6599999999999, Telescope in z: 214.3766822448352, Telescope moving z: 214.3766822448352
+Goal  not yet reached, position:  1816.6599999999999
+2018-05-11 08:24:56.620538: distance:  -96px -43.995mm
+'process' took 0:00:00.033577
+Goal  not yet reached, position:  1816.6599999999999
+Sending to Arduino:  FBgetx;
+Arduino returned  1569
+Horizontal x: 1819.6204000000002, Telescope in z: 214.8403767076926, Telescope moving z: 214.8403767076926
+Goal  not yet reached, position:  1819.6204000000002
+Sending to Arduino:  FBgetx;
+Arduino returned  1572
+Horizontal x: 1822.5808000000002, Telescope in z: 215.30526469895813, Telescope moving z: 215.30526469895813
+2018-05-11 08:24:56.766659: distance:  -82px -37.436mm
+'process' took 0:00:00.032175
+1822.5808000000002
+Goal  not yet reached, position:  1822.5808000000002
+Sending to Arduino:  FBgetx;
+Arduino returned  1575
+Horizontal x: 1825.5412000000001, Telescope in z: 215.7713458931379, Telescope moving z: 215.7713458931379
+Goal  not yet reached, position:  1825.5412000000001
+Goal  not yet reached, position:  1825.5412000000001
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:56.899659: distance:  -88px -40.130mm
+'process' took 0:00:00.032095
+Arduino returned  1578
+Horizontal x: 1828.5016, Telescope in z: 216.2386199535324, Telescope moving z: 216.2386199535324
+Goal  not yet reached, position:  1828.5016
+Sending to Arduino:  FBgetx;
+Arduino returned  1581
+Horizontal x: 1831.462, Telescope in z: 216.7070865322362, Telescope moving z: 216.7070865322362
+Goal  not yet reached, position:  1831.462
+1831.462
+2018-05-11 08:24:57.035712: distance: -103px -46.971mm
+'process' took 0:00:00.033253
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1831.462
+Arduino returned  1584
+Horizontal x: 1834.4224, Telescope in z: 217.1767452701382, Telescope moving z: 217.1767452701382
+Goal  not yet reached, position:  1834.4224
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:57.166095: distance: -110px -50.354mm
+'process' took 0:00:00.031850
+Goal  not yet reached, position:  1834.4224
+Arduino returned  1588
+Horizontal x: 1838.3696, Telescope in z: 217.80481074886956, Telescope moving z: 217.80481074886956
+Goal  not yet reached, position:  1838.3696
+Sending to Arduino:  FBgetx;
+Arduino returned  1589
+Horizontal x: 1839.3564000000001, Telescope in z: 217.96215806509844, Telescope moving z: 217.96215806509844
+Goal  not yet reached, position:  1839.3564000000001
+1839.3564000000001
+2018-05-11 08:24:57.299077: distance: -126px -57.279mm
+'process' took 0:00:00.031768
+Sending to Arduino:  FBgetx;
+Arduino returned  1590
+Horizontal x: 1840.3431999999998, Telescope in z: 218.11963773106197, Telescope moving z: 218.11963773106197
+Goal  not yet reached, position:  1840.3431999999998
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1840.3431999999998
+Arduino returned  1593
+Horizontal x: 1842.3168, Telescope in z: 218.43499405332028, Telescope moving z: 218.43499405332028
+2018-05-11 08:24:57.414984: distance: -135px -61.937mm
+'process' took 0:00:00.032828
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1842.3168
+Arduino returned  1596
+Horizontal x: 1845.2772, Telescope in z: 218.9090207881266, Telescope moving z: 218.9090207881266
+Goal  not yet reached, position:  1845.2772
+1845.2772
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:57.548421: distance: -135px -62.035mm
+'process' took 0:00:00.031316
+Arduino returned  1600
+Horizontal x: 1849.2244, Telescope in z: 219.5429079943151, Telescope moving z: 219.5429079943151
+Goal  not yet reached, position:  1849.2244
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1849.2244
+Arduino returned  1603
+Horizontal x: 1852.1848, Telescope in z: 220.01971151854104, Telescope moving z: 220.01971151854104
+Goal  not yet reached, position:  1852.1848
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:57.681414: distance: -144px -65.918mm
+'process' took 0:00:00.030275
+Arduino returned  1605
+Horizontal x: 1854.1583999999998, Telescope in z: 220.33824130197064, Telescope moving z: 220.33824130197064
+Goal  not yet reached, position:  1854.1583999999998
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1854.1583999999998
+1854.1583999999998
+Arduino returned  1608
+Horizontal x: 1857.1188000000002, Telescope in z: 220.81702679700385, Telescope moving z: 220.81702679700385
+Goal  not yet reached, position:  1857.1188000000002
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:57.856871: distance: -157px -72.145mm
+'process' took 0:00:00.032620
+Arduino returned  1611
+Horizontal x: 1860.0792000000001, Telescope in z: 221.2970008695367, Telescope moving z: 221.2970008695367
+Goal  not yet reached, position:  1860.0792000000001
+Sending to Arduino:  FBgetx;
+Arduino returned  1612
+Horizontal x: 1861.0659999999998, Telescope in z: 221.4572562749123, Telescope moving z: 221.4572562749123
+Goal  not yet reached, position:  1861.0659999999998
+Sending to Arduino:  FBgetx;
+2018-05-11 08:24:57.998879: distance: -167px -76.291mm
+'process' took 0:00:00.031981
+Goal  not yet reached, position:  1861.0659999999998
+Arduino returned  1610
+Horizontal x: 1859.0924, Telescope in z: 221.13687747648248, Telescope moving z: 221.13687747648248
+1859.0924
+Goal  not yet reached, position:  1859.0924
+Sending to Arduino:  FBgetx;
+Arduino returned  1612
+Horizontal x: 1861.0659999999998, Telescope in z: 221.4572562749123, Telescope moving z: 221.4572562749123
+Goal  not yet reached, position:  1861.0659999999998
+2018-05-11 08:24:58.133609: distance: -185px -85.434mm
+'process' took 0:00:00.031766
+Sending to Arduino:  FBgetx;
+Arduino returned  1615
+Horizontal x: 1864.0264000000002, Telescope in z: 221.93881438838758, Telescope moving z: 221.93881438838758
+Goal  not yet reached, position:  1864.0264000000002
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1864.0264000000002
+Arduino returned  1618
+Horizontal x: 1866.9868000000001, Telescope in z: 222.42155997125047, Telescope moving z: 222.42155997125047
+2018-05-11 08:24:58.253153: distance: -168px -77.286mm
+'process' took 0:00:00.036378
+Goal  not yet reached, position:  1866.9868000000001
+Sending to Arduino:  FBgetx;
+1866.9868000000001
+Arduino returned  1621
+Horizontal x: 1869.9472, Telescope in z: 222.9054925299195, Telescope moving z: 222.9054925299195
+Goal  not yet reached, position:  1869.9472
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1869.9472
+2018-05-11 08:24:58.411366: distance: -165px -75.906mm
+'process' took 0:00:00.044894
+Arduino returned  1625
+Horizontal x: 1873.8944000000001, Telescope in z: 223.55258147420204, Telescope moving z: 223.55258147420204
+Goal  not yet reached, position:  1873.8944000000001
+Sending to Arduino:  FBgetx;
+Arduino returned  1628
+Horizontal x: 1876.8548, Telescope in z: 224.03928166065566, Telescope moving z: 224.03928166065566
+Goal  not yet reached, position:  1876.8548
+2018-05-11 08:24:58.527977: distance: -176px -80.657mm
+'process' took 0:00:00.043932
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1876.8548
+1876.8548
+Arduino returned  1632
+Horizontal x: 1880.8020000000001, Telescope in z: 224.69005887081846, Telescope moving z: 224.69005887081846
+Goal  not yet reached, position:  1880.8020000000001
+Sending to Arduino:  FBgetx;
+Arduino returned  1633
+Horizontal x: 1881.7887999999998, Telescope in z: 224.85308225882318, Telescope moving z: 224.85308225882318
+Goal  not yet reached, position:  1881.7887999999998
+2018-05-11 08:24:58.676139: distance: -188px -86.624mm
+'process' took 0:00:00.031520
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1881.7887999999998
+Arduino returned  1630
+Horizontal x: 1878.8283999999999, Telescope in z: 224.36440695686127, Telescope moving z: 224.36440695686127
+Goal  not yet reached, position:  1878.8283999999999
+2018-05-11 08:24:58.797259: distance: -203px -93.135mm
+'process' took 0:00:00.031268
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1878.8283999999999
+1878.8283999999999
+Arduino returned  1634
+Horizontal x: 1882.7756, Telescope in z: 225.0162372402325, Telescope moving z: 225.0162372402325
+Goal  not yet reached, position:  1882.7756
+Sending to Arduino:  FBgetx;
+Arduino returned  1637
+Horizontal x: 1885.7359999999999, Telescope in z: 225.50649153786958, Telescope moving z: 225.50649153786958
+2018-05-11 08:24:58.930428: distance: -193px -89.028mm
+'process' took 0:00:00.030938
+Goal  not yet reached, position:  1885.7359999999999
+Sending to Arduino:  FBgetx;
+Arduino returned  1639
+Horizontal x: 1887.7096000000001, Telescope in z: 225.83398532136272, Telescope moving z: 225.83398532136272
+Goal  not yet reached, position:  1887.7096000000001
+Goal  not yet reached, position:  1887.7096000000001
+Sending to Arduino:  FBgetx;
+Arduino returned  1642
+Horizontal x: 1890.67, Telescope in z: 226.32621194910138, Telescope moving z: 226.32621194910138
+2018-05-11 08:24:59.067296: distance: -191px -87.908mm
+'process' took 0:00:00.031032
+1890.67
+Goal  not yet reached, position:  1890.67
+Sending to Arduino:  FBgetx;
+Arduino returned  1645
+Goal  not yet reached, position:  1890.67
+Horizontal x: 1893.6304, Telescope in z: 226.8196212005833, Telescope moving z: 226.8196212005833
+2018-05-11 08:24:59.196665: distance: -203px -93.790mm
+'process' took 0:00:00.030901
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1893.6304
+Arduino returned  1649
+Horizontal x: 1897.5776, Telescope in z: 227.47933881046214, Telescope moving z: 227.47933881046214
+Goal  not yet reached, position:  1897.5776
+2018-05-11 08:24:59.311830: distance: -215px -99.177mm
+'process' took 0:00:00.030400
+Sending to Arduino:  FBgetx;
+1897.5776
+Arduino returned  1652
+Horizontal x: 1900.538, Telescope in z: 227.97550518628856, Telescope moving z: 227.97550518628856
+Goal  not yet reached, position:  1900.538
+Goal  not yet reached, position:  1900.538
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1900.538
+2018-05-11 08:24:59.464628: distance: -228px -104.439mm
+'process' took 0:00:00.031040
+Arduino returned  1651
+Horizontal x: 1899.5511999999999, Telescope in z: 227.80998518583448, Telescope moving z: 227.80998518583448
+Goal  not yet reached, position:  1899.5511999999999
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1899.5511999999999
+1899.5511999999999
+'process' took 0:00:00.030239
+Arduino returned  1652
+Horizontal x: 1900.538, Telescope in z: 227.97550518628856, Telescope moving z: 227.97550518628856
+Goal  not yet reached, position:  1900.538
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1900.538
+Arduino returned  1652
+Horizontal x: 1900.538, Telescope in z: 227.97550518628856, Telescope moving z: 227.97550518628856
+Goal  not yet reached, position:  1900.538
+2018-05-11 08:24:59.731248: distance: -228px -105.699mm
+'process' took 0:00:00.031434
+Sending to Arduino:  FBgetx;
+Arduino returned  1653
+Horizontal x: 1901.5248000000001, Telescope in z: 228.14115636447013, Telescope moving z: 228.14115636447013
+Goal  not yet reached, position:  1901.5248000000001
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1901.5248000000001
+Arduino returned  1656
+Horizontal x: 1904.4852, Telescope in z: 228.6388967320762, Telescope moving z: 228.6388967320762
+1904.4852
+'process' took 0:00:00.030065
+Goal  not yet reached, position:  1904.4852
+Sending to Arduino:  FBgetx;
+Arduino returned  1659
+Horizontal x: 1907.4456, Telescope in z: 229.13781685352717, Telescope moving z: 229.13781685352717
+Goal  not yet reached, position:  1907.4456
+Sending to Arduino:  FBgetx;
+Goal  not yet reached, position:  1907.4456
+'process' took 0:00:00.041201
+Arduino returned  1662
+Horizontal x: 1910.406, Telescope in z: 229.63791608209465, Telescope moving z: 229.63791608209465
+Goal  not yet reached, position:  1910.406
+Sending to Arduino:  FBgetx;
+1910.406
+Goal  not yet reached, position:  1910.406
+'process' took 0:00:00.029581
+Arduino returned  1665
+Horizontal x: 1913.3663999999999, Telescope in z: 230.13919375984472, Telescope moving z: 230.13919375984472
+Goal  not yet reached, position:  1913.3663999999999
+Sending to Arduino:  FBgetx;
+Arduino returned  1663
+Horizontal x: 1911.3928, Telescope in z: 229.80487773536004, Telescope moving z: 229.80487773536004
+Goal  not yet reached, position:  1911.3928
+Sending to Arduino:  FBgetx;
+'process' took 0:00:00.029492
+Goal  not yet reached, position:  1911.3928

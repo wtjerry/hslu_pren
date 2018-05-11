@@ -64,10 +64,10 @@ class Controller(object):
     def _get_load(self):
         self._logger.major_step("Getting load")
         self._magnet.start()
-        self._telescope.down(Config.CONTROLLER_INITIAL_LOAD_HEIGHT)
+        self._telescope.down(Config.CONTROLLER_INITIAL_TELESCOPE_DOWN)
         time.sleep(1)
         self._executor.enqueue(self._position.start_position_output)
-        self._telescope.up(Config.CONTROLLER_INITIAL_LOAD_HEIGHT)
+        self._telescope.up(Config.CONTROLLER_INITIAL_TELESCOPE_UP)
         self._move_until_goal_reached()
 
     def _move_until_goal_reached(self):
