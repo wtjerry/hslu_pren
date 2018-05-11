@@ -33,6 +33,7 @@ class Controller(object):
         self._queue = Queue()
         self._search_goal_process = Process(target=_goal_detection.start, args=(self._queue,))
         self.reverted = False
+        self._speed_already_set = False
 
     def get_position_sender(self):
         ip = get_wlan_ip_address()
@@ -81,13 +82,12 @@ class Controller(object):
         while not self._goal_found:
             value = self._queue.get()
             print("goal detection value: ", value)
-            speed_already_set = False
             if Config.CONTROLLER_GOAL_DETECTION_THRESHOLD > value > -Config.CONTROLLER_GOAL_DETECTION_THRESHOLD:
                 print("goal found")
                 self._on_goal_found(value)
-            elif value < Config.CONTROLLER_DISTANCE_TO_GOAL_SLOWER and not speed_already_set and self.reverted is False:
+            elif value < Config.CONTROLLER_DISTANCE_TO_GOAL_SLOWER and (not self._speed_already_set) and self.reverted is False:
                 print("Goal slower speed set")
-                speed_already_set = True
+                self._speed_already_set = True
                 self._movement.set_speed(Config.CONTROLLER_SEARCH_GOAL_SPEED)
 
     def _fail_safe(self):
