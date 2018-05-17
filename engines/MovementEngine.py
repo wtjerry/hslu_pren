@@ -2,6 +2,7 @@ import math
 
 
 class MovementEngine(object):
+    _RESET_COMMAND = "RS"
     _START_COMMAND = "FBstart"
     _CHANGE_SPEED_COMMAND = "FBsetspeed"
     _STOP_COMMAND = "FBstop"
@@ -12,6 +13,9 @@ class MovementEngine(object):
     def __init__(self, communication):
         self._communication = communication
         self.is_moving = False
+
+    def reset(self):
+        self._communication.execute(self._RESET_COMMAND)
 
     def start(self, speed):
         self._communication.execute(self._START_COMMAND + str(speed))

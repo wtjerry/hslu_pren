@@ -53,6 +53,7 @@ class Controller(object):
         self._logger.major_step("Switching to start")
         self._executor.enqueue(self._tilt_controller.start)
         self._executor.enqueue(self._position.start_calc_pos)
+        self._movement.reset()
         self._move_until_load_reached()
 
     def _move_until_load_reached(self):
@@ -85,7 +86,8 @@ class Controller(object):
             if Config.CONTROLLER_GOAL_DETECTION_THRESHOLD > value > -Config.CONTROLLER_GOAL_DETECTION_THRESHOLD:
                 print("goal found")
                 self._on_goal_found(value)
-            elif value < Config.CONTROLLER_DISTANCE_TO_GOAL_SLOWER and (not self._speed_already_set) and self.reverted is False:
+            elif value < Config.CONTROLLER_DISTANCE_TO_GOAL_SLOWER and (
+            not self._speed_already_set) and self.reverted is False:
                 print("Goal slower speed set")
                 self._speed_already_set = True
                 self._movement.set_speed(Config.CONTROLLER_SEARCH_GOAL_SPEED)
