@@ -35,9 +35,8 @@ class Binding(object):
         return Communication()
 
     def _get_real_position(self, position_sender):
-        from position.XPositionSensor import XPositionSensor
         from position.Position import Position
-        return Position(XPositionSensor(), self.movement_engine, self.telescope_engine, position_sender)
+        return Position(self.movement_engine, self.telescope_engine, position_sender)
 
     def _get_real_goal_detection(self):
         from goaldetection.GoalDetection import GoalDetection

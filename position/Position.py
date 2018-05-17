@@ -12,8 +12,7 @@ class Position(object):
     _x_pos_horizontal = 0
     _z_pos_bottom_magnet_when_telescope_in = 0
 
-    def __init__(self, x_position_sensor, movement_engine, telescope_engine, position_sender):
-        self._xposition_sensor = x_position_sensor
+    def __init__(self, movement_engine, telescope_engine, position_sender):
         self._movement_engine = movement_engine
         self._telescope_engine = telescope_engine
         self._position_sender = position_sender
