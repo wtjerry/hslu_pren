@@ -131,7 +131,11 @@ class Controller(object):
 
     def _block_until_goal_reached(self, distance_to_goal_when_found):
         goal_reached = False
-        goal_position = self._position.get_current_x() + Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE + distance_to_goal_when_found
+        current_x = self._position.get_current_x()
+        goal_position = current_x \
+            + Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE \
+            + distance_to_goal_when_found \
+            + self._calculate_xCorrection_for_goal_detection(current_x)
         while not goal_reached:
             position = self._position.get_current_x()
             if position >= goal_position:
@@ -140,6 +144,11 @@ class Controller(object):
             else:
                 print("Goal  not yet reached, position: ", position)
             time.sleep(0.05)
+
+    def _calculate_xCorrection_for_goal_detection(self, current_x):
+        return ((Config.CONTROLLER_MAX_GOAL_DETECTION_CORRECTION - Config.CONTROLLER_MIN_GOAL_DETECTION_CORRECTION) /
+                (Config.CONTROLLER_X_POSITION_WHERE_GOAL_DETECTION_CORRECTION_IS_MAX - Config.CONTROLLER_X_POSITION_WHERE_GOAL_DETECTION_CORRECTION_IS_MIN)) \
+               * current_x - Config.CONTROLLER_CORRECTION_INTERCEPT
 
     def _deliver_load(self):
         self._logger.major_step("Delivering load")
