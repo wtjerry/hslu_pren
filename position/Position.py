@@ -45,14 +45,13 @@ class Position(object):
         self._should_calc = False
 
     def _calculate_x_horizontal(self, x_pos_on_rope):
-        return 0.9868 * x_pos_on_rope + 287.12
+        return 0.9859 * x_pos_on_rope + 292.1
 
     def _calculate_z_bottom_magnet_when_telescope_in(self, x_pos_horizontal):
-        return -0.000000000006079 * x_pos_horizontal ** 4 \
-               + 0.000000042190949 * x_pos_horizontal ** 3 \
-               - 0.000041455473666 * x_pos_horizontal ** 2 \
-               - 0.107742650963210 * x_pos_horizontal \
-               + 1.370961454271310 - 465 + (100 + x_pos_horizontal) * 0.142857 + 600
+        return 0.000000000000624 * x_pos_horizontal ** 4 \
+               - 0.000000007007811 * x_pos_horizontal ** 3 \
+               + 0.000083444175263 * x_pos_horizontal ** 2 \
+               - 0.087276683060509 * x_pos_horizontal + 205.381816677109
 
     def get_current_x(self):
         return self._x_pos_horizontal
