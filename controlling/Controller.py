@@ -134,15 +134,17 @@ class Controller(object):
         current_x = self._position.get_current_x()
         goal_position = current_x \
             + Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE \
-            + distance_to_goal_when_found \
-            + self._calculate_xCorrection_for_goal_detection(current_x)
+            + distance_to_goal_when_found
+        correction = self._calculate_xCorrection_for_goal_detection(current_x)
+        print("potential goal correction: {correction}".format(correction=correction))
         while not goal_reached:
             position = self._position.get_current_x()
             if position >= goal_position:
                 print("Goal Reached! ##########################################")
                 goal_reached = True
             else:
-                print("Goal  not yet reached, position: ", position)
+                print("Goal not yet reached, position: {pos} goalPosition: {goalPos}"
+                      .format(pos=position, goalPos=goal_position))
             time.sleep(0.05)
 
     def _calculate_xCorrection_for_goal_detection(self, current_x):
