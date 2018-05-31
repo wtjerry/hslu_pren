@@ -20,6 +20,8 @@ def update_label():
             l = f.readline().rstrip()
             if "new position" in l:
                 x, z = extract_x_and_z(l)
+                x = int(float(x))
+                z = int(float(z))
                 app.queueFunction(app.setLabel, "pos_x_value", x) 
                 app.queueFunction(app.setLabel, "pos_z_value", z) 
 
