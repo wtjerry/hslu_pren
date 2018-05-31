@@ -54,6 +54,7 @@ class Controller(object):
         self._executor.enqueue(self._tilt_controller.start)
         self._executor.enqueue(self._position.start_calc_pos)
         self._movement.reset()
+        self._magnet.stop()
         self._move_until_load_reached()
 
     def _move_until_load_reached(self):
@@ -67,15 +68,15 @@ class Controller(object):
         self._logger.major_step("Getting load")
         self._magnet.start()
         self._telescope.down(Config.CONTROLLER_INITIAL_TELESCOPE_DOWN)
-        time.sleep(1)
+        time.sleep(2)
         self._executor.enqueue(self._position.start_position_output)
         self._telescope.up(Config.CONTROLLER_INITIAL_TELESCOPE_UP)
         self._move_until_goal_reached()
 
     def _move_until_goal_reached(self):
         self._logger.major_step("Moving to goal")
-        self._movement.start(Config.CONTROLLER_MOVE_TO_GOAL_SPEED)
         self._search_goal_process.start()
+        self._movement.start(Config.CONTROLLER_MOVE_TO_GOAL_SPEED)
         self._executor.enqueue(self._fail_safe)
         self._goal_detection_handling()
 
