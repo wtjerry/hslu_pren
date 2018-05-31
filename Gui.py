@@ -20,10 +20,14 @@ def update_label():
             l = f.readline().rstrip()
             if "new position" in l:
                 x, z = extract_x_and_z(l)
-                x = int(float(x))
-                z = int(float(z))
+                x = round_to_cm(x)
+                z = round_to_cm(z)
                 app.queueFunction(app.setLabel, "pos_x_value", x) 
                 app.queueFunction(app.setLabel, "pos_z_value", z) 
+
+
+def round_to_cm(dist_mm):
+    return round(float(dist_mm)/10)
 
 
 app = gui()
@@ -34,7 +38,7 @@ app.addLabel("pos_x_value", "", 0, 1)
 app.addLabel("pos_z_label", "z position:   ", 1, 0)
 app.addLabel("pos_z_value", "", 1, 1)
 
-app.setLabel("pos_x_value", "650")
+app.setLabel("pos_x_value", "65")
 app.setLabel("pos_z_value", "0")
 
 app.thread(update_label)
