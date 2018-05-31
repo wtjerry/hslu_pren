@@ -133,11 +133,12 @@ class Controller(object):
     def _block_until_goal_reached(self, distance_to_goal_when_found):
         goal_reached = False
         current_x = self._position.get_current_x()
-        goal_position = current_x \
+        uncorrected_goal_position = current_x \
             + Config.CONTROLLER_DISTANCE_CAMERA_TELESCOPE \
             + distance_to_goal_when_found
-        correction = self._calculate_xCorrection_for_goal_detection(current_x)
-        print("potential goal correction: {correction}".format(correction=correction))
+        correction = self._calculate_xCorrection_for_goal_detection(uncorrected_goal_position)
+        goal_position = uncorrected_goal_position + correction
+
         while not goal_reached:
             position = self._position.get_current_x()
             if position >= goal_position:
@@ -148,10 +149,11 @@ class Controller(object):
                       .format(pos=position, goalPos=goal_position))
             time.sleep(0.05)
 
-    def _calculate_xCorrection_for_goal_detection(self, current_x):
-        return ((Config.CONTROLLER_MAX_GOAL_DETECTION_CORRECTION - Config.CONTROLLER_MIN_GOAL_DETECTION_CORRECTION) /
-                (Config.CONTROLLER_X_POSITION_WHERE_GOAL_DETECTION_CORRECTION_IS_MAX - Config.CONTROLLER_X_POSITION_WHERE_GOAL_DETECTION_CORRECTION_IS_MIN)) \
-               * current_x - Config.CONTROLLER_CORRECTION_INTERCEPT
+    def _calculate_xCorrection_for_goal_detection(self, uncorrected_goal_position):
+        return 0.000000005 \
+            * pow(uncorrected_goal_position, 3) - 0.000008 \
+            * pow(uncorrected_goal_position, 2) - 0.0007 \
+            * uncorrected_goal_position + 52.16
 
     def _deliver_load(self):
         self._logger.major_step("Delivering load")
