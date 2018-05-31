@@ -57,7 +57,7 @@ class Position(object):
         return self._x_pos_horizontal
 
     def get_current_z_telescope_when_in(self):
-        return self._z_pos_bottom_magnet_when_telescope_in - Config.POSITION_LOAD_HEIGHT
+        return self._z_pos_bottom_magnet_when_telescope_in
 
     def get_current_z_while_telescope_is_moving(self):
         return self.get_current_z_telescope_when_in() - self._telescope_engine.get_z()
