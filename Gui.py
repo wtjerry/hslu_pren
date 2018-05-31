@@ -32,6 +32,9 @@ app.addLabel("pos_x_value", "", 0, 1)
 app.addLabel("pos_z_label", "z position:   ", 1, 0)
 app.addLabel("pos_z_value", "", 1, 1)
 
+app.setLabel("pos_x_value", "650")
+app.setLabel("pos_z_value", "0")
+
 app.thread(update_label)
 
 app.go()
