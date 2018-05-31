@@ -160,9 +160,9 @@ class Controller(object):
         self._telescope.down(self._position.get_current_z_telescope_when_in())
         self._magnet.stop()
         time.sleep(2)
+        self._position.stop_output()
         self._telescope.up(Config.CONTROLLER_END_TELESCOPE_HEIGHT)
         self._movement.start(Config.CONTROLLER_FINISH_SPEED)
-        self._position.stop_output()
         self._finish()
 
     def _finish(self):
