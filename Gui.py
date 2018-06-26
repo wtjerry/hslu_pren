@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from appJar import gui
 
 pipe_path = "/home/jerry/coding/git/pren/hslu_pren/pos_queue"
@@ -11,7 +13,7 @@ def extract_x_and_z(s):
     index_z_end = s.find("'", index_z_start)
     z = s[index_z_start:index_z_end]
 
-    return (x, z)
+    return x, z
 
 
 def update_label():
@@ -30,13 +32,16 @@ def round_to_cm(dist_mm):
     return round(float(dist_mm)/10)
 
 
-app = gui()
+app = gui("position", "900x550")
+app.setBg("white")
 app.setFont(18)
 
-app.addLabel("pos_x_label", "x position:   ", 0, 0)
-app.addLabel("pos_x_value", "", 0, 1)
-app.addLabel("pos_z_label", "z position:   ", 1, 0)
-app.addLabel("pos_z_value", "", 1, 1)
+app.addImage("image", "gui_background.png", 0, 0, 2, 0)
+
+app.addLabel("pos_x_label", "x position:   ", 1, 0)
+app.addLabel("pos_z_label", "z position:   ", 2, 0)
+app.addLabel("pos_x_value", "", 1, 1)
+app.addLabel("pos_z_value", "", 2, 1)
 
 app.setLabel("pos_x_value", "65")
 app.setLabel("pos_z_value", "0")
