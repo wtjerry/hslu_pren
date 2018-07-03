@@ -68,7 +68,7 @@ class Controller(object):
         self._logger.major_step("Getting load")
         self._magnet.start()
         self._telescope.down(Config.CONTROLLER_INITIAL_TELESCOPE_DOWN)
-        time.sleep(0.5)
+        time.sleep(1)
         self._executor.enqueue(self._position.start_position_output)
         self._telescope.up(Config.CONTROLLER_INITIAL_TELESCOPE_UP)
         self._move_until_goal_reached()
